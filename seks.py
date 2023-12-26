@@ -25,8 +25,8 @@ def seks() -> None:
                          f"Naciśnij 4, żeby złożyć wniosek o miejsce w akademiku\n"
                          f"Naciśnij 5, żeby przeprowadzić akcje kwaterunkową\n")
         if inputTmp == "0":
-            studentsToAccommodate = inputStudents("testowe pliki/students.txt")
-            dorms = inputDorms("testowe pliki/dorms.txt")
+            studentsToAccommodate = inputStudents("pliki do testów/students.txt")
+            dorms = inputDorms("pliki do testów/dorms.txt")
             studentsToAccommodate.sort()
         elif inputTmp == "1":
             displayDorm(dorms)
