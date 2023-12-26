@@ -1,0 +1,18 @@
+Celem zadania jest stworzenie systemu na wzór Elektronicznego Systemu Kwaterowania Studentów: esks.pw.edu.pl
+
+1. System pobiera plik w formacie json z aktualną informacją o akademikach
+2. Dany akademik dzieli się na pokoje, które mają 1 lub więcej segmentów
+3. Segmenty, pokoje lub cały akademik mogą być włączane lub wyłączane z kwaterowania
+4. System kwateruje studentów w akcjach kwaterunkowych lub pojedynczo do aktualnie wolnych miejsc
+5. Kwaterowanie w akcji kwaterunkowej polega na wskazanie pliku z danymi studentów do zakwaterowania
+6. Studenci zgłaszają preferencje, gdzie chcieliby zostać zakwaterowani poprzez wskazanie konkretnego segmentu
+lub konkretne cechy np. pokój 2-osobowy w DS Babilon
+7. Student może wskazać konkretne osoby, z którymi chce mieszkać.
+8. W pozostałych przypadkach system stara się kwaterować możliwie podobnych studentów razem tj. w podobnym wieku,
+mówiącym w tym samym języku, studiujące na tym samym wydziale itp. Studenci różnych płci nie powinni być kwaterowani
+do jednego segmentu.
+9. System po zakończeniu pracy zwraca plik tekstowy, gdzie studenci są przypisani do konkretnych segmentach
+w akademikach. Np.:
+Jan Kowalski    101A    DS Babilon
+Piotr Nowak 307A    DS Akademik
+...
