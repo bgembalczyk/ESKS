@@ -1,71 +1,77 @@
 dormsData = [
-    {"name": "Akademik", "beds": 800,
-     "rooms": [([{"beds": 1, "floor": [2], "separate": False}], 0.5 / 6),
-               ([{"beds": 2, "floor": [2], "separate": False}], 0.5 / 6),
-               ([{"beds": 1, "floor": [3], "separate": False}], 0.2 / 6),
-               ([{"beds": 2, "floor": [3], "separate": False}], 0.2 / 6),
-               ([{"beds": 2, "floor": [3], "separate": True}], 0.2 / 6),
-               ([{"beds": 3, "floor": [3], "separate": False}], 0.2 / 6),
-               ([{"beds": 4, "floor": [3], "separate": False}], 0.2 / 6),
-               ([{"beds": 1, "floor": [4, 5, 6, 7, 8], "separate": False}], 0.25 / 6),
-               ([{"beds": 2, "floor": [4, 5, 6, 7, 8], "separate": False}], 0.25 / 6),
-               ([{"beds": 3, "floor": [4, 5, 6, 7, 8], "separate": False}], 0.25 / 6),
-               ([{"beds": 4, "floor": [4, 5, 6, 7, 8], "separate": False}], 0.25 / 6)]},
-    {"name": "Babilon", "beds": 800,
-     "rooms": [([{"beds": 1, "kitchen": False}], 0.25 / 7),
-               ([{"beds": 2, "kitchen": False}], 0.25 / 7),
-               ([{"beds": 2, "kitchen": True}], 0.25 / 7),
-               ([{"beds": 3, "kitchen": False}], 0.25 / 7),
-               ([{"beds": 2, "kitchen": False}, {"beds": 2, "kitchen": False}], 0.25),
-               ([{"beds": 1, "kitchen": False}, {"beds": 3, "kitchen": False}], 0.25 / 7),
-               ([{"beds": 2, "kitchen": False}, {"beds": 3, "kitchen": False}], 0.25 / 7),
-               ([{"beds": 3, "kitchen": False}, {"beds": 3, "kitchen": False}], 0.25 / 7)]
+    {"name": "Akademik", "location": "Ochota",
+     "rooms": [({"segments": [1], "old": True}, 65),
+               ({"segments": [2], "old": True}, 30),
+               ({"segments": [1], "renovated": True}, 25),
+               ({"segments": [2], "renovated": True}, 15),
+               ({"segments": [2], "renovated": True, "bathroom": True}, 15),
+               ({"segments": [3], "renovated": True}, 10),
+               ({"segments": [4], "renovated": True}, 5),
+               ({"segments": [1]}, 165),
+               ({"segments": [2]}, 85),
+               ({"segments": [3]}, 55),
+               ({"segments": [4]}, 40)]
      },
-    {"name": "Bratniak", "beds": 200,
-     "rooms": [([{"beds": 2}], 0.4),
-               ([{"beds": 3}], 0.4),
-               ([{"beds": 4}], 0.1),
-               ([{"beds": 5}], 0.1)]
+    {"name": "Babilon", "location": "Ochota",
+     "rooms": [({"segments": [1], "bathroom": True}, 30),
+               ({"segments": [2], "bathroom": True}, 15),
+               ({"segments": [2], "bathroom": True, "kitchen": True}, 15),
+               ({"segments": [3], "bathroom": True}, 10),
+               ({"segments": [2, 2], "bathroom": True}, 50),
+               ({"segments": [1, 3], "bathroom": True}, 10),
+               ({"segments": [2, 3], "bathroom": True}, 7),
+               ({"segments": [3, 3], "bathroom": True}, 5)]
      },
-    {"name": "Mikrus", "beds": 490,
-     "rooms": [([{"beds": 1}], 1 / 25),
-               ([{"beds": 2}], 24 / 25)]
+    {"name": "Bratniak", "location": "Ochota",
+     "rooms": [({"segments": [2]}, 40),
+               ({"segments": [3]}, 25),
+               ({"segments": [4]}, 5),
+               ({"segments": [5]}, 4)]
      },
-    {"name": "Muszelka", "beds": 150,
-     "rooms": [([{"beds": 1}], 0.25),
-               ([{"beds": 1}, {"beds": 1}], 0.25),
-               ([{"beds": 1}, {"beds": 2}], 0.25),
-               ([{"beds": 2}, {"beds": 2}], 0.25)]
+    {"name": "Mikrus", "location": "Kampus Centralny",
+     "rooms": [({"segments": [1]}, 20),
+               ({"segments": [2]}, 235)]
      },
-    {"name": "Riviera", "beds": 700,
-     "rooms": [([{"beds": 2, "floor": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]}], 1 / 28),
-               ([{"beds": 2, "floor": [15, 16]}], 1 / 28),
-               ([{"beds": 3, "floor": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]}, {"beds": 3, "floor": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]}], 1 / 28),
-               ([{"beds": 3, "floor": [15, 16]}, {"beds": 3, "floor": [15, 16]}], 1 / 28)]
+    {"name": "Muszelka", "location": "Ochota",
+     "rooms": [({"segments": [1]}, 38),
+               ({"segments": [1, 1]}, 19),
+               ({"segments": [1, 2]}, 13),
+               ({"segments": [2, 2]}, 9)]
      },
-    {"name": "Tatrzańska", "beds": 200,
-     "rooms": [([{"beds": 1}], 0.2),
-               ([{"beds": 1}, {"beds": 1}], 0.2),
-               ([{"beds": 1}, {"beds": 2}], 0.2),
-               ([{"beds": 2}, {"beds": 2}], 0.4)]
+    {"name": "Riviera", "location": "Kampus Centralny",
+     "rooms": [({"segments": [2], "bathroom": True, "ad": True}, 75),
+               ({"segments": [2], "bathroom": True}, 100),
+               ({"segments": [3, 3], "bathroom": True, "ad": True}, 25),
+               ({"segments": [3, 3], "bathroom": True}, 35)]
      },
-    {"name": "Tulipan", "beds": 150,
-     "rooms": [([{"beds": 1}, {"beds": 2}], 1)]
+    {"name": "Tatrzańska", "location": "Mokotów",
+     "rooms": [({"segments": [1]}, 40),
+               ({"segments": [1, 1]}, 20),
+               ({"segments": [1, 2]}, 15),
+               ({"segments": [2, 2]}, 20)]
      },
-    {"name": "Ustronie", "beds": 340,
-     "rooms": [([{"beds": 2, "type": "normal"}], 1 / 3),
-               ([{"beds": 2, "type": "renovated"}], 1 / 3),
-               ([{"beds": 2, "type": "separated"}], 1 / 3)]
+    {"name": "Tulipan", "location": "Ochota",
+     "rooms": [({"segments": [1, 2], "shower": True}, 50)]
      },
-    {"name": "Żaczek", "beds": 700,
-     "rooms": [([{"beds": 1}], 0.3),
-               ([{"beds": 2}], 0.3),
-               ([{"beds": 2}, {"beds": 2}], 0.4)]}
+    {"name": "Ustronie", "location": "Wola",
+     "rooms": [({"segments": [2]}, 115),
+               ({"segments": [2], "renovated": True}, 115),
+               ({"segments": [2], "bathroom": True}, 115)]
+     },
+    {"name": "Wcześniak", "location": "Płock",
+     "rooms": [({"segments": [1, 1, 2, 2], "bathroom": True}, 40),
+               ({"segments": [2, 2, 2, 2], "bathroom": True}, 45)]
+     },
+    {"name": "Żaczek", "location": "Kampus Południowy",
+     "rooms": [({"beds": [1], "bathroom": True, "kitchen": True}, 210),
+               ({"beds": [2], "bathroom": True, "kitchen": True}, 105),
+               ({"beds": [2, 2], "bathroom": True, "kitchen": True}, 70)]
+     }
 ]
 
 file = open("dorms.txt", "w")
 # TODO
-# Teraz jest już tylko mało czytelne
+# Totalnie do przerobienia
 for dorm in dormsData:
     if dorm['name'] == "Akademik" or dorm['name'] == "Riviera":
         roomNum = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
