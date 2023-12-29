@@ -100,6 +100,8 @@ majors = [
 with open("students.txt", "w") as file:
     for i in range(N):
         stud_major = find_major(majors, random.randint(0, max_stud - 1))
-        line = f"{time.time_ns() // 1000}; {stud_major[0]}; {stud_major[1]}; {stud_major[2]}; {stud_major[3]}"
-        print(line)
+        sex = random.randint(0, 1)
+        line = f"{time.time_ns() // 1000}; {random.randint(1997, 2005)}; {sex * 'F' + (1 - sex) * 'M'}; " \
+               f"{stud_major[0]}; {stud_major[1]}; {stud_major[2]}; {stud_major[3]}\n"
+        file.write(line)
 

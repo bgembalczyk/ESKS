@@ -1,0 +1,10 @@
+1703874572905224; 1997; F; Zarządzania; Inżynieria zarządzania; Warszawa; polski
+1703874572905234; 2003; F; Elektryczny; Elektrotechnika; Warszawa; polski
+1703874572905240; 1999; M; Elektroniki i Technik Informacyjnych; Informatyka; Warszawa; polski
+1703874572905248; 2005; F; Budownictwa, Mechaniki i Petrochemii; Budownictwo; Płock; polski
+1703874572905251; 2000; M; Architektury; Architektura; Warszawa; polski
+1703874572905257; 1999; M; Mechaniczny Energetyki i Lotnictwa; Lotnictwo i kosmonautyka; Warszawa; polski
+1703874572905261; 2005; M; Fizyki; Fotonika; Warszawa; polski
+1703874572905268; 1997; M; Transportu; Transport; Warszawa; polski
+1703874572905271; 2000; F; Chemiczny; Biotechnologia; Warszawa; polski
+1703874572905277; 1998; F; Matematyki i Nauk Informacyjnych; Matematyka i analiza danych; Warszawa; polski
