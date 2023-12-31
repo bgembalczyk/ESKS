@@ -84,9 +84,10 @@ for dorm in dorms_data:
     for room in dorm["rooms"]:
         room_type, n = room
         for i in range(n):
-            tmp_room = {"number": room_number, "habitable": True}
+            tmp_room = {"number": room_number, "habitable": tmp_dorm["habitable"]}
             if "old" in room_type and room_type["old"]:
                 tmp_room["condition"] = "old"
+                tmp_room["habitable"] = False
             elif "renovated" in room_type and room_type["renovated"]:
                 tmp_room["condition"] = "renovated"
             else:
@@ -101,7 +102,8 @@ for dorm in dorms_data:
             tmp_room["ad"] = "ad" in room_type and room_type["ad"]
             tmp_room["segments"] = []
             for j, segment in enumerate(room_type["segments"]):
-                tmp_segment = {"symbol": chr(ord("A") + j), "habitable": True, "beds": segment, "tenants": []}
+                tmp_segment = {"symbol": chr(ord("A") + j), "habitable": tmp_room["habitable"], "beds": segment,
+                               "tenants": []}
                 tmp_room["segments"].append(tmp_segment)
             tmp_dorm["rooms"].append(tmp_room)
             room_number += 1
