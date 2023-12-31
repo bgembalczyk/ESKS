@@ -1,4 +1,6 @@
-dormsData = [
+import json
+
+dorms_data = [
     {"name": "Akademik", "location": "Ochota",
      "rooms": [({"segments": [1], "old": True}, 65),
                ({"segments": [2], "old": True}, 30),
@@ -51,7 +53,7 @@ dormsData = [
                ({"segments": [2, 2]}, 20)]
      },
     {"name": "Tulipan", "location": "Ochota",
-     "rooms": [({"segments": [1, 2], "shower": True}, 50)]
+     "rooms": [({"segments": [1, 1, 2], "shower": True}, 40)]
      },
     {"name": "Ustronie", "location": "Wola",
      "rooms": [({"segments": [2]}, 115),
@@ -63,65 +65,46 @@ dormsData = [
                ({"segments": [2, 2, 2, 2], "bathroom": True}, 45)]
      },
     {"name": "Żaczek", "location": "Kampus Południowy",
-     "rooms": [({"beds": [1], "bathroom": True, "kitchen": True}, 210),
-               ({"beds": [2], "bathroom": True, "kitchen": True}, 105),
-               ({"beds": [2, 2], "bathroom": True, "kitchen": True}, 70)]
+     "rooms": [({"segments": [1], "bathroom": True, "kitchen": True}, 210),
+               ({"segments": [2], "bathroom": True, "kitchen": True}, 105),
+               ({"segments": [2, 2], "bathroom": True, "kitchen": True}, 70)]
      }
 ]
 
-file = open("dorms.txt", "w")
-# TODO
-# Totalnie do przerobienia
-for dorm in dormsData:
-    if dorm['name'] == "Akademik" or dorm['name'] == "Riviera":
-        roomNum = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    else:
-        roomNum = [0]
-    for room in dorm['rooms']:
-        bedNum = 0
-        for segment in room[0]:
-            bedNum += segment['beds']
-        for i in range(int(room[1] * dorm['beds'] / bedNum)):
-            if dorm['name'] == "Akademik" or dorm['name'] == "Riviera":
-                for floor in room[0][0]['floor']:
-                    roomNum[floor - 2] += 1
-                    file.write(f"{dorm['name']};")
-                    file.write(f"{floor * 100 + roomNum[floor - 2]};")
-                    if dorm['name'] == "Akademik":
-                        file.write(f"{room[0][0]['separate']};")
-                    else:
-                        file.write(";")
-                    if dorm['name'] == "Babilon":
-                        file.write(f"{room[0][0]['kitchen']};")
-                    else:
-                        file.write(";")
-                    if dorm['name'] == "Ustronie":
-                        file.write(f"{room[0][0]['type']};")
-                    else:
-                        file.write(";")
-                    tmp = ""
-                    for segment in room[0]:
-                        tmp += f"{segment['beds']},"
-                    file.write(f"{tmp[:-1]}\n")
-            else:
-                roomNum[0] += 1
-                file.write(f"{dorm['name']};")
-                file.write(f"{roomNum[0]};")
-                if dorm['name'] == "Akademik":
-                    file.write(f"{room[0][0]['separate']};")
-                else:
-                    file.write(";")
-                if dorm['name'] == "Babilon":
-                    file.write(f"{room[0][0]['kitchen']};")
-                else:
-                    file.write(";")
-                if dorm['name'] == "Ustronie":
-                    file.write(f"{room[0][0]['type']};")
-                else:
-                    file.write(";")
-                tmp = ""
-                for segment in room[0]:
-                    tmp += f"{segment['beds']},"
-                file.write(f"{tmp[:-1]}\n")
+dorms = {
+    "dorms": []
+}
 
-file.close()
+for dorm in dorms_data:
+    tmp_dorm = {"name": dorm["name"],
+                "location": dorm["location"],
+                "rooms": []}
+    room_number = 1
+    for room in dorm["rooms"]:
+        room_type, n = room
+        for i in range(n):
+            tmp_room = {"number": room_number}
+            if "old" in room_type and room_type["old"]:
+                tmp_room["condition"] = "old"
+            elif "renovated" in room_type and room_type["renovated"]:
+                tmp_room["condition"] = "renovated"
+            else:
+                tmp_room["condition"] = "normal"
+            if "bathroom" in room_type and room_type["bathroom"]:
+                tmp_room["bathroom"] = "full"
+            elif "shower" in room_type and room_type["shower"]:
+                tmp_room["bathroom"] = "shower"
+            else:
+                tmp_room["bathroom"] = "none"
+            tmp_room["kitchen"] = "kitchen" in room_type and room_type["kitchen"]
+            tmp_room["ad"] = "ad" in room_type and room_type["ad"]
+            tmp_room["segments"] = []
+            for j, segment in enumerate(room_type["segments"]):
+                tmp_segment = {"symbol": chr(ord("A") + j), "beds": segment, "tenants": []}
+                tmp_room["segments"].append(tmp_segment)
+            tmp_dorm["rooms"].append(tmp_room)
+            room_number += 1
+    dorms["dorms"].append(tmp_dorm)
+
+with open("dorms.json", "w", encoding='utf-8') as file:
+    json.dump(dorms, file, ensure_ascii=False, indent=4)
