@@ -1,16 +1,34 @@
 import random
 import time
 
-def gen_room():
-    tmp = random.random()
-    if tmp >= 0.5:
-        return 2
-    elif tmp >= 0.25:
-        return 1
-    elif tmp >= 0.125:
-        return 3
-    else:
-        return 4
+def random_segment(dorm):
+    match dorm:
+        case "Akademik":
+            max_room, max_seg = 510, 1
+        case "Babilon":
+            max_room, max_seg = 142, 2
+        case "Bratniak":
+            max_room, max_seg = 74, 1
+        case "Mikrus":
+            max_room, max_seg = 255, 1
+        case "Muszelka":
+            max_room, max_seg = 79, 2
+        case "Riviera":
+            max_room, max_seg = 235, 2
+        case "Tatrzańska":
+            max_room, max_seg = 95, 2
+        case "Tulipan":
+            max_room, max_seg = 40, 3
+        case "Ustronie":
+            max_room, max_seg = 345, 1
+        case "Wcześniak":
+            max_room, max_seg = 85, 4
+        case "Żaczek":
+            max_room, max_seg = 385, 2
+        case _:
+            # TODO
+            pass
+    return f"{random.randint(1, max_room)}{chr(ord('A') + random.randint(1, max_seg))}"
 
 def find_major(majors, n):
     for major in majors:
@@ -18,9 +36,9 @@ def find_major(majors, n):
             return major[1], major[0], major[3], major[4]
 
 
-N = 10
+N = 100
 max_stud = 5660
-dorm_names = ["Akademik", "Babilon", "Bratniak", "Mikrus", "Muszelka", "Riviera", "Tatrzańska", "Tulipan", "Ustronie",
+dorm_Wwa = ["Akademik", "Babilon", "Bratniak", "Mikrus", "Muszelka", "Riviera", "Tatrzańska", "Tulipan", "Ustronie",
              "Żaczek"]
 majors = [
     ["Administracja", "Administracji i Nauk Społecznych", "200", "Warszawa", "polski", "200"],
@@ -97,11 +115,32 @@ majors = [
     ["Telecommunications", "Elektroniki i Technik Informacyjnych", "30", "Warszawa", "angielski", "5660"]
 ]
 
+# TODO
+# student nie chce jakies preferencji
 with open("students.txt", "w") as file:
     for i in range(N):
-        stud_major = find_major(majors, random.randint(0, max_stud - 1))
         sex = random.randint(0, 1)
-        line = f"{time.time_ns() // 1000}; {random.randint(1997, 2005)}; {sex * 'F' + (1 - sex) * 'M'}; " \
-               f"{stud_major[0]}; {stud_major[1]}; {stud_major[2]}; {stud_major[3]}\n"
+        stud_faculty, stud_major, stud_city, stud_lang = find_major(majors, random.randint(0, max_stud - 1))
+        preference_tenant = None
+        if stud_city == "Płock":
+            preference_dorm = "Wcześniak"
+            preference_location = "Płock"
+        else:
+            preference_dorm = random.choice(dorm_Wwa)
+            if stud_faculty in ["Inżynierii Materiałowej", "Mechaniczny Technologiczny", "Mechatroniki", "Samochodów i Maszyn Roboczych", "Zarządzania"]:
+                preference_location = "Kampus Południowy"
+            else:
+                preference_location = random.choice(["Ochota", "Kampus Centralny", "Mokotów", "Wola"])
+        preference_segment = random_segment(preference_dorm)
+        preference_tenants_room = random.randint(0, 7)
+        preference_tenants_segment = random.randint(0, min(5, preference_tenants_room))
+        preference_condition = random.choice(["normal", "renovated"])
+        preference_bathroom = random.choice(["full", "shower", "null"])
+        preference_kitchen = random.choice([True, False])
+        preference_ad = random.choice([True, False])
+        line = f"{time.time_ns() // 1000};{random.randint(1997, 2005)};{sex * 'F' + (1 - sex) * 'M'};" \
+               f"{stud_faculty};{stud_major};{stud_city};{stud_lang};{preference_tenant};{preference_dorm};" \
+               f"{preference_segment};{preference_location};{preference_tenants_room};{preference_tenants_segment};" \
+               f"{preference_condition};{preference_bathroom};{preference_kitchen};{preference_ad}\n"
         file.write(line)
 

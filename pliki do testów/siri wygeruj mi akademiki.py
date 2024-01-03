@@ -97,7 +97,7 @@ for dorm in dorms_data:
             elif "shower" in room_type and room_type["shower"]:
                 tmp_room["bathroom"] = "shower"
             else:
-                tmp_room["bathroom"] = "none"
+                tmp_room["bathroom"] = "null"
             tmp_room["kitchen"] = "kitchen" in room_type and room_type["kitchen"]
             tmp_room["ad"] = "ad" in room_type and room_type["ad"]
             tmp_room["segments"] = []
