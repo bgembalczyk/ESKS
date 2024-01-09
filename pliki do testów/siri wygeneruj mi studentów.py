@@ -26,8 +26,7 @@ def random_segment(dorm):
         case "Żaczek":
             max_room, max_seg = 385, 2
         case _:
-            # TODO
-            pass
+            return None
     return f"{random.randint(1, max_room)}{chr(ord('A') + random.randint(1, max_seg))}"
 
 def find_major(majors, n):
@@ -126,18 +125,46 @@ with open("students.txt", "w") as file:
             preference_dorm = "Wcześniak"
             preference_location = "Płock"
         else:
-            preference_dorm = random.choice(dorm_Wwa)
+            if random.random() > 1 / 3:
+                preference_dorm = random.choice(dorm_Wwa)
+            else:
+                preference_dorm = None
             if stud_faculty in ["Inżynierii Materiałowej", "Mechaniczny Technologiczny", "Mechatroniki", "Samochodów i Maszyn Roboczych", "Zarządzania"]:
                 preference_location = "Kampus Południowy"
             else:
-                preference_location = random.choice(["Ochota", "Kampus Centralny", "Mokotów", "Wola"])
-        preference_segment = random_segment(preference_dorm)
-        preference_tenants_room = random.randint(0, 7)
-        preference_tenants_segment = random.randint(0, min(5, preference_tenants_room))
-        preference_condition = random.choice(["normal", "renovated"])
-        preference_bathroom = random.choice(["full", "shower", "null"])
-        preference_kitchen = random.choice([True, False])
-        preference_ad = random.choice([True, False])
+                if random.random() > 1 / 4:
+                    preference_location = random.choice(["Ochota", "Kampus Centralny", "Mokotów", "Wola"])
+                else:
+                    preference_location = None
+        if random.random() > 1 / 2:
+            preference_segment = random_segment(preference_dorm)
+        else:
+            preference_segment = None
+        if random.random() > 1 / 8:
+            preference_tenants_room = random.randint(0, 7)
+            if random.random() > 1 / 9:
+                preference_tenants_segment = random.randint(0, min(5, preference_tenants_room))
+            else:
+                preference_tenants_segment = None
+        else:
+            preference_tenants_room = None
+            preference_tenants_segment = None
+        if random.random() > 1 / 5:
+            preference_condition = random.choice(["normal", "renovated"])
+        else:
+            preference_condition = None
+        if random.random() > 1 / 6:
+            preference_bathroom = random.choice(["full", "shower", "null"])
+        else:
+            preference_bathroom = None
+        if random.random() > 1 / 7:
+            preference_kitchen = random.choice([True, False])
+        else:
+            preference_kitchen = None
+        if preference_dorm == "Riviera" or preference_location == "Kampus Centralny":
+            preference_ad = random.choice([True, False])
+        else:
+            preference_ad = False
         line = f"{time.time_ns() // 1000};{random.randint(1997, 2005)};{sex * 'F' + (1 - sex) * 'M'};" \
                f"{stud_faculty};{stud_major};{stud_city};{stud_lang};{preference_tenant};{preference_dorm};" \
                f"{preference_segment};{preference_location};{preference_tenants_room};{preference_tenants_segment};" \
