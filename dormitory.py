@@ -33,7 +33,7 @@ class Dormitory:
     def tenantsNum(self) -> int:
         res = 0
         for room in self.rooms:
-            res += room.tenantsNum()
+            res += room.tenants_num()
         return res
 
     def room(self, roomNum: int) -> Room | None:

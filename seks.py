@@ -7,7 +7,7 @@ def checkPlaces(dorms: dict) -> int:
     tenantsNum = 0
     for dorm in dorms:
         bedsAvailable += dorms[dorm].beds()
-        tenantsNum += dorms[dorm].tenantsNum()
+        tenantsNum += dorms[dorm].tenants_num()
     return bedsAvailable - tenantsNum
 
 
