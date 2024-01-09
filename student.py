@@ -2,14 +2,47 @@ from segment import Segment
 
 class Student:
     def __init__(self, id, year, sex, faculty, major, city, lang, preference):
-        self.id = id
-        self.year = year
-        self.sex = sex
-        self.faculty = faculty
-        self.major = major
-        self.city = city
-        self.lang = lang
-        self.preference = preference
+        self._id = id
+        self._year = year
+        self._sex = sex
+        self._faculty = faculty
+        self._major = major
+        self._city = city
+        self._lang = lang
+        self._preference = preference
+        self.segment = None
+
+    @property
+    def id(self):
+        return self._id
+
+    @property
+    def year(self):
+        return self._year
+
+    @property
+    def sex(self):
+        return self._sex
+
+    @property
+    def faculty(self):
+        return self._faculty
+
+    @property
+    def major(self):
+        return self._major
+
+    @property
+    def city(self):
+        return self._city
+
+    @property
+    def lang(self):
+        return self._lang
+
+    @property
+    def preference(self):
+        return self._preference
 
     def __str__(self):
         return f"USOSid: {self.id}\n" \
@@ -20,4 +53,4 @@ class Student:
 
     def accommodate(self, segment_var: Segment) -> None:
         segment_var.tenants.append(self)
-        self.dorm = segment_var.room().dorm()
+        self.segment = segment_var
