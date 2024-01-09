@@ -1,5 +1,4 @@
 import random
-import time
 
 def random_segment(dorm):
     match dorm:
@@ -113,12 +112,14 @@ majors = [
     ["Power Engineering", "Mechaniczny Energetyki i Lotnictwa", "20", "Warszawa", "angielski", "5630"],
     ["Telecommunications", "Elektroniki i Technik Informacyjnych", "30", "Warszawa", "angielski", "5660"]
 ]
+students_id_pool = list(range(1000000, 2000000))
 
-# TODO
-# student nie chce jakies preferencji
+
 with open("students.txt", "w") as file:
     for i in range(N):
         sex = random.randint(0, 1)
+        stud_id = random.choice(students_id_pool)
+        students_id_pool.remove(stud_id)
         stud_faculty, stud_major, stud_city, stud_lang = find_major(majors, random.randint(0, max_stud - 1))
         if stud_city == "Płock":
             preference_dorm = "Wcześniak"
@@ -164,11 +165,11 @@ with open("students.txt", "w") as file:
             preference_ad = random.choice([True, False])
         else:
             preference_ad = False
-        if random.random() < 1 / 5:
-            preference_tenant = (time.time_ns() // 1000) + random.randint(-1000, 2000)
+        if random.random() < 1 / 4:
+            preference_tenant = random.randint(1000000, 2000000)
         else:
             preference_tenant = None
-        line = f"{time.time_ns() // 1000};{random.randint(1997, 2005)};{sex * 'F' + (1 - sex) * 'M'};" \
+        line = f"{stud_id};{random.randint(1997, 2005)};{sex * 'F' + (1 - sex) * 'M'};" \
                f"{stud_faculty};{stud_major};{stud_city};{stud_lang};{preference_tenant};{preference_dorm};" \
                f"{preference_segment};{preference_location};{preference_tenants_room};{preference_tenants_segment};" \
                f"{preference_condition};{preference_bathroom};{preference_kitchen};{preference_ad}\n"
