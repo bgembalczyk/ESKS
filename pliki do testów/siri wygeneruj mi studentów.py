@@ -120,7 +120,6 @@ with open("students.txt", "w") as file:
     for i in range(N):
         sex = random.randint(0, 1)
         stud_faculty, stud_major, stud_city, stud_lang = find_major(majors, random.randint(0, max_stud - 1))
-        preference_tenant = None
         if stud_city == "Płock":
             preference_dorm = "Wcześniak"
             preference_location = "Płock"
@@ -165,6 +164,10 @@ with open("students.txt", "w") as file:
             preference_ad = random.choice([True, False])
         else:
             preference_ad = False
+        if random.random() < 1 / 5:
+            preference_tenant = (time.time_ns() // 1000) + random.randint(-1000, 2000)
+        else:
+            preference_tenant = None
         line = f"{time.time_ns() // 1000};{random.randint(1997, 2005)};{sex * 'F' + (1 - sex) * 'M'};" \
                f"{stud_faculty};{stud_major};{stud_city};{stud_lang};{preference_tenant};{preference_dorm};" \
                f"{preference_segment};{preference_location};{preference_tenants_room};{preference_tenants_segment};" \
