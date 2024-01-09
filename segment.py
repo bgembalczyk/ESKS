@@ -10,6 +10,9 @@ class Segment:
                        f"\t\tLiczba łóżek: {self.beds}\n" \
                        f"\t\tLiczba mieszkańców: {len(self.tenants)}\n"
 
+    def __lt__(self, other):
+        return self.symbol() < other.symbol()
+
     def symbol(self) -> str:
         return self._symbol
 
