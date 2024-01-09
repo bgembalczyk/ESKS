@@ -36,7 +36,7 @@ class Dormitory:
             res += room.tenants_num()
         return res
 
-    def room(self, roomNum: int) -> Room | None:
+    def find_room(self, roomNum: int) -> Room | None:
         for i in self.rooms:
             if i.number() == roomNum:
                 return i
