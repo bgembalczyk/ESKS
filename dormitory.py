@@ -51,7 +51,7 @@ class Dormitory:
             roomTmp = Room(self, int(tab[0]), "renovated")
         else:
             roomTmp = Room(self, int(tab[0]))
-        roomTmp.inputSegments(tab[-1])
+        roomTmp.input_segments(tab[-1])
         self.rooms.append(roomTmp)
 
     # TODO
