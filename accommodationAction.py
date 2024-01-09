@@ -1,10 +1,10 @@
 def accommodationAction(studentsToAccommodate: list, dorms: dict) -> None:
     while studentsToAccommodate:
         tmpStudent = studentsToAccommodate[0]
-        tmpSegment = dorms[tmpStudent.prefDorm].findPlace(tmpStudent)
+        tmpSegment = dorms[tmpStudent.prefDorm].find_place(tmpStudent)
         if not tmpSegment:
             for dorm in dorms:
-                tmpSegment = dorms[dorm].findPlace(tmpStudent)
+                tmpSegment = dorms[dorm].find_place(tmpStudent)
                 if tmpSegment:
                     break
         if not tmpSegment:

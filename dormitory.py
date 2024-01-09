@@ -21,7 +21,7 @@ class Dormitory:
         resStr = f"Dom Studencki {self.name}\n" \
                  f"Liczba pokoi: {len(self.rooms)}\n" \
                  f"Liczba łóżek: {self.beds()}\n" \
-                 f"Liczba mieszkańców: {self.tenantsNum()}\n"
+                 f"Liczba mieszkańców: {self.tenants_num()}\n"
         return resStr
 
     def beds(self) -> int:
@@ -30,7 +30,7 @@ class Dormitory:
             res += room.beds()
         return res
 
-    def tenantsNum(self) -> int:
+    def tenants_num(self) -> int:
         res = 0
         for room in self.rooms:
             res += room.tenants_num()
@@ -42,7 +42,7 @@ class Dormitory:
                 return i
         return None
 
-    def inputRooms(self, tab: list) -> None:
+    def input_rooms(self, tab: list) -> None:
         if tab[1] or tab[3] == "separated":
             roomTmp = Room(self, int(tab[0]), "separated")
         elif tab[2] == "kitchen":
@@ -56,11 +56,11 @@ class Dormitory:
 
     # TODO
     # nie ma już Student.prefTenantsNum
-    def findPlace(self, student: Student) -> Segment | None:
-        prefMatesNum = student.prefTenantsNum
+    def find_place(self, student: Student) -> Segment | None:
+        pref_mates_num = student.prefTenantsNum
         for room in self.rooms:
             for segment in room.segments:
-                if segment.beds == prefMatesNum and len(segment.tenants) < segment.beds:
+                if segment.beds == pref_mates_num and len(segment.tenants) < segment.beds:
                     return segment
         for room in self.rooms:
             for segment in room.segments:

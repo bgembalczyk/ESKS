@@ -13,7 +13,7 @@ def inputDorms(path: str) -> dict:
         if tmp[0] not in dormNames:
             dorms[tmp[0]] = Dormitory(tmp[0])
             dormNames.append(tmp[0])
-        dorms[tmp[0]].inputRooms(tmp[1:])
+        dorms[tmp[0]].input_rooms(tmp[1:])
     file.close()
     return dorms
 
