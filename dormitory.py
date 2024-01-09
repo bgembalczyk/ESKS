@@ -3,7 +3,7 @@ from segment import Segment
 from student import Student
 
 class Dormitory:
-    def __init__(self, name: str, location, habitable):
+    def __init__(self, name: str, habitable, location):
         self._name = name
         self._location = location
         self.habitable = habitable

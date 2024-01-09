@@ -1,12 +1,13 @@
 from segment import Segment
 
 class Room:
-    def __init__(self, dorm, number, condition, bathroom, kitchen, ad):
+    def __init__(self, dorm, number, habitable, condition, bathroom, kitchen, ad):
         self._dorm = dorm
         self._number = number
         self._bathroom = bathroom
         self._kitchen = kitchen
         self._ad = ad
+        self.habitable = habitable
         self.condition = condition
         self.segments = []
 
