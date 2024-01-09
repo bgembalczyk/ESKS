@@ -14,7 +14,7 @@ class Student:
     def __str__(self):
         return f"USOSid: {self.id}\n" \
                f"Birth year: {self.year}\n" \
-               f"Sex: {self.prefDorm}\n" \
+               f"Sex: {self.sex}\n" \
                f"Student is studying: {self.major} in {self.lang} at the faculty {self.faculty} in {self.city}\n" \
                f"Student's accommodation preferences: {self.preference}"
 
