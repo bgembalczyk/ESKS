@@ -141,9 +141,9 @@ with open("students.txt", "w") as file:
         else:
             preference_segment = None
         if random.random() > 1 / 8:
-            preference_tenants_num_room = random.randint(0, 7)
+            preference_tenants_num_room = random.randint(1, 8)
             if random.random() > 1 / 9:
-                preference_tenants_num_segment = random.randint(0, min(5, preference_tenants_num_room))
+                preference_tenants_num_segment = random.randint(1, min(6, preference_tenants_num_room))
             else:
                 preference_tenants_num_segment = None
         else:
@@ -171,7 +171,8 @@ with open("students.txt", "w") as file:
             preference_tenant = None
         line = f"{stud_id};{random.randint(1997, 2005)};{sex * 'F' + (1 - sex) * 'M'};" \
                f"{stud_faculty};{stud_major};{stud_city};{stud_lang};{preference_tenant};{preference_dorm};" \
-               f"{preference_segment};{preference_location};{preference_tenants_num_room};{preference_tenants_num_segment};" \
-               f"{preference_condition};{preference_bathroom};{preference_kitchen};{preference_ad}\n"
+               f"{preference_segment};{preference_location};{preference_tenants_num_room};" \
+               f"{preference_tenants_num_segment};{preference_condition};{preference_bathroom};{preference_kitchen};" \
+               f"{preference_ad}\n"
         file.write(line)
 

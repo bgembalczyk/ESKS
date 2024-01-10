@@ -1,7 +1,7 @@
 from segment import Segment
 
 class Room:
-    def __init__(self, dorm, number, habitable, condition, bathroom, kitchen, ad):
+    def __init__(self, dorm, number: int, habitable: bool, condition: str, bathroom: str, kitchen: bool, ad: bool):
         self._dorm = dorm
         self._number = number
         self._bathroom = bathroom
@@ -16,7 +16,7 @@ class Room:
         return self._dorm
 
     @property
-    def number(self) -> int:
+    def number(self):
         return self._number
 
     @property
@@ -53,13 +53,13 @@ class Room:
             res += len(segment.tenants)
         return res
 
-    def segment(self, segment_symbol: str) -> Segment | None:
-        for i in self.segments:
-            if i.symbol() == segment_symbol:
-                return i
+    def get_segment(self, segment_symbol: str) -> Segment | None:
+        for segment_iter in self.segments:
+            if segment_iter.symbol() == segment_symbol:
+                return segment_iter
         return None
 
-    def input_segments(self, tab: list) -> None:
+    def input_segments(self, tab: list):
         for segment in tab:
             new_segment = Segment(self, segment["symbol"], segment["habitable"], segment["beds"])
             self.segments.append(new_segment)

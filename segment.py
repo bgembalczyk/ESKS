@@ -1,8 +1,8 @@
 class Segment:
-    def __init__(self, room, symbol: str, habitable, beds: int):
+    def __init__(self, room, symbol: str, habitable: bool, beds: int):
         self._room = room
         self._symbol = symbol
-        self._beds = beds
+        self.beds = beds
         self.habitable = habitable
         self.tenants = []
 
@@ -13,10 +13,6 @@ class Segment:
     @property
     def symbol(self):
         return self._symbol
-
-    @property
-    def beds(self):
-        return self._beds
 
     def __str__(self):
         return f"\t\tSegment {self.symbol}\n" \

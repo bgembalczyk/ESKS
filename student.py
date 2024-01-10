@@ -1,8 +1,8 @@
 from segment import Segment
 
 class Student:
-    def __init__(self, id: int, year: int, sex: str, faculty: str, major: str, city: str, lang: str, preference: list):
-        self._id = id
+    def __init__(self, USOSid: int, year: int, sex: str, faculty: str, major: str, city: str, lang: str, preference):
+        self._id = USOSid
         self._year = year
         self._sex = sex
         self._faculty = faculty
