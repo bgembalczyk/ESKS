@@ -24,3 +24,6 @@ class Segment:
 
     def tenants_num(self):
         return len(self.tenants)
+
+    def type(self):
+        return (self.room.dorm.name, )

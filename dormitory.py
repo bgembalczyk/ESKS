@@ -52,12 +52,12 @@ class Dormitory:
 
     def segment_types(self):
         result = []
-        if not self.habitable:
+        if not self.habitable or self.beds() == self.tenants_num():
             return result
         for room in self.rooms:
-            if room.habitable:
+            if room.habitable and room.beds() > room.tenants_num():
                 for segment in room.segments:
-                    if segment.habitable:
+                    if segment.habitable and segment.beds > segment.tenants_num():
                         seg_type = (self.name, self.location, room.beds(), segment.beds, room.condition, room.bathroom, room.kitchen, room.ad)
                         if seg_type not in result:
                             result.append(seg_type)
