@@ -60,5 +60,6 @@ class Room:
         return None
 
     def input_segments(self, tab: list) -> None:
-        for i in range(len(tab)):
-            self.segments.append(Segment(self, f"{chr(ord('A') + i)}", int(tab[i])))
+        for segment in tab:
+            new_segment = Segment(self, segment["symbol"], segment["habitable"], segment["beds"])
+            self.segments.append(new_segment)

@@ -43,16 +43,10 @@ class Dormitory:
         return None
 
     def input_rooms(self, tab: list) -> None:
-        if tab[1] or tab[3] == "separated":
-            roomTmp = Room(self, int(tab[0]), "separated")
-        elif tab[2] == "kitchen":
-            roomTmp = Room(self, int(tab[0]), "kitchen")
-        elif tab[3] == "renovated":
-            roomTmp = Room(self, int(tab[0]), "renovated")
-        else:
-            roomTmp = Room(self, int(tab[0]))
-        roomTmp.input_segments(tab[-1])
-        self.rooms.append(roomTmp)
+        for room in tab:
+            new_room = Room(self, room["number"], room["habitable"], room["condition"], room["bathroom"], room["kitchen"], room["ad"])
+            new_room.input_segments(room["segments"])
+            self.rooms.append(new_room)
 
     # TODO
     # nie ma już Student.prefTenantsNum
