@@ -55,14 +55,13 @@ class Dormitory:
         if not self.habitable:
             return result
         for room in self.rooms:
-            if not room.habitable:
-                break
-            for segment in room.segments:
-                if not segment.habitable:
-                    break
-                segType = (self.name, self.location, room.beds(), segment.beds(),
-                           room.condition, room.bathroom, room.kitchen, room.ad)
-                result.append(segType)
+            if room.habitable:
+                for segment in room.segments:
+                    if segment.habitable:
+                        seg_type = (self.name, self.location, room.beds(), segment.beds, room.condition, room.bathroom, room.kitchen, room.ad)
+                        if seg_type not in result:
+                            result.append(seg_type)
+        return result
 
     # TODO
     # nie ma już Student.prefTenantsNum

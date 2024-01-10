@@ -82,7 +82,7 @@ def editRoom(dorm: Dormitory):
                      "Naciśnij 3, żeby usunąć pokój\n")
     while tmpInput != "0":
         intInput = int(input("Podaj numer pokoju: "))
-        roomInput = dorm.room(intInput)
+        roomInput = dorm.get_room(intInput)
         if roomInput:
             if tmpInput == "1":
                 print("Już jest pokój o takim numerze!")
@@ -109,7 +109,7 @@ def editSegment(room: Room):
                      "Naciśnij 3, żeby usunąć segment\n")
     while tmpInput != "0":
         chrInput = input("Podaj symbol segmentu: ")
-        segmentInput = room.segment(chrInput)
+        segmentInput = room.get_segment(chrInput)
         if segmentInput:
             if tmpInput == "1":
                 print("Już jest segment o takim symbolu!")

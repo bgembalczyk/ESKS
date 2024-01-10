@@ -10,7 +10,7 @@ def input_dorms(path):
             new_dorm = Dormitory(dorm["name"], dorm["habitable"], dorm["location"])
             new_dorm.input_rooms(dorm["rooms"])
             dorms.append(new_dorm)
-    return
+    return dorms
 
 def input_students(path: str) -> list:
     with open(path, "r") as file:
