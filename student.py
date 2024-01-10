@@ -1,7 +1,7 @@
 from segment import Segment
 
 class Student:
-    def __init__(self, id, year, sex, faculty, major, city, lang, preference):
+    def __init__(self, id: int, year: int, sex: str, faculty: str, major: str, city: str, lang: str, preference: list):
         self._id = id
         self._year = year
         self._sex = sex
@@ -51,6 +51,10 @@ class Student:
                f"Student is studying: {self.major} in {self.lang} at The Faculty {self.faculty} in {self.city}\n" \
                f"Student's accommodation preferences: {self.preference}\n"
 
-    def accommodate(self, segment_var: Segment) -> None:
+    def __lt__(self, other):
+        return self.id < other.id
+
+    def accommodate(self, segment_var: Segment):
         segment_var.tenants.append(self)
         self.segment = segment_var
+        return
