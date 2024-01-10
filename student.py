@@ -48,8 +48,8 @@ class Student:
         return f"USOSid: {self.id}\n" \
                f"Birth year: {self.year}\n" \
                f"Sex: {self.sex}\n" \
-               f"Student is studying: {self.major} in {self.lang} at the faculty {self.faculty} in {self.city}\n" \
-               f"Student's accommodation preferences: {self.preference}"
+               f"Student is studying: {self.major} in {self.lang} at The Faculty {self.faculty} in {self.city}\n" \
+               f"Student's accommodation preferences: {self.preference}\n"
 
     def accommodate(self, segment_var: Segment) -> None:
         segment_var.tenants.append(self)

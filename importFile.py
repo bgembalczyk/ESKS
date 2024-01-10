@@ -12,12 +12,16 @@ def input_dorms(path):
             dorms.append(new_dorm)
     return
 
-def inputStudents(path: str) -> list:
-    file = open(path, "r")
-    students = []
-    for line in file:
-        tmp = line.split()
-        students.append(Student(int(tmp[0]), int(tmp[1]), tmp[2], int(tmp[3])))
-    file.close()
-    return students
-
+def input_students(path: str) -> list:
+    with open(path, "r") as file:
+        students = []
+        for line in file:
+            tmp = line[:-1].split(";")
+            stud_tmp = tmp[:7]
+            stud_id, stud_year, stud_sex, stud_faculty, stud_major, stud_city, stud_lang = stud_tmp
+            preference = tmp[7:]
+            new_stud = Student(stud_id, stud_year, stud_sex, stud_faculty, stud_major, stud_city, stud_lang, preference)
+            print(new_stud)
+            students.append(new_stud)
+        file.close()
+        return students
