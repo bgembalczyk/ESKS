@@ -65,6 +65,9 @@ class Student:
     def __lt__(self, other):
         return self.id < other.id
 
+    def __eq__(self, other):
+        return self.id == other.id
+
     def accommodate(self, segment_var: Segment):
         segment_var.tenants.append(self)
         self.segment = segment_var

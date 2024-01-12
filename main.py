@@ -13,18 +13,7 @@ if __name__ == '__main__':
 #    seks.seks()
     dorms = input_dorms("pliki do testów/dorms.json")
     students = input_students("pliki do testów/students.txt")
-    segment_configs_counts = available_configurations(dorms)
-    segment_configs = [segment_configuration["configuration"] for segment_configuration in segment_configs_counts]
-    for student in students:
-        if student.preference not in segment_configs:
-            better_segments = []
-            for seg_conf in segment_configs:
-                if student.preference.dorm == seg_conf.dorm and student.preference.location == seg_conf.location:
-                    if student.preference < seg_conf:
-                        better_segments.append(seg_conf)
-            if len(better_segments) > 0:
-                print(student.id)
-                print(student.preference)
-                for bet_seg in better_segments:
-                    print(bet_seg)
-                print("\n")
+    for i in students_live_together(students):
+        for j in i:
+            print(j)
+        print("\n")

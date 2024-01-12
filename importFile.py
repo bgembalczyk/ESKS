@@ -60,7 +60,7 @@ def input_students(path: str) -> list:
             except (NameError, SyntaxError):
                 pass
             stud_pref = SegmentType(pref_dorm, pref_location, pref_tenants_num_room, pref_tenants_num_segment, pref_condition, pref_bathroom, pref_kitchen, pref_ad)
-            new_stud = Student(stud_id, stud_year, stud_sex, stud_faculty, stud_major, stud_city, stud_lang, pref_roommate, (pref_dorm, pref_segment), stud_pref)
+            new_stud = Student(int(stud_id), stud_year, stud_sex, stud_faculty, stud_major, stud_city, stud_lang, pref_roommate, (pref_dorm, pref_segment), stud_pref)
             students.append(new_stud)
         return students
 
