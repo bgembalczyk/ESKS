@@ -1,7 +1,7 @@
 from segment import Segment
 
 class Student:
-    def __init__(self, USOSid: int, year: int, sex: str, faculty: str, major: str, city: str, lang: str, preference):
+    def __init__(self, USOSid, year, sex, faculty, major, city, lang, pref_roommate, pref_segment, preference):
         self._id = USOSid
         self._year = year
         self._sex = sex
@@ -9,6 +9,8 @@ class Student:
         self._major = major
         self._city = city
         self._lang = lang
+        self._pref_roommate = pref_roommate
+        self._pref_segment = pref_segment
         self._preference = preference
         self.segment = None
 
@@ -41,6 +43,14 @@ class Student:
         return self._lang
 
     @property
+    def pref_roommate(self):
+        return self._pref_roommate
+
+    @property
+    def pref_segment(self):
+        return self._pref_segment
+
+    @property
     def preference(self):
         return self._preference
 
@@ -49,7 +59,8 @@ class Student:
                f"Birth year: {self.year}\n" \
                f"Sex: {self.sex}\n" \
                f"Student is studying: {self.major} in {self.lang} at The Faculty {self.faculty} in {self.city}\n" \
-               f"Student's accommodation preferences: {self.preference}\n"
+               f"Student's preferred roommate: {self.pref_roommate}\n" \
+               f"Student's preferred segment is {self.pref_segment[1]} in {self.pref_segment[0]}\n"
 
     def __lt__(self, other):
         return self.id < other.id

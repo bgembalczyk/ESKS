@@ -1,3 +1,5 @@
+from segmentType import SegmentType
+
 class Segment:
     def __init__(self, room, symbol: str, habitable: bool, beds: int):
         self._room = room
@@ -26,4 +28,6 @@ class Segment:
         return len(self.tenants)
 
     def type(self):
-        return (self.room.dorm.name, )
+        result = SegmentType(self.room.dorm.name, self.room.dorm.location, self.room.beds(), self.beds, self.room.condition, self.room.bathroom, self.room.kitchen, self.room.ad)
+        return result
+
