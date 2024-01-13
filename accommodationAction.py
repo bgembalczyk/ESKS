@@ -53,7 +53,7 @@ def students_live_together(students):
             result.append(tmp)
     return result
 
-def students_exact_segments(students, dorms):
+def students_exact_segment_type(students, dorms):
     result = []
     segment_configs_counts = available_configurations(dorms)
     segment_configs = [segment_configuration["configuration"] for segment_configuration in segment_configs_counts]
@@ -66,7 +66,7 @@ def students_exact_segments(students, dorms):
             result.append([student, student_acceptable_configs])
     return result
 
-def students_better_segments(students, dorms):
+def students_better_segment_type(students, dorms):
     result = []
     segment_configs_counts = available_configurations(dorms)
     segment_configs = [segment_configuration["configuration"] for segment_configuration in segment_configs_counts]

@@ -108,16 +108,17 @@ class SegmentType:
         return False
 
     def __mul__(self, other):
-        # TODO
-        # w poniższy warunek się wykrzcza jak other.dorm in self.dorm
-        # nie można tak po prostu dodać or, bo None'y
-        # poprawie to jak wstane xd
-        if self.dorm == other.dorm:
-            new_dorm = self.dorm
-        else:
+        if None in [self.dorm, other.dorm]:
             tmp_dorm = [x for x in [self.dorm, other.dorm] if x is not None]
             if len(tmp_dorm) == 1:
                 new_dorm = tmp_dorm[0]
+            else:
+                new_dorm = None
+        else:
+            if self.dorm == other.dorm:
+                new_dorm = self.dorm
+            elif other.dorm in self.dorm:
+                new_dorm = self.dorm
             else:
                 new_dorm = []
                 for item in [self.dorm, other.dorm]:
@@ -126,14 +127,17 @@ class SegmentType:
                     else:
                         new_dorm.append(item)
 
-        # TODO
-        # analogicznie jak wyżej
-        if self.location == other.location:
-            new_location = self.location
-        else:
+        if None in [self.location, other.location]:
             tmp_location = [x for x in [self.location, other.location] if x is not None]
             if len(tmp_location) == 1:
                 new_location = tmp_location[0]
+            else:
+                new_location = None
+        else:
+            if self.location == other.location:
+                new_location = self.location
+            elif other.location in self.location:
+                new_location = self.location
             else:
                 new_location = []
                 for item in [self.location, other.location]:
