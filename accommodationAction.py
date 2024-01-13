@@ -1,3 +1,5 @@
+from graphs import *
+
 # def accommodationAction(studentsToAccommodate: list, dorms: dict) -> None:
 #     while studentsToAccommodate:
 #         tmpStudent = studentsToAccommodate[0]
@@ -31,12 +33,6 @@ def get_student(USOSid, students):
             return student
     return None
 
-def find_next(student, pairs):
-    for pair in pairs:
-        if student == pair[0]:
-            return pair
-    return None
-
 def student_pairs(students):
     result = []
     for student in students:
@@ -48,14 +44,13 @@ def student_pairs(students):
 
 def students_live_together(students):
     result = []
-    pairs = student_pairs(students)
-    for pair in pairs:
-        tmp = [pair[0]]
-        while find_next(pair[1], pairs) is not None:
-            pair = find_next(pair[1], pairs)
-            tmp.append(pair[0])
-        tmp.append(pair[1])
-        result.append(tmp)
+    edges = student_pairs(students)
+    nodes = all_nodes(edges)
+    for node in nodes:
+        tmp = find_connected_subgraph(node, edges)
+        tmp.sort()
+        if tmp not in result:
+            result.append(tmp)
     return result
 
 def students_exact_segments(students, dorms):

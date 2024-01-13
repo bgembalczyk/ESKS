@@ -60,7 +60,7 @@ class Student:
                f"Sex: {self.sex}\n" \
                f"Student is studying: {self.major} in {self.lang} at The Faculty {self.faculty} in {self.city}\n" \
                f"Student's preferred roommate: {self.pref_roommate}\n" \
-               f"Student's preferred segment is {self.pref_segment[1]} in {self.pref_segment[0]}\n"
+               f"Student's preferred segment is {self.pref_segment[1]} in {self.pref_segment[0]}"
 
     def __lt__(self, other):
         return self.id < other.id

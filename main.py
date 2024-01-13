@@ -14,6 +14,12 @@ if __name__ == '__main__':
     dorms = input_dorms("pliki do testów/dorms.json")
     students = input_students("pliki do testów/students.txt")
     for i in students_live_together(students):
+        combined_preference = SegmentType(None, None, None, None, None, None, None, None)
         for j in i:
             print(j)
+            print(j.preference)
+            print()
+            combined_preference = combined_preference * j.preference
+        print()
+        print(combined_preference)
         print("\n")
