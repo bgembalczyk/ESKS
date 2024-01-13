@@ -2,8 +2,8 @@ from dataclasses import dataclass
 
 @dataclass(eq=False)
 class SegmentType:
-    dorm: str | list | None
-    location: str | list | None
+    dorm: str | None
+    location: str | None
     tenants_num_room: int | None
     tenants_num_segment: int | None
     condition: str | None   # "normal", "renovated", "old"
@@ -14,29 +14,11 @@ class SegmentType:
     def __eq__(self, other):
         if self.dorm is not None and other.dorm is not None:
             if self.dorm != other.dorm:
-                try:
-                    if self.dorm not in other.dorm:
-                        return False
-                except TypeError:
-                    pass
-                try:
-                    if other.dorm not in self.dorm:
-                        return False
-                except TypeError:
-                    pass
+                return False
 
         if self.location is not None and other.location is not None:
             if self.location != other.location:
-                try:
-                    if self.location not in other.location:
-                        return False
-                except TypeError:
-                    pass
-                try:
-                    if other.location not in self.location:
-                        return False
-                except TypeError:
-                    pass
+                return False
 
         if self.tenants_num_room is not None and other.tenants_num_room is not None:
             if self.tenants_num_room != other.tenants_num_room:
@@ -107,91 +89,91 @@ class SegmentType:
             return True
         return False
 
-    def __mul__(self, other):
-        if None in [self.dorm, other.dorm]:
-            tmp_dorm = [x for x in [self.dorm, other.dorm] if x is not None]
-            if len(tmp_dorm) == 1:
-                new_dorm = tmp_dorm[0]
-            else:
-                new_dorm = None
-        else:
-            if self.dorm == other.dorm:
-                new_dorm = self.dorm
-            elif other.dorm in self.dorm:
-                new_dorm = self.dorm
-            else:
-                new_dorm = []
-                for item in [self.dorm, other.dorm]:
-                    if type(item) is list:
-                        new_dorm += item
-                    else:
-                        new_dorm.append(item)
-
-        if None in [self.location, other.location]:
-            tmp_location = [x for x in [self.location, other.location] if x is not None]
-            if len(tmp_location) == 1:
-                new_location = tmp_location[0]
-            else:
-                new_location = None
-        else:
-            if self.location == other.location:
-                new_location = self.location
-            elif other.location in self.location:
-                new_location = self.location
-            else:
-                new_location = []
-                for item in [self.location, other.location]:
-                    if type(item) is list:
-                        new_location += item
-                    else:
-                        new_location.append(item)
-
-        if None in [self.tenants_num_room, other.tenants_num_room]:
-            tmp_tenants_num_room = [x for x in [self.tenants_num_room, other.tenants_num_room] if x is not None]
-            if len(tmp_tenants_num_room) == 0:
-                new_tenants_num_room = None
-            else:
-                new_tenants_num_room = tmp_tenants_num_room[0]
-        else:
-            new_tenants_num_room = min([self.tenants_num_room, other.tenants_num_room])
-
-        if None in [self.tenants_num_segment, other.tenants_num_segment]:
-            tmp_tenants_num_segment = [x for x in [self.tenants_num_segment, other.tenants_num_segment] if x is not None]
-            if len(tmp_tenants_num_segment) == 0:
-                new_tenants_num_segment = None
-            else:
-                new_tenants_num_segment = tmp_tenants_num_segment[0]
-        else:
-            new_tenants_num_segment = min([self.tenants_num_segment, other.tenants_num_segment])
-
-        if "renovated" in [self.condition, other.condition]:
-            new_condition = "renovated"
-        elif "normal" in [self.condition, other.condition]:
-            new_condition = "normal"
-        elif "old" in [self.condition, other.condition]:
-            new_condition = "old"
-        else:
-            new_condition = None
-
-        if "full" in [self.bathroom, other.bathroom]:
-            new_bathroom = "full"
-        elif "shower" in [self.bathroom, other.bathroom]:
-            new_bathroom = "shower"
-        elif "null" in [self.bathroom, other.bathroom]:
-            new_bathroom = "null"
-        else:
-            new_bathroom = None
-
-        if self.kitchen is not None or other.kitchen is not None:
-            new_kitchen = True in [self.kitchen, other.kitchen]
-        else:
-            new_kitchen = None
-
-        if self.ad is not None or other.ad is not None:
-            new_ad = not (False in [self.ad, other.ad])
-        else:
-            new_ad = None
-
-        return SegmentType(new_dorm, new_location, new_tenants_num_room, new_tenants_num_segment, new_condition, new_bathroom, new_kitchen, new_ad)
+    # def __mul__(self, other):
+    #     if None in [self.dorm, other.dorm]:
+    #         tmp_dorm = [x for x in [self.dorm, other.dorm] if x is not None]
+    #         if len(tmp_dorm) == 1:
+    #             new_dorm = tmp_dorm[0]
+    #         else:
+    #             new_dorm = None
+    #     else:
+    #         if self.dorm == other.dorm:
+    #             new_dorm = self.dorm
+    #         elif other.dorm in self.dorm:
+    #             new_dorm = self.dorm
+    #         else:
+    #             new_dorm = []
+    #             for item in [self.dorm, other.dorm]:
+    #                 if type(item) is list:
+    #                     new_dorm += item
+    #                 else:
+    #                     new_dorm.append(item)
+    #
+    #     if None in [self.location, other.location]:
+    #         tmp_location = [x for x in [self.location, other.location] if x is not None]
+    #         if len(tmp_location) == 1:
+    #             new_location = tmp_location[0]
+    #         else:
+    #             new_location = None
+    #     else:
+    #         if self.location == other.location:
+    #             new_location = self.location
+    #         elif other.location in self.location:
+    #             new_location = self.location
+    #         else:
+    #             new_location = []
+    #             for item in [self.location, other.location]:
+    #                 if type(item) is list:
+    #                     new_location += item
+    #                 else:
+    #                     new_location.append(item)
+    #
+    #     if None in [self.tenants_num_room, other.tenants_num_room]:
+    #         tmp_tenants_num_room = [x for x in [self.tenants_num_room, other.tenants_num_room] if x is not None]
+    #         if len(tmp_tenants_num_room) == 0:
+    #             new_tenants_num_room = None
+    #         else:
+    #             new_tenants_num_room = tmp_tenants_num_room[0]
+    #     else:
+    #         new_tenants_num_room = min([self.tenants_num_room, other.tenants_num_room])
+    #
+    #     if None in [self.tenants_num_segment, other.tenants_num_segment]:
+    #         tmp_tenants_num_segment = [x for x in [self.tenants_num_segment, other.tenants_num_segment] if x is not None]
+    #         if len(tmp_tenants_num_segment) == 0:
+    #             new_tenants_num_segment = None
+    #         else:
+    #             new_tenants_num_segment = tmp_tenants_num_segment[0]
+    #     else:
+    #         new_tenants_num_segment = min([self.tenants_num_segment, other.tenants_num_segment])
+    #
+    #     if "renovated" in [self.condition, other.condition]:
+    #         new_condition = "renovated"
+    #     elif "normal" in [self.condition, other.condition]:
+    #         new_condition = "normal"
+    #     elif "old" in [self.condition, other.condition]:
+    #         new_condition = "old"
+    #     else:
+    #         new_condition = None
+    #
+    #     if "full" in [self.bathroom, other.bathroom]:
+    #         new_bathroom = "full"
+    #     elif "shower" in [self.bathroom, other.bathroom]:
+    #         new_bathroom = "shower"
+    #     elif "null" in [self.bathroom, other.bathroom]:
+    #         new_bathroom = "null"
+    #     else:
+    #         new_bathroom = None
+    #
+    #     if self.kitchen is not None or other.kitchen is not None:
+    #         new_kitchen = True in [self.kitchen, other.kitchen]
+    #     else:
+    #         new_kitchen = None
+    #
+    #     if self.ad is not None or other.ad is not None:
+    #         new_ad = not (False in [self.ad, other.ad])
+    #     else:
+    #         new_ad = None
+    #
+    #     return SegmentType(new_dorm, new_location, new_tenants_num_room, new_tenants_num_segment, new_condition, new_bathroom, new_kitchen, new_ad)
 
 
