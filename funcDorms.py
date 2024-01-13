@@ -24,3 +24,18 @@ def available_configurations(dorms):
         for config in dorm.segment_types():
             result.append({"configuration": config, "count": all_configs.count(config)})
     return result
+
+def is_correct_location(dorm_name, dorm_location):
+    if dorm_location == "Ochota" and dorm_name not in ["Akademik", "Babilon", "Bratniak", "Muszelka", "Tulipan"]:
+        return False
+    if dorm_location == "Kampus Centralny" and dorm_name not in ["Mikrus", "Riviera"]:
+        return False
+    if dorm_location == "Mokotów" and dorm_name != "Tatrzańska":
+        return False
+    if dorm_location == "Wola" and dorm_name != "Ustronie":
+        return False
+    if dorm_location == "Kampus Południowy" and dorm_name != "Żaczek":
+        return False
+    if dorm_location == "Płock" and dorm_name != "Wcześniak":
+        return False
+    return True
