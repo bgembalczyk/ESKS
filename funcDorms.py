@@ -36,7 +36,7 @@ def available_configurations(dorms):
         all_configs += dorm.segment_types(True)
     for dorm in dorms:
         for config in dorm.segment_types():
-            result.append({"configuration": config, "count": all_configs.count(config)})
+            result.append({"configuration": config, "beds": all_configs.count(config) * config.tenants_num_segment, "students": []})
     return result
 
 def combined_segment_types(roommates):

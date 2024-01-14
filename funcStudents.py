@@ -8,7 +8,7 @@ def get_student(USOSid, students):
             return student
     return None
 
-def student_pairs(students):
+def students_roommates_pairs(students):
     result = []
     for student in students:
         if student.pref_roommate is not None:
@@ -20,7 +20,7 @@ def student_pairs(students):
 
 def students_live_together(students):
     result = []
-    edges = student_pairs(students)
+    edges = students_roommates_pairs(students)
     nodes = all_nodes(edges)
     for node in nodes:
         tmp = find_connected_subgraph(node, edges)
@@ -69,24 +69,23 @@ def students_better_segment_type(students, dorms):
 
 def students_that_dont_know_where_dorms_are(students, dorms):
     result = []
-    segment_configurations_count = available_configurations(dorms)
-    segment_configurations = []
-    for seg_conf in segment_configurations_count:
-        segment_configurations.append(seg_conf["configuration"])
+    segment_configs_counts = available_configurations(dorms)
+    segment_configs = [segment_configuration["configuration"] for segment_configuration in segment_configs_counts]
     for student in students:
         if not is_correct_location(student.preference.dorm, student.preference.location):
             matching_segment_types = []
             new_student_preference = student.preference.correct_location()
-            for seg_conf in segment_configurations:
+            for seg_conf in segment_configs:
                 for stud_pref in new_student_preference:
                     if stud_pref == seg_conf:
                         matching_segment_types.append(seg_conf)
             if len(matching_segment_types) == 0:
-                for seg_conf in segment_configurations:
-                    if student.preference.dorm == seg_conf.dorm or student.preference.location == seg_conf.location:
+                for seg_conf in segment_configs:
+                    if student.preference.dorm == seg_conf.dorm or student.preference.location == seg_conf.location or student.preference.dorm is None or student.preference.location is None:
                         if student.preference < seg_conf:
                             matching_segment_types.append(seg_conf)
-            result.append([student, matching_segment_types])
+            if len(matching_segment_types) > 0:
+                result.append([student, matching_segment_types])
     return result
 
 def find_best_segment_type(students, dorms):
@@ -94,15 +93,57 @@ def find_best_segment_type(students, dorms):
     segment_configs_counts = available_configurations(dorms)
     segment_configs = [segment_configuration["configuration"] for segment_configuration in segment_configs_counts]
     for student in students:
-        if student not in students:
-            best_match = []
-            min_tmp = 9999999
-            for seg_conf in segment_configs:
-                tmp = student.preference - seg_conf
-                if tmp < min_tmp:
-                    min_tmp = tmp
-            for seg_conf in segment_configs:
-                tmp = student.preference - seg_conf
-                if tmp == min_tmp:
-                    best_match.append(seg_conf)
-            result.append([student, best_match])
+        best_match = []
+        min_tmp = 9999999
+        for seg_conf in segment_configs:
+            tmp = student.preference - seg_conf
+            if tmp < min_tmp:
+                min_tmp = tmp
+        for seg_conf in segment_configs:
+            tmp = student.preference - seg_conf
+            if tmp == min_tmp:
+                best_match.append(seg_conf)
+        result.append([student, best_match])
+    return result
+
+def add_to_seg_conf_from_cat(students, students_to_accommodate, available_configs, flexible_students):
+    for referral in students_to_accommodate:
+        if type(referral[1]) is list and len(referral[1]) == 1:
+            referral[1] = referral[1][0]
+        if type(referral[1]) is not list:
+            for config in available_configs:
+                if referral[1] == config["configuration"] and len(config["students"]) < config["beds"]:
+                    config["students"].append(referral[0])
+                    students.remove(referral[0])
+        else:
+            flexible_students.append(referral)
+            students.remove(referral[0])
+
+def divide_into_segment_configurations(students, dorms):
+    available_configs = available_configurations(dorms)
+    flexible_students = []
+
+    add_to_seg_conf_from_cat(students, students_exact_segment(students, dorms), available_configs, flexible_students)
+
+    add_to_seg_conf_from_cat(students, students_exact_segment_type(students, dorms), available_configs, flexible_students)
+
+    add_to_seg_conf_from_cat(students, students_better_segment_type(students, dorms), available_configs, flexible_students)
+
+    add_to_seg_conf_from_cat(students, students_that_dont_know_where_dorms_are(students, dorms), available_configs, flexible_students)
+
+    add_to_seg_conf_from_cat(students, find_best_segment_type(students, dorms), available_configs, flexible_students)
+
+    for referral in flexible_students:
+        min_segs = 1000
+        for seg_conf in referral[1]:
+            for conf_div in available_configs:
+                if seg_conf == conf_div["configuration"]:
+                    if min_segs > conf_div["beds"]:
+                        min_segs = conf_div["beds"]
+        for conf_div in available_configs:
+            if min_segs == conf_div["beds"]:
+                referral[1] = conf_div["configuration"]
+                students.append(referral[0])
+                break
+
+    add_to_seg_conf_from_cat(students, flexible_students, available_configs, flexible_students)

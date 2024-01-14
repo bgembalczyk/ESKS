@@ -17,5 +17,4 @@ if __name__ == '__main__':
 #    seks.seks()
     dorms = input_dorms("pliki do testów/dorms.json")
     students = input_students("pliki do testów/students.txt")
-    segment_configs_counts = available_configurations(dorms)
-    segment_configs = [segment_configuration["configuration"] for segment_configuration in segment_configs_counts]
+    divide_into_segment_configurations(students, dorms)
