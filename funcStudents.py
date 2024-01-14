@@ -51,7 +51,7 @@ def students_better_segment_type(students, dorms):
         if student.preference not in segment_configs:
             better_segments = []
             for seg_conf in segment_configs:
-                if student.preference.dorm == seg_conf.dorm and student.preference.location == seg_conf.location:
+                if student.preference.dorm in [seg_conf.dorm, None] and student.preference.location in [seg_conf.location, None]:
                     if student.preference < seg_conf:
                         better_segments.append(seg_conf)
             if len(better_segments) > 0:

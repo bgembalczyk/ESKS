@@ -40,18 +40,20 @@ if __name__ == '__main__':
     # def find_best_segment_type(students, dorms):
     for student in students:
         if student not in acc_studs:
-            print(student)
-            print(student.preference)
             best_match = []
             min_tmp = 9999999
             for seg_conf in segment_configs:
                 tmp = student.preference - seg_conf
                 if tmp < min_tmp:
                     min_tmp = tmp
-            print(min_tmp)
-            for seg_conf in segment_configs:
-                tmp = student.preference - seg_conf
-                if tmp == min_tmp:
-                    best_match.append(seg_conf)
-                    print(seg_conf)
-            print()
+            if min_tmp == 1000000:
+                print(student)
+                print(student.preference)
+                print(min_tmp)
+                for seg_conf in segment_configs:
+                    tmp = student.preference - seg_conf
+                    if tmp == min_tmp:
+                        print(f"test: {student.preference < seg_conf}")
+                        best_match.append(seg_conf)
+                        print(seg_conf)
+                print()
