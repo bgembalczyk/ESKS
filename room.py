@@ -55,7 +55,7 @@ class Room:
 
     def get_segment(self, segment_symbol: str) -> Segment | None:
         for segment_iter in self.segments:
-            if segment_iter.symbol() == segment_symbol:
+            if segment_iter.symbol == segment_symbol:
                 return segment_iter
         return None
 

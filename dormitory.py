@@ -39,7 +39,7 @@ class Dormitory:
 
     def get_room(self, roomNum: int) -> Room | None:
         for room_iter in self.rooms:
-            if room_iter.number() == roomNum:
+            if room_iter.number == roomNum:
                 return room_iter
         return None
 

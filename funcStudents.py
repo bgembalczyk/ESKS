@@ -29,6 +29,16 @@ def students_live_together(students):
             result.append(tmp)
     return result
 
+def students_exact_segment(students, dorms):
+    result = []
+    for student in students:
+        if None not in student.pref_segment:
+            chosen_segment = get_specific_segment(dorms, student.pref_segment)
+            if chosen_segment is not None:
+                if chosen_segment.habitable and chosen_segment.beds > chosen_segment.tenants_num():
+                    result.append([student, chosen_segment.type()])
+    return result
+
 def students_exact_segment_type(students, dorms):
     result = []
     segment_configs_counts = available_configurations(dorms)
@@ -43,7 +53,6 @@ def students_exact_segment_type(students, dorms):
     return result
 
 def students_better_segment_type(students, dorms):
-    # to chyba nie działa tak jak chciałem -> sprawdź screeny
     result = []
     segment_configs_counts = available_configurations(dorms)
     segment_configs = [segment_configuration["configuration"] for segment_configuration in segment_configs_counts]
@@ -79,3 +88,21 @@ def students_that_dont_know_where_dorms_are(students, dorms):
                             matching_segment_types.append(seg_conf)
             result.append([student, matching_segment_types])
     return result
+
+def find_best_segment_type(students, dorms):
+    result = []
+    segment_configs_counts = available_configurations(dorms)
+    segment_configs = [segment_configuration["configuration"] for segment_configuration in segment_configs_counts]
+    for student in students:
+        if student not in students:
+            best_match = []
+            min_tmp = 9999999
+            for seg_conf in segment_configs:
+                tmp = student.preference - seg_conf
+                if tmp < min_tmp:
+                    min_tmp = tmp
+            for seg_conf in segment_configs:
+                tmp = student.preference - seg_conf
+                if tmp == min_tmp:
+                    best_match.append(seg_conf)
+            result.append([student, best_match])

@@ -17,6 +17,18 @@ from segmentType import SegmentType
 #         tmpStudent.accommodate(tmpSegment)
 #         studentsToAccommodate.pop(0)
 
+def get_specific_segment(dorms, pref_seg_num):
+    pref_dorm = pref_seg_num[0]
+    pref_room = int(pref_seg_num[1][:-1])
+    pref_segment = pref_seg_num[1][-1]
+    for dorm in dorms:
+        if dorm.name == pref_dorm:
+            room = dorm.get_room(pref_room)
+            if room is not None:
+                segment = room.get_segment(pref_segment)
+                return segment
+    return None
+
 def available_configurations(dorms):
     all_configs = []
     result = []
