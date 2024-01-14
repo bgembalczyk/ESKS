@@ -17,16 +17,4 @@ if __name__ == '__main__':
 #    seks.seks()
     dorms = input_dorms("pliki do testów/dorms.json")
     students = input_students("pliki do testów/students.txt")
-    for i in students_live_together(students):
-        roommates = []
-        for j in i:
-            print(j)
-            print(j.preference)
-            print()
-            roommates.append(j.preference)
-        tmp = combined_segment_types(roommates)
-        for j in tmp:
-            print(j)
-        print("\n")
-
-
+    students_that_dont_know_where_dorms_are(students, dorms)

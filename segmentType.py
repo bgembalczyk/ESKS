@@ -176,4 +176,12 @@ class SegmentType:
     #
     #     return SegmentType(new_dorm, new_location, new_tenants_num_room, new_tenants_num_segment, new_condition, new_bathroom, new_kitchen, new_ad)
 
+    def copy(self):
+        return SegmentType(self.dorm, self.location, self.tenants_num_room, self.tenants_num_segment, self.condition, self.bathroom, self.kitchen, self.ad)
 
+    def correct_location(self):
+        tmp1 = self.copy()
+        tmp2 = self.copy()
+        tmp1.dorm = None
+        tmp2.location = None
+        return tmp1, tmp2

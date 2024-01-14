@@ -1,3 +1,5 @@
+from segmentType import SegmentType
+
 # def accommodationAction(studentsToAccommodate: list, dorms: dict) -> None:
 #     while studentsToAccommodate:
 #         tmpStudent = studentsToAccommodate[0]
@@ -25,7 +27,66 @@ def available_configurations(dorms):
             result.append({"configuration": config, "count": all_configs.count(config)})
     return result
 
+def combined_segment_types(roommates):
+    new_dorm = []
+    new_location = []
+    new_tenants_num_room = []
+    new_tenants_num_segment = []
+    new_condition = None
+    new_bathroom = None
+    new_kitchen = None
+    new_ad = None
+
+    for roommate in roommates:
+        if roommate.dorm is not None and roommate.dorm not in new_dorm:
+            new_dorm.append(roommate.dorm)
+        if roommate.location is not None and roommate.location not in new_location:
+            new_location.append(roommate.location)
+        if roommate.tenants_num_room is not None:
+            new_tenants_num_room.append(roommate.tenants_num_room)
+        if roommate.tenants_num_segment is not None:
+            new_tenants_num_segment.append(roommate.tenants_num_segment)
+        if new_condition != "renovated":
+            if roommate.condition == "renovated":
+                new_condition = "renovated"
+            elif roommate.condition == "normal" and new_condition != "normal":
+                new_condition = "normal"
+            elif roommate.condition == "old" and new_condition is None:
+                new_condition = "old"
+        if new_bathroom != "full":
+            if roommate.bathroom == "full":
+                new_bathroom = "full"
+            elif roommate.bathroom == "shower" and new_bathroom != "shower":
+                new_bathroom = "shower"
+            elif roommate.bathroom == "null" and new_bathroom is None:
+                new_bathroom = "null"
+        if new_kitchen is not True:
+            if roommate.kitchen is not None:
+                new_kitchen = roommate.kitchen
+        if new_ad is not False:
+            if roommate.ad is not None:
+                new_ad = roommate.ad
+
+    if len(new_dorm) == 0:
+        new_dorm = [None]
+    if len(new_location) == 0:
+        new_location = [None]
+    if len(new_tenants_num_segment) == 0:
+        new_tenants_num_segment = [0]
+    if len(new_tenants_num_room) == 0:
+        new_tenants_num_room = [0]
+    new_tenants_num_segment = max(len(roommates), min(new_tenants_num_segment))
+    new_tenants_num_room = max(len(roommates), min(new_tenants_num_room))
+
+    result = []
+    for dorm in new_dorm:
+        for location in new_location:
+            result.append(SegmentType(dorm, location, new_tenants_num_room, new_tenants_num_segment, new_condition, new_bathroom, new_kitchen, new_ad))
+    return result
+
 def is_correct_location(dorm_name, dorm_location):
+    if None in [dorm_name, dorm_location]:
+        return True
     if dorm_location == "Ochota" and dorm_name not in ["Akademik", "Babilon", "Bratniak", "Muszelka", "Tulipan"]:
         return False
     if dorm_location == "Kampus Centralny" and dorm_name not in ["Mikrus", "Riviera"]:
@@ -39,3 +100,4 @@ def is_correct_location(dorm_name, dorm_location):
     if dorm_location == "Płock" and dorm_name != "Wcześniak":
         return False
     return True
+
