@@ -176,6 +176,61 @@ class SegmentType:
     #
     #     return SegmentType(new_dorm, new_location, new_tenants_num_room, new_tenants_num_segment, new_condition, new_bathroom, new_kitchen, new_ad)
 
+    def __sub__(self, other):
+        # dorm >> num_segment >> num_room >> condition >> bathroom >> kitchen >> ad
+        result = 1000000
+        if self.dorm is not None and self.location is not None:
+            if self.dorm != other.dorm:
+                if self.location != other.location:
+                    result += 3000000
+                else:
+                    result += 1000000
+            elif self.location != other.location:
+                result += 2000000
+        elif self.dorm is not None:
+            if self.dorm != other.dorm:
+                result += 1000000
+        elif self.location is not None:
+            if self.location != other.location:
+                result += 2000000
+        res_tent = 0
+        if self.tenants_num_room is not None:
+            tmp = (other.tenants_num_room - self.tenants_num_room)
+            if tmp > 0:
+                res_tent += tmp
+        if self.tenants_num_segment is not None:
+            tmp = (other.tenants_num_segment - self.tenants_num_segment) * 2
+            if tmp > 0:
+                res_tent += tmp
+        result += res_tent * 10000
+        if self.condition is not None:
+            if self.condition != other.condition:
+                if self.condition == "renovated":
+                    if other.condition == "normal":
+                        result += 1000
+                    elif other.condition == "old":
+                        result += 2000
+                elif self.condition == "normal":
+                    if other.condition == "old":
+                        result += 1000
+        if self.bathroom is not None:
+            if self.bathroom != other.bathroom:
+                if self.bathroom == "full":
+                    if other.bathroom == "shower":
+                        result += 100
+                    elif other.bathroom == "null":
+                        result += 200
+                elif self.bathroom == "shower":
+                    if other.bathroom == "null":
+                        result += 100
+        if self.kitchen is not None:
+            if self.kitchen and not other.kitchen:
+                result += 10
+        if self.ad is not None:
+            if not self.kitchen and other.ad:
+                result += 1
+        return result
+
     def copy(self):
         return SegmentType(self.dorm, self.location, self.tenants_num_room, self.tenants_num_segment, self.condition, self.bathroom, self.kitchen, self.ad)
 
