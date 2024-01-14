@@ -1,6 +1,7 @@
 from graphs import *
 from funcDorms import *
 from segmentType import SegmentType
+from itertools import combinations
 
 def get_student(USOSid, students):
     for student in students:
@@ -135,15 +136,61 @@ def divide_into_segment_configurations(students, dorms):
 
     for referral in flexible_students:
         min_segs = 1000
+        min_conf = None
         for seg_conf in referral[1]:
             for conf_div in available_configs:
                 if seg_conf == conf_div["configuration"]:
                     if min_segs > conf_div["beds"]:
                         min_segs = conf_div["beds"]
+                        min_conf = seg_conf
         for conf_div in available_configs:
-            if min_segs == conf_div["beds"]:
+            if min_conf == seg_conf:
                 referral[1] = conf_div["configuration"]
                 students.append(referral[0])
                 break
 
     add_to_seg_conf_from_cat(students, flexible_students, available_configs, flexible_students)
+
+    return available_configs
+
+def compare_students(potential_roommates):
+    result = 0
+    for student_i in potential_roommates:
+        for student_j in potential_roommates:
+            if student_i != student_j:
+                # if student_i.pref_segment[1] is not None and student_j.pref_segment[1] is not None:
+                #     if not (student_i.pref_segment[0] == student_j.pref_segment[0] and student_i.pref_segment[1] == student_j.pref_segment[1]):
+                #         result += 100
+                if student_i.sex != student_j.sex:
+                    result += 1000
+                if student_i.city != student_j.city:
+                    result += 100
+                if student_i.lang != student_j.lang:
+                    result += 100
+                result += abs(student_i.year - student_j.year)
+                if student_i.faculty != student_j.faculty:
+                    result += 2
+                if student_i.major == student_j.major:
+                    result += 4
+    return result
+
+def find_best_roommates(potential_roommates, potential_combs):
+    min_fit = 10000
+    for comb in potential_combs:
+        if compare_students(comb) < min_fit:
+            min_fit = compare_students(comb)
+    for comb in potential_combs:
+        if compare_students(comb) == min_fit:
+            for student in comb:
+                potential_roommates.remove(student)
+            print(min_fit)
+            return comb
+    return None
+
+def divide_into_segments(potential_roommates, tenant_num_segment):
+    result = []
+    while len(potential_roommates) > tenant_num_segment:
+        potential_combs = list(combinations(potential_roommates, tenant_num_segment))
+        result.append(find_best_roommates(potential_roommates, potential_combs))
+    result.append(potential_roommates)
+    return result

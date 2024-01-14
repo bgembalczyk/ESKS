@@ -1,100 +1,500 @@
-166;1998;F;Inżynierii Chemicznej i Procesowej;Inżynieria chemiczna i procesowa;Warszawa;polski;157;None;None;Mokotów;7;6;normal;null;False;False
-180;2001;M;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;None;Babilon;101B;Kampus Południowy;5;4;normal;null;False;False
-165;1997;F;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;Tulipan;None;Kampus Centralny;1;1;None;null;True;True
-172;2001;M;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;None;Akademik;None;None;3;1;renovated;null;False;False
-113;1998;M;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;None;None;Mokotów;5;1;normal;full;True;False
-121;2004;F;Architektury;Architektura;Warszawa;polski;None;Mikrus;182A;Ochota;2;2;normal;full;True;False
-129;2001;M;Mechaniczny Energetyki i Lotnictwa;Energetyka;Warszawa;polski;132;None;None;Wola;1;1;normal;shower;True;False
-124;1999;F;Inżynierii Materiałowej;Inżynieria materiałowa;Warszawa;polski;None;Tatrzańska;37A;Kampus Południowy;7;None;renovated;shower;True;False
-159;2002;M;Chemiczny;Biotechnologia;Warszawa;polski;None;Mikrus;None;Mokotów;5;3;None;null;True;False
-111;2000;M;Zarządzania;Zarządzanie;Warszawa;polski;156;None;None;Kampus Południowy;1;1;normal;full;True;False
-167;2003;F;Budownictwa, Mechaniki i Petrochemii;Technologia chemiczna;Płock;polski;166;Wcześniak;None;Płock;8;2;normal;full;True;False
-142;1999;F;Elektryczny;Elektrotechnika;Warszawa;polski;175;None;None;Kampus Centralny;6;4;normal;null;True;True
-196;2004;F;Elektroniki i Technik Informacyjnych;Cyberbezpieczeństwo;Warszawa;polski;None;Akademik;54A;Kampus Centralny;None;None;normal;shower;True;True
-115;1997;M;Geodezji i Kartografii;Geodezja i kartografia;Warszawa;polski;182;None;None;Kampus Centralny;1;1;renovated;full;False;False
-154;2004;M;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;None;None;None;Mokotów;3;3;renovated;shower;True;False
-123;2005;M;Elektryczny;Informatyka stosowana;Warszawa;polski;None;Babilon;None;Kampus Centralny;None;None;renovated;shower;False;True
-197;1998;F;Mechatroniki;Inżynieria biomedyczna;Warszawa;polski;None;Bratniak;71A;Kampus Południowy;1;1;None;full;None;False
-140;1998;M;Matematyki i Nauk Informacyjnych;Matematyka i analiza danych;Warszawa;polski;None;Muszelka;None;Mokotów;7;5;normal;null;True;False
-141;2002;M;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;Mikrus;88A;None;5;4;renovated;shower;True;False
-155;2005;M;Elektroniki i Technik Informacyjnych;Computer Science;Warszawa;angielski;None;Riviera;None;Mokotów;5;2;renovated;full;False;True
-187;2005;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Babilon;None;Kampus Centralny;5;1;normal;None;None;False
-143;1998;M;Mechaniczny Energetyki i Lotnictwa;Lotnictwo i kosmonautyka;Warszawa;polski;None;Muszelka;32B;Wola;4;3;renovated;shower;False;False
-127;1997;M;Elektryczny;Informatyka stosowana;Warszawa;polski;None;None;None;Wola;3;2;None;None;True;False
-106;2000;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;109;None;None;Mokotów;6;2;normal;shower;False;False
-195;2005;F;Mechaniczny Energetyki i Lotnictwa;Robotyka i automatyka;Warszawa;polski;None;Ustronie;None;Mokotów;3;2;renovated;full;True;False
-189;2005;F;Mechaniczny Technologiczny;Papiernictwo i poligrafia;Warszawa;polski;108;Tatrzańska;75A;Kampus Południowy;8;1;renovated;null;None;False
-128;2002;F;Inżynierii Materiałowej;Inżynieria materiałowa;Warszawa;polski;None;Tulipan;26B;Kampus Południowy;7;6;renovated;full;False;False
-105;2000;F;Inżynierii Materiałowej;Inżynieria materiałowa;Warszawa;polski;None;Babilon;123B;Kampus Południowy;2;2;None;shower;False;False
-174;1997;F;Inżynierii Materiałowej;Inżynieria materiałowa;Warszawa;polski;None;Tulipan;19C;Kampus Południowy;5;3;normal;null;True;False
-100;2004;M;Zarządzania;Inżynieria zarządzania;Warszawa;polski;None;None;None;Kampus Południowy;8;2;normal;shower;False;False
-151;2002;F;Kolegium Nauk Ekonomicznych i Społecznych;Ekonomia;Płock;polski;None;Wcześniak;None;Płock;1;None;renovated;full;False;False
-190;2001;F;Samochodów i Maszyn Roboczych;Inżynieria pojazdów elektrycznych i hybrydowych;Warszawa;polski;None;None;None;Kampus Południowy;1;1;renovated;null;None;False
-147;2001;F;Zarządzania;Inżynieria zarządzania;Warszawa;polski;105;Akademik;245A;Kampus Południowy;5;4;renovated;full;True;False
-194;2000;M;Mechatroniki;Mechatronika;Warszawa;polski;None;Riviera;222B;Kampus Południowy;7;None;None;shower;True;False
-157;2004;M;Matematyki i Nauk Informacyjnych;Matematyka i analiza danych;Warszawa;polski;None;None;None;Wola;None;None;renovated;shower;True;False
-199;2001;F;Geodezji i Kartografii;Geoinformatyka;Warszawa;polski;104;Akademik;None;Kampus Centralny;1;1;None;None;None;True
-173;2000;M;Mechatroniki;Mechatronika;Warszawa;polski;None;Bratniak;None;Kampus Południowy;None;None;None;full;None;False
-176;2001;M;Mechaniczny Energetyki i Lotnictwa;Energetyka;Warszawa;polski;None;Tulipan;None;Kampus Centralny;6;4;normal;None;True;True
-136;1999;F;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;195;Riviera;None;Kampus Centralny;2;2;normal;null;True;False
-144;2004;M;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;None;None;Ochota;3;1;normal;full;None;False
-108;1998;F;Inżynierii Materiałowej;Inżynieria materiałowa;Warszawa;polski;None;Bratniak;21A;Kampus Południowy;3;2;normal;shower;True;False
-125;2005;M;Transportu;Transport;Warszawa;polski;142;None;None;Ochota;8;4;renovated;None;False;False
-149;2005;F;Matematyki i Nauk Informacyjnych;Matematyka;Warszawa;polski;None;None;None;None;3;1;renovated;None;False;False
-160;2005;F;Architektury;Architecture;Warszawa;angielski;178;None;None;None;2;1;renovated;full;True;False
-146;2000;M;Inżynierii Lądowej;Budownictwo;Warszawa;polski;142;Babilon;None;Kampus Centralny;None;None;normal;null;False;False
-150;2004;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;None;Tatrzańska;43B;Kampus Centralny;8;3;normal;null;True;False
-163;1999;M;Mechaniczny Energetyki i Lotnictwa;Energetyka;Warszawa;polski;None;None;None;None;4;2;renovated;null;True;False
-177;1998;M;Chemiczny;Technologia chemiczna;Warszawa;polski;None;Ustronie;20A;Kampus Centralny;None;None;renovated;None;False;False
-164;2005;M;Zarządzania;Inżynieria zarządzania;Warszawa;polski;None;Mikrus;170A;Kampus Południowy;2;2;normal;None;True;False
-175;2005;M;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;163;Tatrzańska;93A;Wola;3;2;renovated;None;True;False
-131;2002;M;Budownictwa, Mechaniki i Petrochemii;Budownictwo;Płock;polski;None;Wcześniak;26A;Płock;4;4;renovated;full;True;False
-138;2002;F;Elektryczny;Electrical Engineering;Warszawa;angielski;None;None;None;Kampus Centralny;None;None;normal;shower;False;True
-193;2005;M;Matematyki i Nauk Informacyjnych;Matematyka i analiza danych;Warszawa;polski;None;Muszelka;None;Kampus Centralny;3;None;None;shower;True;False
-101;2005;M;Elektroniki i Technik Informacyjnych;Inżynieria Internetu rzeczy;Warszawa;polski;None;None;None;Wola;2;2;renovated;None;None;False
-192;2005;M;Inżynierii Chemicznej i Procesowej;Inżynieria chemiczna i procesowa;Warszawa;polski;112;Riviera;20A;Ochota;5;4;normal;full;False;False
-168;2002;F;Architektury;Architecture;Warszawa;angielski;None;Akademik;484A;Mokotów;8;None;renovated;null;True;False
-162;1997;M;Transportu;Transport;Warszawa;polski;None;None;None;None;None;None;None;full;True;False
-116;1997;F;Mechatroniki;Inżynieria biomedyczna;Warszawa;polski;187;Ustronie;None;Kampus Południowy;7;1;None;shower;False;False
-133;1998;M;Elektroniki i Technik Informacyjnych;Cyberbezpieczeństwo;Warszawa;polski;None;Akademik;None;None;8;5;normal;full;True;False
-153;2002;F;Mechatroniki;Mechatronics;Warszawa;angielski;None;None;None;Kampus Południowy;1;1;normal;None;None;False
-198;2003;M;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;154;Ustronie;None;Kampus Południowy;6;None;normal;null;True;False
-171;2000;F;Fizyki;Fizyka techniczna;Warszawa;polski;135;Ustronie;None;None;4;3;normal;shower;True;False
-186;1997;F;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;Tatrzańska;None;Mokotów;1;1;normal;null;False;False
-158;2000;F;Transportu;Transport;Warszawa;polski;None;None;None;Kampus Centralny;3;1;None;null;False;True
-103;1997;F;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;Bratniak;None;Wola;2;2;normal;shower;True;False
-170;1999;M;Mechatroniki;Inżynieria biomedyczna;Warszawa;polski;None;Tulipan;None;Kampus Południowy;1;1;renovated;null;True;False
-126;2001;F;Budownictwa, Mechaniki i Petrochemii;Inżynieria środowiska;Płock;polski;None;Wcześniak;50C;Płock;6;1;renovated;None;False;False
-119;2004;F;Samochodów i Maszyn Roboczych;Electric and Hybrid Vehicles Engineering;Warszawa;angielski;None;Żaczek;None;Kampus Południowy;None;None;renovated;full;True;False
-110;2003;F;Mechatroniki;Automatyka, robotyka i informatyka  przemysłowa;Warszawa;polski;None;Akademik;None;Kampus Południowy;2;2;None;full;True;False
-148;2000;M;Elektryczny;Elektrotechnika;Warszawa;polski;None;None;None;Mokotów;7;1;normal;null;False;False
-122;1997;F;Inżynierii Materiałowej;Inżynieria materiałowa;Warszawa;polski;124;Babilon;134B;Kampus Południowy;6;1;None;full;None;False
-120;2002;F;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;Mikrus;None;Kampus Centralny;5;2;renovated;full;None;True
-114;2005;F;Mechaniczny Energetyki i Lotnictwa;Power Engineering;Warszawa;angielski;None;Bratniak;None;Wola;None;None;normal;null;False;False
-185;2001;F;Mechaniczny Technologiczny;Mechanika i budowa maszyn;Warszawa;polski;None;None;None;Kampus Południowy;4;3;renovated;full;None;False
-139;2005;M;Transportu;Transport;Warszawa;polski;None;Żaczek;None;Ochota;8;1;normal;full;True;False
-135;2005;F;Matematyki i Nauk Informacyjnych;Informatyka i systemy informacyjne;Warszawa;polski;None;None;None;Wola;4;4;normal;full;False;False
-179;2003;M;Budownictwa, Mechaniki i Petrochemii;Budownictwo;Płock;polski;None;Wcześniak;60C;Płock;2;1;renovated;shower;False;False
-134;2001;F;Mechatroniki;Automatyka, robotyka i informatyka  przemysłowa;Warszawa;polski;None;Mikrus;100A;Kampus Południowy;7;None;normal;None;False;False
-169;2000;F;Transportu;Transport;Warszawa;polski;None;None;None;Kampus Centralny;6;1;renovated;shower;False;True
-132;2005;M;Budownictwa, Mechaniki i Petrochemii;Budownictwo;Płock;polski;None;Wcześniak;10A;Płock;4;1;normal;None;True;False
-156;2001;F;Architektury;Architektura;Warszawa;polski;177;None;None;None;2;1;normal;shower;False;False
-181;2004;F;Zarządzania;Zarządzanie;Warszawa;polski;None;None;None;Kampus Południowy;5;2;normal;full;False;False
-112;2000;F;Architektury;Architektura;Warszawa;polski;None;Żaczek;None;Wola;7;5;normal;shower;False;False
-117;1998;M;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;Babilon;80B;None;7;None;None;shower;True;False
-109;1999;F;Chemiczny;Technologia chemiczna;Warszawa;polski;None;Babilon;None;Ochota;4;3;renovated;shower;False;False
-102;2003;M;Transportu;Transport;Warszawa;polski;None;None;None;Wola;1;1;renovated;None;True;False
-191;2004;F;Mechaniczny Energetyki i Lotnictwa;Energetyka;Warszawa;polski;None;None;None;Ochota;8;6;renovated;null;None;False
-184;1998;F;Mechaniczny Technologiczny;Automatyzacja i robotyzacja procesów produkcyjnych;Warszawa;polski;None;Muszelka;60B;Kampus Południowy;8;None;normal;None;True;False
-145;1998;F;Fizyki;Fizyka techniczna;Warszawa;polski;138;Tulipan;None;None;1;None;normal;full;False;False
-183;2001;F;Samochodów i Maszyn Roboczych;Inżynieria pojazdów elektrycznych i hybrydowych;Warszawa;polski;None;Mikrus;62A;Kampus Południowy;4;3;normal;null;False;False
-188;2001;F;Mechaniczny Energetyki i Lotnictwa;Energetyka;Warszawa;polski;None;Bratniak;48A;None;3;1;None;shower;False;False
-130;2004;M;Architektury;Architecture;Warszawa;angielski;None;Akademik;None;None;5;2;renovated;shower;True;False
-137;2001;F;Zarządzania;Zarządzanie;Warszawa;polski;None;Mikrus;28A;Kampus Południowy;2;2;renovated;None;True;False
-178;2001;F;Elektroniki i Technik Informacyjnych;Cyberbezpieczeństwo;Warszawa;polski;None;None;None;Mokotów;1;1;None;None;True;False
-182;2005;F;Inżynierii Lądowej;Civil Engineering;Warszawa;angielski;None;Babilon;None;None;1;1;normal;shower;None;False
-104;2002;M;Budownictwa, Mechaniki i Petrochemii;Mechanika i budowa maszyn;Płock;polski;131;Wcześniak;None;Płock;7;4;normal;shower;True;False
-161;1999;M;Elektroniki i Technik Informacyjnych;Telecommunications;Warszawa;angielski;None;Babilon;None;Mokotów;5;1;normal;None;True;False
-118;1998;M;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;166;Tulipan;27A;None;None;None;None;shower;True;False
-152;2005;M;Zarządzania;Zarządzanie;Warszawa;polski;None;Ustronie;None;Kampus Południowy;6;1;None;None;True;False
-107;2001;F;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;175;None;None;None;8;5;normal;shower;None;False
+764;1999;M;Elektroniki i Technik Informacyjnych;Computer Science;Warszawa;angielski;None;Riviera;None;Ochota;3;2;normal;full;False;False
+432;2005;F;Elektryczny;Electrical Engineering;Warszawa;angielski;None;None;None;Mokotów;5;4;normal;shower;None;False
+719;2002;F;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;None;Żaczek;None;None;2;2;renovated;shower;False;False
+330;1999;F;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;None;Ustronie;None;Ochota;5;5;normal;None;False;False
+510;2000;M;Matematyki i Nauk Informacyjnych;Informatyka i systemy informacyjne;Warszawa;polski;696;None;None;Ochota;2;2;renovated;full;True;False
+227;2004;F;Mechaniczny Technologiczny;Papiernictwo i poligrafia;Warszawa;polski;None;Riviera;32B;Kampus Południowy;1;1;None;None;True;False
+769;2002;F;Mechatroniki;Automatyka, robotyka i informatyka  przemysłowa;Warszawa;polski;None;None;None;Kampus Południowy;None;None;normal;None;False;False
+569;1997;F;Fizyki;Fizyka techniczna;Warszawa;polski;955;Ustronie;None;Mokotów;7;5;renovated;null;False;False
+991;2001;F;Mechatroniki;Mechatronika;Warszawa;polski;None;None;None;Kampus Południowy;2;2;normal;shower;True;False
+972;2000;M;Mechaniczny Technologiczny;Mechanika i budowa maszyn;Warszawa;polski;None;Akademik;65A;Kampus Południowy;1;1;renovated;full;True;False
+381;2000;F;Mechatroniki;Mechatronika;Warszawa;polski;942;Bratniak;None;Kampus Południowy;5;3;renovated;None;False;False
+838;1998;F;Samochodów i Maszyn Roboczych;Inżynieria pojazdów elektrycznych i hybrydowych;Warszawa;polski;360;Bratniak;17A;Kampus Południowy;3;1;None;shower;False;False
+669;1999;F;Matematyki i Nauk Informacyjnych;Matematyka;Warszawa;polski;None;Mikrus;137A;Ochota;None;None;renovated;None;False;False
+293;1997;F;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;Mikrus;None;None;6;2;renovated;full;False;False
+771;2001;F;Architektury;Architektura;Warszawa;polski;874;Riviera;None;None;4;2;normal;None;True;False
+590;1999;M;Budownictwa, Mechaniki i Petrochemii;Przemysłowe zastosowania informatyki;Płock;polski;None;Wcześniak;None;Płock;8;5;renovated;shower;True;False
+730;1997;F;Budownictwa, Mechaniki i Petrochemii;Inżynieria środowiska;Płock;polski;None;Wcześniak;None;Płock;6;3;normal;shower;True;False
+711;2004;F;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;None;None;None;Kampus Centralny;3;2;renovated;None;True;True
+134;1997;F;Inżynierii Chemicznej i Procesowej;Inżynieria chemiczna i procesowa;Warszawa;polski;None;None;None;Kampus Centralny;2;1;normal;full;False;False
+111;2003;M;Samochodów i Maszyn Roboczych;Inżynieria mechaniczna;Warszawa;polski;None;Babilon;50A;Kampus Południowy;1;1;None;null;True;False
+458;2000;M;Chemiczny;Technologia chemiczna;Warszawa;polski;119;None;None;None;3;3;renovated;shower;False;False
+424;2002;F;Elektryczny;Electrical Engineering;Warszawa;angielski;None;Tulipan;25A;None;8;6;renovated;full;None;False
+579;1998;M;Elektryczny;Informatyka stosowana;Warszawa;polski;552;Tatrzańska;None;None;3;2;normal;full;False;False
+663;1997;M;Mechaniczny Energetyki i Lotnictwa;Lotnictwo i kosmonautyka;Warszawa;polski;None;Akademik;39A;None;6;5;renovated;None;False;False
+441;1999;F;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;None;None;None;Mokotów;None;None;None;shower;True;False
+566;2004;F;Elektryczny;Informatyka stosowana;Warszawa;polski;None;None;None;None;7;None;renovated;None;None;False
+915;2003;M;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Mikrus;81A;None;1;1;None;full;False;False
+276;2004;F;Elektryczny;Informatyka stosowana;Warszawa;polski;None;None;None;None;None;None;renovated;null;False;False
+875;2001;M;Elektryczny;Electrical Engineering;Warszawa;angielski;None;Tatrzańska;67B;None;6;3;None;null;False;False
+644;1997;M;Geodezji i Kartografii;Gospodarka przestrzenna;Warszawa;polski;None;None;None;Kampus Centralny;1;1;normal;shower;True;False
+795;2002;M;Samochodów i Maszyn Roboczych;Inżynieria pojazdów elektrycznych i hybrydowych;Warszawa;polski;None;Tatrzańska;60B;Kampus Południowy;8;6;normal;None;None;False
+166;1997;F;Mechatroniki;Mechatronika;Warszawa;polski;None;Mikrus;None;Kampus Południowy;6;4;normal;full;False;False
+113;2003;F;Geodezji i Kartografii;Geoinformatyka;Warszawa;polski;539;None;None;Mokotów;3;2;renovated;full;True;False
+733;2002;F;Mechaniczny Energetyki i Lotnictwa;Energetyka;Warszawa;polski;None;Bratniak;35A;Wola;None;None;None;null;None;False
+329;1999;F;Mechatroniki;Inżynieria biomedyczna;Warszawa;polski;None;Babilon;None;Kampus Południowy;8;3;None;shower;False;False
+570;2004;M;Mechaniczny Technologiczny;Mechanika i budowa maszyn;Warszawa;polski;None;Bratniak;19A;Kampus Południowy;7;None;normal;shower;False;False
+933;1998;F;Mechatroniki;Mechatronika;Warszawa;polski;None;None;None;Kampus Południowy;5;1;None;null;False;False
+228;1998;F;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;Mikrus;52A;Wola;5;3;normal;full;False;False
+396;2005;F;Budownictwa, Mechaniki i Petrochemii;Technologia chemiczna;Płock;polski;976;Wcześniak;64C;Płock;1;1;renovated;full;False;False
+574;2005;F;Zarządzania;Inżynieria zarządzania;Warszawa;polski;None;Bratniak;25A;Kampus Południowy;None;None;renovated;shower;False;False
+717;2000;F;Elektryczny;Elektrotechnika;Warszawa;polski;None;None;None;Wola;2;2;renovated;None;True;False
+860;2003;F;Kolegium Nauk Ekonomicznych i Społecznych;Ekonomia;Płock;polski;None;Wcześniak;64D;Płock;7;4;normal;shower;True;False
+897;2004;M;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;None;Muszelka;None;Ochota;6;None;renovated;null;True;False
+407;2004;M;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;396;Riviera;None;Kampus Centralny;None;None;normal;null;False;False
+927;2005;M;Architektury;Architektura;Warszawa;polski;None;Muszelka;9B;Mokotów;4;3;None;full;None;False
+568;1998;M;Elektroniki i Technik Informacyjnych;Telekomunikacja;Warszawa;polski;524;None;None;Wola;3;1;normal;shower;False;False
+176;1997;M;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Tulipan;8B;None;8;1;renovated;shower;True;False
+313;1997;M;Fizyki;Fizyka techniczna;Warszawa;polski;None;Bratniak;None;Wola;6;3;normal;shower;False;False
+788;2004;M;Chemiczny;Biotechnologia;Warszawa;polski;256;None;None;Ochota;5;2;renovated;None;False;False
+498;2003;F;Mechaniczny Energetyki i Lotnictwa;Power Engineering;Warszawa;angielski;None;None;None;Ochota;3;1;renovated;None;False;False
+674;1998;M;Elektryczny;Elektrotechnika;Warszawa;polski;None;None;None;Ochota;5;4;None;shower;None;False
+902;2003;F;Mechaniczny Energetyki i Lotnictwa;Robotyka i automatyka;Warszawa;polski;None;Żaczek;368A;Kampus Centralny;7;3;normal;full;False;False
+224;2000;F;Chemiczny;Biotechnologia;Warszawa;polski;240;Bratniak;None;None;3;None;renovated;null;None;False
+772;2001;F;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;None;Mikrus;145A;Kampus Południowy;4;3;renovated;full;True;False
+814;2000;F;Elektroniki i Technik Informacyjnych;Telekomunikacja;Warszawa;polski;None;Muszelka;None;None;None;None;None;null;True;False
+431;2005;F;Transportu;Transport;Warszawa;polski;None;Ustronie;None;Wola;1;1;None;full;True;False
+704;2005;M;Inżynierii Materiałowej;Inżynieria materiałowa;Warszawa;polski;None;Tatrzańska;79B;Kampus Południowy;8;None;normal;shower;False;False
+761;1998;F;Matematyki i Nauk Informacyjnych;Matematyka;Warszawa;polski;None;Żaczek;None;Kampus Centralny;5;3;renovated;shower;True;True
+861;1997;M;Transportu;Transport;Warszawa;polski;None;Riviera;None;Kampus Centralny;6;5;renovated;null;False;False
+821;2005;M;Budownictwa, Mechaniki i Petrochemii;Budownictwo;Płock;polski;None;Wcześniak;42B;Płock;4;1;normal;shower;False;False
+998;2002;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;None;Żaczek;None;Kampus Centralny;6;5;renovated;null;True;True
+713;2005;F;Samochodów i Maszyn Roboczych;Inżynieria mechaniczna;Warszawa;polski;None;Tatrzańska;70A;Kampus Południowy;6;2;normal;shower;True;False
+222;1998;M;Architektury;Architektura;Warszawa;polski;None;Tatrzańska;None;Mokotów;8;2;renovated;shower;True;False
+665;2000;M;Elektryczny;Elektrotechnika;Warszawa;polski;None;None;None;None;7;None;normal;full;False;False
+651;2000;F;Matematyki i Nauk Informacyjnych;Inżynieria i analiza danych;Warszawa;polski;None;Tulipan;None;Ochota;8;None;normal;full;False;False
+886;2005;M;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;Muszelka;68B;Wola;3;3;None;full;False;False
+766;1999;F;Mechaniczny Energetyki i Lotnictwa;Aerospace Engineering;Warszawa;angielski;927;Riviera;None;Kampus Centralny;1;1;renovated;full;False;True
+195;2001;F;Inżynierii Materiałowej;Inżynieria materiałowa;Warszawa;polski;None;None;None;Kampus Południowy;4;4;None;full;None;False
+236;2005;F;Zarządzania;Inżynieria zarządzania;Warszawa;polski;None;Mikrus;None;Kampus Południowy;8;2;normal;full;False;False
+327;2000;M;Inżynierii Materiałowej;Inżynieria materiałowa;Warszawa;polski;None;Mikrus;11A;Kampus Południowy;5;2;renovated;None;None;False
+433;1998;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Akademik;None;Kampus Centralny;1;1;renovated;None;False;True
+334;2001;M;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Tatrzańska;None;Mokotów;1;1;normal;shower;False;False
+742;2002;M;Fizyki;Fizyka techniczna;Warszawa;polski;183;Muszelka;58B;Ochota;3;3;None;full;False;False
+910;2002;F;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Environmental Engineering;Warszawa;angielski;None;Tatrzańska;None;None;4;1;normal;null;False;False
+494;1997;F;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;735;Ustronie;None;Ochota;8;4;renovated;null;False;False
+398;1999;F;Elektryczny;Elektrotechnika;Warszawa;polski;None;Akademik;None;Kampus Centralny;1;None;normal;None;None;False
+114;2004;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;779;None;None;Mokotów;1;1;renovated;full;False;False
+159;2001;F;Samochodów i Maszyn Roboczych;Inżynieria pojazdów elektrycznych i hybrydowych;Warszawa;polski;None;Bratniak;10A;Kampus Południowy;6;4;normal;shower;False;False
+618;1998;M;Matematyki i Nauk Informacyjnych;Matematyka;Warszawa;polski;722;Ustronie;8A;None;5;1;renovated;full;None;False
+767;2000;F;Chemiczny;Technologia chemiczna;Warszawa;polski;None;Żaczek;None;Kampus Centralny;7;4;renovated;shower;False;False
+181;2003;M;Mechatroniki;Mechatronika;Warszawa;polski;None;Ustronie;66A;Kampus Południowy;3;1;normal;full;True;False
+901;2002;M;Elektryczny;Electrical Engineering;Warszawa;angielski;None;None;None;Mokotów;5;3;normal;full;False;False
+847;2003;M;Mechaniczny Energetyki i Lotnictwa;Mechanika i projektowanie maszyn;Warszawa;polski;648;Akademik;143A;Kampus Centralny;6;5;None;shower;False;True
+950;2002;M;Mechaniczny Energetyki i Lotnictwa;Lotnictwo i kosmonautyka;Warszawa;polski;631;Akademik;None;None;None;None;None;full;False;False
+545;2000;F;Transportu;Transport;Warszawa;polski;None;None;None;Mokotów;None;None;renovated;full;None;False
+602;2001;M;Matematyki i Nauk Informacyjnych;Inżynieria i analiza danych;Warszawa;polski;910;Babilon;139A;None;6;6;None;null;False;False
+617;2001;M;Budownictwa, Mechaniki i Petrochemii;Technologia chemiczna;Płock;polski;None;Wcześniak;None;Płock;4;1;None;full;False;False
+775;2002;F;Transportu;Transport;Warszawa;polski;None;Bratniak;None;Ochota;4;2;normal;shower;False;False
+109;1998;F;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;None;None;Mokotów;8;3;None;shower;False;False
+572;2003;M;Chemiczny;Biotechnologia;Warszawa;polski;None;Ustronie;125A;Mokotów;5;3;normal;full;False;False
+501;2000;F;Samochodów i Maszyn Roboczych;Inżynieria mechaniczna;Warszawa;polski;None;Muszelka;None;Kampus Południowy;2;1;renovated;shower;None;False
+811;2002;F;Mechaniczny Energetyki i Lotnictwa;Energetyka;Warszawa;polski;105;None;None;Kampus Centralny;7;2;normal;shower;False;False
+382;1999;M;Chemiczny;Technologia chemiczna;Warszawa;polski;None;Mikrus;110A;Ochota;2;2;None;shower;False;False
+949;1997;F;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;None;Akademik;330A;Ochota;4;2;renovated;null;False;False
+294;2005;M;Mechatroniki;Automatyka, robotyka i informatyka  przemysłowa;Warszawa;polski;None;Muszelka;24B;Kampus Południowy;6;1;renovated;shower;True;False
+531;2005;F;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;Muszelka;17B;Kampus Centralny;6;1;normal;full;True;True
+182;2000;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Mikrus;None;Wola;2;1;None;shower;False;False
+135;1997;M;Architektury;Architektura;Warszawa;polski;None;Tatrzańska;None;None;1;1;normal;shower;True;False
+726;2000;F;Budownictwa, Mechaniki i Petrochemii;Budownictwo;Płock;polski;None;Wcześniak;None;Płock;5;1;normal;shower;False;False
+355;2001;M;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;None;Tulipan;29C;Mokotów;2;2;renovated;shower;False;False
+165;2004;F;Elektroniki i Technik Informacyjnych;Telekomunikacja;Warszawa;polski;451;Żaczek;303A;Kampus Centralny;3;None;None;null;True;False
+931;2000;M;Budownictwa, Mechaniki i Petrochemii;Przemysłowe zastosowania informatyki;Płock;polski;None;Wcześniak;None;Płock;8;1;renovated;full;False;False
+527;2003;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;132;Tulipan;None;Mokotów;3;3;renovated;null;False;False
+351;2005;F;Kolegium Nauk Ekonomicznych i Społecznych;Ekonomia;Płock;polski;None;Wcześniak;36B;Płock;6;2;renovated;null;False;False
+452;2004;M;Architektury;Architektura;Warszawa;polski;None;Mikrus;None;Mokotów;5;None;renovated;null;None;False
+586;2004;F;Elektroniki i Technik Informacyjnych;Inżynieria Internetu rzeczy;Warszawa;polski;None;Bratniak;1A;Wola;3;1;renovated;full;True;False
+671;1998;M;Geodezji i Kartografii;Gospodarka przestrzenna;Warszawa;polski;629;Babilon;None;Mokotów;8;None;normal;shower;False;False
+397;2002;F;Elektryczny;Elektrotechnika;Warszawa;polski;None;Mikrus;204A;Ochota;7;4;normal;shower;True;False
+627;2005;M;Elektroniki i Technik Informacyjnych;Automatyka i robotyka;Warszawa;polski;746;Muszelka;15B;None;2;2;renovated;shower;True;False
+392;2004;M;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;542;None;None;Kampus Centralny;3;1;renovated;full;True;True
+880;1998;M;Matematyki i Nauk Informacyjnych;Inżynieria i analiza danych;Warszawa;polski;None;None;None;None;2;1;normal;full;True;False
+127;2005;M;Inżynierii Lądowej;Budownictwo;Warszawa;polski;804;Tatrzańska;69A;Kampus Centralny;5;3;renovated;null;False;False
+781;1998;F;Mechatroniki;Mechatronics;Warszawa;angielski;None;Akademik;2A;Kampus Południowy;7;1;None;full;True;False
+117;1999;F;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;981;Mikrus;None;Kampus Centralny;4;4;normal;shower;True;True
+542;2005;F;Matematyki i Nauk Informacyjnych;Matematyka i analiza danych;Warszawa;polski;None;Tulipan;None;None;4;1;None;full;True;False
+573;1997;F;Fizyki;Fizyka techniczna;Warszawa;polski;373;Żaczek;153B;Wola;3;1;None;shower;None;False
+879;2002;F;Mechaniczny Technologiczny;Mechanika i budowa maszyn;Warszawa;polski;None;Ustronie;274A;Kampus Południowy;7;2;normal;full;False;False
+401;2000;F;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;None;Tatrzańska;None;Wola;8;3;None;null;None;False
+721;2002;M;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;579;Ustronie;294A;Wola;7;2;None;shower;False;False
+650;1998;F;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;None;None;Wola;2;1;None;null;False;False
+337;1997;M;Elektryczny;Elektrotechnika;Warszawa;polski;None;Riviera;198B;Ochota;6;4;None;null;None;False
+883;1998;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;None;Tulipan;None;Mokotów;7;1;None;shower;False;False
+226;2000;M;Geodezji i Kartografii;Geodezja i kartografia;Warszawa;polski;None;Ustronie;None;Wola;2;2;None;full;False;False
+615;2001;F;Inżynierii Chemicznej i Procesowej;Inżynieria chemiczna i procesowa;Warszawa;polski;None;Mikrus;None;Kampus Centralny;1;1;normal;null;True;True
+916;2002;M;Mechaniczny Energetyki i Lotnictwa;Aerospace Engineering;Warszawa;angielski;None;None;None;Kampus Centralny;7;6;None;null;True;False
+245;1998;M;Elektryczny;Electrical Engineering;Warszawa;angielski;None;None;None;Wola;3;1;renovated;full;True;False
+823;2004;M;Inżynierii Lądowej;Budownictwo;Warszawa;polski;638;Akademik;428A;Wola;7;2;None;null;False;False
+342;1997;M;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;None;None;Wola;None;None;renovated;null;False;False
+172;2000;M;Samochodów i Maszyn Roboczych;Mechatronika pojazdów i maszyn roboczych;Warszawa;polski;None;Tulipan;18A;Kampus Południowy;4;2;normal;shower;None;False
+903;2005;M;Matematyki i Nauk Informacyjnych;Informatyka i systemy informacyjne;Warszawa;polski;596;None;None;Wola;4;3;normal;null;None;False
+358;2005;F;Geodezji i Kartografii;Geoinformatyka;Warszawa;polski;None;Żaczek;None;Kampus Centralny;None;None;renovated;null;True;False
+747;1999;F;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;None;None;None;None;2;2;renovated;None;False;False
+160;2001;F;Elektryczny;Elektromobilność;Warszawa;polski;None;Babilon;None;Kampus Centralny;4;None;None;shower;True;True
+217;1997;F;Matematyki i Nauk Informacyjnych;Matematyka i analiza danych;Warszawa;polski;None;None;None;Ochota;5;5;renovated;full;True;False
+571;2002;F;Transportu;Transport;Warszawa;polski;None;Tulipan;None;Ochota;7;4;renovated;full;False;False
+567;2005;F;Kolegium Nauk Ekonomicznych i Społecznych;Ekonomia;Płock;polski;None;Wcześniak;59A;Płock;4;4;renovated;full;False;False
+863;1998;M;Transportu;Transport;Warszawa;polski;None;Babilon;2B;Kampus Centralny;5;4;renovated;full;False;True
+621;2005;M;Transportu;Transport;Warszawa;polski;511;Tulipan;None;None;2;1;normal;null;True;False
+101;2002;M;Geodezji i Kartografii;Gospodarka przestrzenna;Warszawa;polski;None;Mikrus;None;None;7;None;None;shower;True;False
+256;1999;M;Elektryczny;Elektrotechnika;Warszawa;polski;None;Muszelka;21A;None;2;2;renovated;None;True;False
+630;1997;M;Elektryczny;Automatyka i robotyka stosowana;Warszawa;polski;None;Mikrus;128A;None;7;6;renovated;null;True;False
+622;2003;M;Elektroniki i Technik Informacyjnych;Telekomunikacja;Warszawa;polski;898;Bratniak;None;Mokotów;3;2;normal;null;False;False
+344;1997;M;Elektryczny;Elektrotechnika;Warszawa;polski;None;Tatrzańska;None;Ochota;8;3;renovated;None;True;False
+905;2001;F;Samochodów i Maszyn Roboczych;Inżynieria pojazdów elektrycznych i hybrydowych;Warszawa;polski;None;None;None;Kampus Południowy;3;3;None;shower;False;False
+984;2002;F;Mechaniczny Energetyki i Lotnictwa;Power Engineering;Warszawa;angielski;None;None;None;Kampus Centralny;8;6;renovated;full;True;False
+754;2004;M;Budownictwa, Mechaniki i Petrochemii;Inżynieria środowiska;Płock;polski;534;Wcześniak;None;Płock;6;None;None;null;False;False
+203;2004;M;Zarządzania;Zarządzanie;Warszawa;polski;262;Muszelka;45B;Kampus Południowy;5;2;None;shower;True;False
+445;2003;M;Kolegium Nauk Ekonomicznych i Społecznych;Ekonomia;Płock;polski;None;Wcześniak;71B;Płock;5;4;None;shower;False;False
+557;1998;M;Mechaniczny Technologiczny;Mechanika i budowa maszyn;Warszawa;polski;None;Bratniak;None;Kampus Południowy;5;2;normal;shower;None;False
+512;2003;M;Matematyki i Nauk Informacyjnych;Informatyka i systemy informacyjne;Warszawa;polski;None;None;None;Mokotów;None;None;normal;shower;False;False
+936;2005;M;Matematyki i Nauk Informacyjnych;Matematyka i analiza danych;Warszawa;polski;None;None;None;Ochota;8;2;renovated;null;False;False
+371;1998;M;Kolegium Nauk Ekonomicznych i Społecznych;Ekonomia;Płock;polski;None;Wcześniak;None;Płock;1;1;renovated;full;True;False
+287;2004;M;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;Żaczek;308A;Ochota;1;1;normal;shower;True;False
+829;2000;F;Mechaniczny Technologiczny;Automatyzacja i robotyzacja procesów produkcyjnych;Warszawa;polski;257;Muszelka;5A;Kampus Południowy;5;3;normal;null;False;False
+642;2003;M;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;None;Tulipan;None;Kampus Południowy;2;1;normal;shower;True;False
+269;2000;F;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;Mikrus;None;Mokotów;6;6;normal;None;True;False
+765;1998;F;Zarządzania;Inżynieria zarządzania;Warszawa;polski;None;None;None;Kampus Południowy;7;5;renovated;None;None;False
+801;1997;F;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;978;Mikrus;None;Ochota;4;3;normal;None;True;False
+746;2002;M;Fizyki;Fizyka techniczna;Warszawa;polski;None;None;None;Wola;8;6;None;null;False;False
+346;2002;M;Transportu;Transport;Warszawa;polski;None;Mikrus;None;Mokotów;2;1;renovated;null;True;False
+907;2005;M;Elektryczny;Informatyka stosowana;Warszawa;polski;None;Riviera;196B;Kampus Centralny;6;None;renovated;full;False;False
+265;2003;M;Architektury;Architektura;Warszawa;polski;834;Ustronie;275A;Wola;4;None;normal;full;False;False
+482;2000;F;Budownictwa, Mechaniki i Petrochemii;Przemysłowe zastosowania informatyki;Płock;polski;None;Wcześniak;17B;Płock;1;1;normal;shower;False;False
+648;2003;F;Mechaniczny Technologiczny;Automatyzacja i robotyzacja procesów produkcyjnych;Warszawa;polski;234;None;None;Kampus Południowy;1;1;normal;shower;None;False
+462;2000;F;Geodezji i Kartografii;Gospodarka przestrzenna;Warszawa;polski;None;Bratniak;None;Ochota;2;2;renovated;null;True;False
+339;1999;M;Fizyki;Fizyka techniczna;Warszawa;polski;817;Riviera;107A;Wola;7;1;normal;full;False;False
+509;2004;M;Mechaniczny Energetyki i Lotnictwa;Energetyka;Warszawa;polski;156;Muszelka;8B;Kampus Centralny;6;6;normal;null;None;False
+799;2005;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;577;Riviera;162B;Wola;3;3;None;null;None;False
+759;2003;M;Budownictwa, Mechaniki i Petrochemii;Inżynieria środowiska;Płock;polski;None;Wcześniak;None;Płock;6;4;normal;shower;True;False
+625;2005;F;Samochodów i Maszyn Roboczych;Inżynieria mechaniczna;Warszawa;polski;None;None;None;Kampus Południowy;7;6;normal;full;True;False
+664;2001;M;Transportu;Transport;Warszawa;polski;None;None;None;Wola;7;6;None;null;None;False
+906;1999;M;Matematyki i Nauk Informacyjnych;Matematyka i analiza danych;Warszawa;polski;783;None;None;None;6;5;renovated;full;False;False
+370;2005;F;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;None;Babilon;142A;Ochota;None;None;None;null;False;False
+199;2000;M;Elektryczny;Elektromobilność;Warszawa;polski;None;Tulipan;7B;Wola;4;2;None;null;True;False
+333;2002;F;Mechatroniki;Mechatronika;Warszawa;polski;566;None;None;Kampus Południowy;2;None;renovated;null;True;False
+988;2005;M;Samochodów i Maszyn Roboczych;Mechatronika pojazdów i maszyn roboczych;Warszawa;polski;None;Riviera;None;Kampus Południowy;8;None;None;null;False;False
+881;1999;M;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;Ustronie;None;None;7;None;renovated;shower;False;False
+690;2005;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Riviera;None;Wola;None;None;None;full;True;True
+971;1998;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Muszelka;None;Kampus Centralny;None;None;None;null;False;True
+304;2002;F;Samochodów i Maszyn Roboczych;Mechatronics of Vehicles and Construction Machinery;Warszawa;angielski;989;None;None;Kampus Południowy;8;None;normal;full;None;False
+809;2001;M;Transportu;Transport;Warszawa;polski;None;Żaczek;159B;None;6;4;None;null;False;False
+741;2000;F;Samochodów i Maszyn Roboczych;Inżynieria mechaniczna;Warszawa;polski;None;None;None;Kampus Południowy;5;None;normal;shower;False;False
+638;1999;M;Samochodów i Maszyn Roboczych;Inżynieria pojazdów elektrycznych i hybrydowych;Warszawa;polski;None;None;None;Kampus Południowy;2;1;normal;full;False;False
+970;1999;F;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;743;Babilon;10A;Wola;6;6;renovated;null;False;False
+539;2004;F;Transportu;Transport;Warszawa;polski;None;None;None;Wola;8;1;None;shower;False;False
+348;1997;F;Mechaniczny Technologiczny;Papiernictwo i poligrafia;Warszawa;polski;None;Babilon;111A;Kampus Południowy;6;1;normal;null;True;False
+495;1998;M;Samochodów i Maszyn Roboczych;Inżynieria mechaniczna;Warszawa;polski;763;None;None;Kampus Południowy;6;None;renovated;shower;False;False
+302;1998;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Environmental Engineering;Warszawa;angielski;None;Żaczek;None;Ochota;1;1;renovated;full;False;False
+364;2003;M;Geodezji i Kartografii;Geodezja i kartografia;Warszawa;polski;356;None;None;Ochota;None;None;normal;None;True;False
+400;1997;M;Budownictwa, Mechaniki i Petrochemii;Technologia chemiczna;Płock;polski;892;Wcześniak;22B;Płock;5;5;normal;null;False;False
+239;2004;F;Matematyki i Nauk Informacyjnych;Inżynieria i analiza danych;Warszawa;polski;266;Mikrus;None;Mokotów;2;2;None;full;False;False
+145;2002;F;Elektryczny;Informatyka stosowana;Warszawa;polski;822;None;None;None;2;2;renovated;shower;True;False
+240;2004;M;Transportu;Transport;Warszawa;polski;None;Babilon;None;Kampus Centralny;6;2;normal;full;False;True
+712;1998;F;Samochodów i Maszyn Roboczych;Electric and Hybrid Vehicles Engineering;Warszawa;angielski;None;Bratniak;27A;Kampus Południowy;8;5;normal;shower;None;False
+874;1999;M;Transportu;Transport;Warszawa;polski;469;None;None;Mokotów;5;1;None;full;False;False
+623;2002;M;Chemiczny;Technologia chemiczna;Warszawa;polski;None;Muszelka;26B;None;1;1;normal;full;False;False
+763;2004;F;Mechaniczny Technologiczny;Mechanika i budowa maszyn;Warszawa;polski;None;Bratniak;None;Kampus Południowy;5;3;normal;shower;False;False
+606;2000;F;Inżynierii Chemicznej i Procesowej;Inżynieria chemiczna i procesowa;Warszawa;polski;None;Ustronie;None;Ochota;2;1;normal;None;False;False
+647;2002;M;Zarządzania;Zarządzanie;Warszawa;polski;None;Babilon;None;Kampus Południowy;6;None;renovated;null;False;False
+278;2002;F;Geodezji i Kartografii;Gospodarka przestrzenna;Warszawa;polski;None;None;None;Ochota;1;1;renovated;shower;True;False
+340;2005;M;Matematyki i Nauk Informacyjnych;Inżynieria i analiza danych;Warszawa;polski;None;None;None;Kampus Centralny;3;1;normal;None;True;True
+620;1997;M;Fizyki;Fizyka techniczna;Warszawa;polski;None;Żaczek;None;Mokotów;6;5;renovated;None;True;False
+489;2005;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;239;Tulipan;18A;Kampus Centralny;6;3;normal;shower;None;False
+896;2004;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;449;Mikrus;None;Wola;4;1;renovated;shower;False;False
+738;2001;F;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;290;None;None;Mokotów;7;3;renovated;null;False;False
+335;2001;F;Architektury;Architektura;Warszawa;polski;None;Tatrzańska;None;Ochota;2;1;renovated;shower;False;False
+310;2002;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;683;Ustronie;None;Kampus Centralny;8;3;normal;full;False;True
+360;1999;F;Elektroniki i Technik Informacyjnych;Automatyka i robotyka;Warszawa;polski;None;None;None;Ochota;6;3;renovated;null;True;False
+695;1998;M;Mechaniczny Technologiczny;Mechanika i budowa maszyn;Warszawa;polski;None;Ustronie;None;Kampus Południowy;8;2;normal;shower;True;False
+521;2001;F;Geodezji i Kartografii;Geodezja i kartografia;Warszawa;polski;None;Bratniak;None;Kampus Centralny;3;1;None;full;False;True
+793;2005;F;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;None;None;Kampus Centralny;1;1;renovated;full;False;True
+187;2002;M;Elektryczny;Elektrotechnika;Warszawa;polski;None;Babilon;52A;Mokotów;5;1;normal;shower;False;False
+260;2001;M;Elektroniki i Technik Informacyjnych;Computer Science;Warszawa;angielski;None;Riviera;None;None;7;4;renovated;full;False;True
+534;2001;F;Budownictwa, Mechaniki i Petrochemii;Inżynieria środowiska;Płock;polski;None;Wcześniak;53D;Płock;2;1;normal;full;True;False
+947;1998;M;Inżynierii Chemicznej i Procesowej;Inżynieria chemiczna i procesowa;Warszawa;polski;None;Muszelka;None;None;3;None;renovated;full;False;False
+242;2003;M;Mechatroniki;Mechatronika;Warszawa;polski;None;Muszelka;None;Kampus Południowy;5;3;renovated;shower;False;False
+178;2001;M;Elektryczny;Elektrotechnika;Warszawa;polski;None;Mikrus;3A;Mokotów;8;1;normal;None;False;False
+486;2005;M;Chemiczny;Technologia chemiczna;Warszawa;polski;None;None;None;Ochota;7;6;None;None;False;False
+921;2003;F;Mechatroniki;Mechatronika;Warszawa;polski;None;Babilon;79A;Kampus Południowy;5;4;normal;None;True;False
+697;2001;F;Elektryczny;Electrical Engineering;Warszawa;angielski;None;Muszelka;None;None;2;2;normal;full;False;False
+967;2001;F;Elektroniki i Technik Informacyjnych;Telekomunikacja;Warszawa;polski;379;None;None;Wola;6;4;normal;shower;True;False
+385;1999;F;Mechaniczny Technologiczny;Automatyzacja i robotyzacja procesów produkcyjnych;Warszawa;polski;None;Mikrus;117A;Kampus Południowy;2;2;normal;full;False;False
+581;2003;F;Architektury;Architektura;Warszawa;polski;None;Tatrzańska;None;Wola;4;None;None;full;False;False
+281;1999;F;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;784;Mikrus;227A;None;3;1;None;full;False;False
+977;2004;M;Architektury;Architektura;Warszawa;polski;202;Mikrus;None;Mokotów;2;1;normal;null;False;False
+678;2003;M;Budownictwa, Mechaniki i Petrochemii;Technologia chemiczna;Płock;polski;None;Wcześniak;17B;Płock;None;None;normal;shower;True;False
+957;2004;F;Fizyki;Fotonika;Warszawa;polski;None;Akademik;None;Mokotów;1;1;normal;null;True;False
+243;2000;M;Elektryczny;Elektromobilność;Warszawa;polski;None;Ustronie;None;None;None;None;renovated;full;True;False
+966;2001;M;Mechaniczny Energetyki i Lotnictwa;Energetyka;Warszawa;polski;295;Mikrus;82A;Kampus Centralny;4;1;renovated;null;False;False
+457;2004;F;Inżynierii Lądowej;Civil Engineering;Warszawa;angielski;823;None;None;Kampus Centralny;3;None;renovated;full;True;True
+194;2005;M;Mechaniczny Technologiczny;Automatyzacja i robotyzacja procesów produkcyjnych;Warszawa;polski;None;None;None;Kampus Południowy;2;2;normal;shower;False;False
+156;1999;M;Budownictwa, Mechaniki i Petrochemii;Mechanika i budowa maszyn;Płock;polski;263;Wcześniak;50C;Płock;2;1;renovated;shower;True;False
+409;2004;F;Kolegium Nauk Ekonomicznych i Społecznych;Ekonomia;Płock;polski;None;Wcześniak;None;Płock;None;None;None;None;False;False
+374;2000;F;Fizyki;Fizyka techniczna;Warszawa;polski;None;None;None;Mokotów;4;3;renovated;shower;True;False
+670;1999;M;Mechaniczny Technologiczny;Automatyzacja i robotyzacja procesów produkcyjnych;Warszawa;polski;979;None;None;Kampus Południowy;3;1;renovated;null;None;False
+935;2000;M;Elektryczny;Elektrotechnika;Warszawa;polski;None;None;None;None;6;1;renovated;full;False;False
+253;2005;M;Zarządzania;Inżynieria zarządzania;Warszawa;polski;None;None;None;Kampus Południowy;6;2;normal;full;False;False
+810;2001;M;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;649;Tulipan;None;Kampus Centralny;7;6;normal;null;True;True
+720;2001;M;Matematyki i Nauk Informacyjnych;Informatyka i systemy informacyjne;Warszawa;polski;None;Babilon;89B;Kampus Centralny;1;1;renovated;shower;False;False
+928;2004;F;Mechaniczny Energetyki i Lotnictwa;Aerospace Engineering;Warszawa;angielski;684;Bratniak;47A;Mokotów;4;1;None;shower;True;False
+171;2001;M;Budownictwa, Mechaniki i Petrochemii;Technologia chemiczna;Płock;polski;None;Wcześniak;None;Płock;5;4;normal;null;False;False
+687;1998;F;Inżynierii Lądowej;Civil Engineering;Warszawa;angielski;624;None;None;Wola;None;None;renovated;shower;True;False
+930;2001;M;Mechaniczny Technologiczny;Mechanika i budowa maszyn;Warszawa;polski;None;Riviera;None;Kampus Południowy;4;4;renovated;shower;False;True
+532;2002;F;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;None;None;None;Kampus Południowy;6;1;normal;full;True;False
+149;1997;M;Elektroniki i Technik Informacyjnych;Cyberbezpieczeństwo;Warszawa;polski;None;None;None;None;5;3;normal;shower;True;False
+845;2003;F;Elektroniki i Technik Informacyjnych;Automatyka i robotyka;Warszawa;polski;269;Riviera;169A;Ochota;4;3;normal;full;True;False
+844;2005;M;Geodezji i Kartografii;Gospodarka przestrzenna;Warszawa;polski;353;Żaczek;None;Ochota;None;None;normal;full;False;False
+985;2005;M;Chemiczny;Technologia chemiczna;Warszawa;polski;None;Żaczek;354A;None;6;2;normal;null;True;False
+232;2002;F;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;433;Żaczek;181A;Ochota;None;None;normal;null;None;False
+332;2005;F;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;958;None;None;None;5;5;normal;null;False;False
+608;1997;M;Mechaniczny Technologiczny;Mechanika i budowa maszyn;Warszawa;polski;None;Akademik;None;Kampus Południowy;5;None;None;null;True;False
+600;1999;M;Zarządzania;Inżynieria zarządzania;Warszawa;polski;719;None;None;Kampus Południowy;3;3;None;shower;False;False
+983;2001;M;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;None;None;Wola;1;1;None;null;False;False
+251;1998;M;Mechaniczny Energetyki i Lotnictwa;Lotnictwo i kosmonautyka;Warszawa;polski;None;Ustronie;26A;Mokotów;None;None;normal;None;True;False
+324;2004;M;Chemiczny;Technologia chemiczna;Warszawa;polski;None;None;None;None;5;5;renovated;full;False;False
+660;2002;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;None;None;Ochota;None;None;normal;shower;False;False
+948;2000;M;Mechaniczny Energetyki i Lotnictwa;Lotnictwo i kosmonautyka;Warszawa;polski;None;Żaczek;None;Ochota;8;3;normal;null;False;False
+714;2003;M;Samochodów i Maszyn Roboczych;Electric and Hybrid Vehicles Engineering;Warszawa;angielski;None;Akademik;None;Kampus Południowy;4;3;normal;None;True;False
+508;2005;M;Architektury;Architecture;Warszawa;angielski;576;Riviera;53B;None;3;3;renovated;null;False;True
+394;1998;F;Mechaniczny Technologiczny;Automatyzacja i robotyzacja procesów produkcyjnych;Warszawa;polski;None;Tatrzańska;72B;Kampus Południowy;1;1;normal;null;True;False
+388;2000;M;Mechaniczny Technologiczny;Papiernictwo i poligrafia;Warszawa;polski;None;None;None;Kampus Południowy;1;1;renovated;null;True;False
+525;2002;F;Inżynierii Chemicznej i Procesowej;Inżynieria chemiczna i procesowa;Warszawa;polski;None;None;None;Wola;8;1;renovated;full;True;False
+152;2003;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Riviera;43B;Wola;1;1;None;None;None;True
+552;1998;F;Zarządzania;Zarządzanie;Warszawa;polski;201;None;None;Kampus Południowy;8;4;renovated;full;True;False
+368;1997;F;Samochodów i Maszyn Roboczych;Inżynieria mechaniczna;Warszawa;polski;None;Tulipan;None;Kampus Południowy;1;1;normal;shower;False;False
+912;1999;M;Mechaniczny Technologiczny;Automatyzacja i robotyzacja procesów produkcyjnych;Warszawa;polski;846;None;None;Kampus Południowy;None;None;normal;shower;True;False
+718;2005;M;Transportu;Transport;Warszawa;polski;507;Ustronie;247A;Kampus Centralny;6;1;normal;shower;False;True
+363;2003;F;Transportu;Transport;Warszawa;polski;129;Żaczek;None;Ochota;7;1;normal;shower;True;False
+556;2005;F;Kolegium Nauk Ekonomicznych i Społecznych;Ekonomia;Płock;polski;665;Wcześniak;32B;Płock;7;3;None;shower;False;False
+851;1997;F;Chemiczny;Biotechnologia;Warszawa;polski;None;None;None;Mokotów;None;None;None;null;True;False
+694;2002;F;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;None;Bratniak;None;Kampus Południowy;4;None;normal;None;False;False
+290;2004;M;Inżynierii Lądowej;Civil Engineering;Warszawa;angielski;None;None;None;Ochota;5;1;normal;null;False;False
+946;1998;F;Mechaniczny Technologiczny;Papiernictwo i poligrafia;Warszawa;polski;None;None;None;Kampus Południowy;3;1;None;shower;None;False
+613;2001;F;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;Ustronie;71A;Wola;1;1;normal;shower;True;False
+911;2005;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;None;None;Wola;7;2;None;null;True;False
+813;2005;M;Elektryczny;Elektrotechnika;Warszawa;polski;None;Mikrus;None;None;5;2;normal;full;True;False
+223;1999;F;Mechaniczny Technologiczny;Mechanika i budowa maszyn;Warszawa;polski;None;Żaczek;346B;Kampus Południowy;5;4;None;shower;True;False
+614;2003;F;Mechaniczny Technologiczny;Automatyzacja i robotyzacja procesów produkcyjnych;Warszawa;polski;None;Tatrzańska;15A;Kampus Południowy;6;2;normal;full;False;False
+390;2000;F;Mechaniczny Energetyki i Lotnictwa;Robotyka i automatyka;Warszawa;polski;515;Bratniak;None;None;None;None;None;shower;True;False
+140;1997;M;Chemiczny;Biotechnologia;Warszawa;polski;824;Żaczek;191A;Kampus Centralny;8;3;normal;shower;True;False
+366;2001;F;Chemiczny;Technologia chemiczna;Warszawa;polski;None;Riviera;None;Kampus Centralny;4;1;renovated;null;False;False
+683;2004;F;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;None;Babilon;None;Kampus Południowy;7;4;normal;null;False;False
+960;2000;M;Elektryczny;Electrical Engineering;Warszawa;angielski;472;Muszelka;61B;Ochota;6;5;normal;None;None;False
+354;2000;M;Budownictwa, Mechaniki i Petrochemii;Mechanika i budowa maszyn;Płock;polski;None;Wcześniak;39C;Płock;7;1;renovated;full;None;False
+876;2005;M;Inżynierii Lądowej;Budownictwo;Warszawa;polski;558;None;None;None;5;1;normal;None;True;False
+353;1998;M;Budownictwa, Mechaniki i Petrochemii;Technologia chemiczna;Płock;polski;294;Wcześniak;83A;Płock;6;4;renovated;shower;True;False
+778;1997;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Ochrona środowiska;Warszawa;polski;269;Mikrus;None;None;6;2;normal;full;True;False
+110;1999;F;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;None;None;None;Ochota;2;1;normal;null;False;False
+221;1998;F;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;None;None;None;None;None;None;null;False;False
+473;2000;M;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;127;Żaczek;None;Kampus Południowy;8;3;normal;shower;False;False
+920;2003;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Environmental Engineering;Warszawa;angielski;734;None;None;Ochota;4;2;renovated;None;False;False
+422;1998;M;Geodezji i Kartografii;Gospodarka przestrzenna;Warszawa;polski;None;Tatrzańska;44B;Wola;5;None;normal;null;True;False
+979;1999;M;Chemiczny;Biotechnologia;Warszawa;polski;None;Riviera;73A;Wola;1;1;renovated;null;None;False
+989;2003;F;Inżynierii Lądowej;Civil Engineering;Warszawa;angielski;None;Babilon;None;None;None;None;renovated;full;True;False
+868;2001;F;Samochodów i Maszyn Roboczych;Mechatronics of Vehicles and Construction Machinery;Warszawa;angielski;None;Żaczek;None;Kampus Południowy;None;None;renovated;shower;False;False
+716;2002;M;Mechaniczny Technologiczny;Papiernictwo i poligrafia;Warszawa;polski;None;None;None;Kampus Południowy;7;3;renovated;null;None;False
+412;2003;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Riviera;None;None;2;2;renovated;full;False;True
+235;2001;M;Architektury;Architektura;Warszawa;polski;None;None;None;Ochota;6;3;normal;null;True;False
+641;2000;M;Geodezji i Kartografii;Gospodarka przestrzenna;Warszawa;polski;None;None;None;None;1;None;None;null;True;False
+426;1998;M;Fizyki;Fizyka techniczna;Warszawa;polski;None;Tatrzańska;68A;Mokotów;1;1;renovated;null;False;False
+490;1997;F;Matematyki i Nauk Informacyjnych;Matematyka;Warszawa;polski;None;Babilon;47B;Kampus Centralny;1;1;normal;full;True;False
+230;2001;M;Mechatroniki;Automatyka, robotyka i informatyka  przemysłowa;Warszawa;polski;None;None;None;Kampus Południowy;7;4;renovated;shower;True;False
+722;2003;M;Elektryczny;Informatyka stosowana;Warszawa;polski;None;None;None;Ochota;8;5;normal;null;True;False
+846;2004;F;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;Riviera;None;Kampus Centralny;6;6;normal;full;True;False
+776;2002;F;Geodezji i Kartografii;Geodezja i kartografia;Warszawa;polski;None;Babilon;None;Ochota;1;1;renovated;full;True;False
+314;1998;F;Elektryczny;Elektrotechnika;Warszawa;polski;None;Ustronie;None;Wola;None;None;None;None;None;False
+175;2000;M;Chemiczny;Biotechnologia;Warszawa;polski;None;None;None;Kampus Centralny;3;3;renovated;null;True;True
+744;2002;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Babilon;64B;Ochota;7;3;normal;shower;False;False
+447;1999;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;None;None;Mokotów;4;None;renovated;shower;False;False
+827;2000;F;Zarządzania;Inżynieria zarządzania;Warszawa;polski;None;None;None;Kampus Południowy;2;1;normal;None;False;False
+976;1999;M;Fizyki;Fizyka techniczna;Warszawa;polski;467;Babilon;63A;Kampus Centralny;3;None;renovated;shower;False;True
+739;1997;M;Mechatroniki;Mechatronika;Warszawa;polski;948;Babilon;65A;Kampus Południowy;2;1;None;None;None;False
+578;2004;F;Transportu;Transport;Warszawa;polski;None;Tatrzańska;83A;Wola;2;None;normal;full;None;False
+341;2004;M;Matematyki i Nauk Informacyjnych;Matematyka;Warszawa;polski;None;None;None;Ochota;7;2;normal;full;True;False
+904;1998;F;Inżynierii Chemicznej i Procesowej;Inżynieria chemiczna i procesowa;Warszawa;polski;None;Bratniak;17A;Wola;6;1;renovated;null;False;False
+250;2005;M;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;None;Bratniak;1A;Kampus Południowy;None;None;renovated;full;True;False
+296;2001;M;Mechatroniki;Automatyka, robotyka i informatyka  przemysłowa;Warszawa;polski;None;Żaczek;201A;Kampus Południowy;1;1;normal;null;None;False
+577;2004;M;Matematyki i Nauk Informacyjnych;Matematyka;Warszawa;polski;255;Ustronie;None;Ochota;1;1;renovated;shower;False;False
+805;2000;M;Chemiczny;Technologia chemiczna;Warszawa;polski;None;Tatrzańska;None;Ochota;4;1;renovated;full;False;False
+887;1998;F;Chemiczny;Biotechnologia;Warszawa;polski;None;None;None;None;1;1;normal;shower;False;False
+922;2003;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;None;None;Ochota;5;5;normal;null;True;False
+725;2001;F;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;Riviera;127A;None;7;5;normal;full;True;False
+817;2003;M;Transportu;Transport;Warszawa;polski;None;None;None;Ochota;7;5;normal;shower;True;False
+681;2001;F;Elektroniki i Technik Informacyjnych;Telekomunikacja;Warszawa;polski;None;Babilon;55A;None;3;3;None;full;None;False
+449;2000;F;Transportu;Transport;Warszawa;polski;None;Żaczek;134B;Kampus Centralny;6;6;renovated;shower;True;True
+318;2001;F;Chemiczny;Technologia chemiczna;Warszawa;polski;None;None;None;Ochota;2;1;normal;full;False;False
+225;2002;M;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;None;None;Kampus Centralny;4;None;renovated;full;False;False
+616;1998;F;Inżynierii Chemicznej i Procesowej;Inżynieria chemiczna i procesowa;Warszawa;polski;None;Tatrzańska;80B;Kampus Centralny;None;None;renovated;full;True;True
+209;1998;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;None;None;Ochota;None;None;normal;shower;False;False
+869;1999;M;Zarządzania;Zarządzanie;Warszawa;polski;924;Akademik;None;Kampus Południowy;None;None;normal;null;True;False
+828;2000;M;Mechatroniki;Mechatronika;Warszawa;polski;None;Akademik;None;Kampus Południowy;6;3;normal;null;False;False
+565;2003;F;Transportu;Transport;Warszawa;polski;None;Tulipan;15C;Ochota;None;None;renovated;shower;False;False
+686;2004;F;Architektury;Architecture;Warszawa;angielski;None;None;None;Kampus Centralny;None;None;renovated;full;True;True
+173;1997;M;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;None;None;None;8;None;normal;null;False;False
+168;1997;F;Geodezji i Kartografii;Geodezja i kartografia;Warszawa;polski;None;Babilon;60A;Mokotów;5;1;renovated;None;False;False
+631;2004;F;Elektryczny;Electrical Engineering;Warszawa;angielski;None;Bratniak;64A;Mokotów;2;2;renovated;shower;True;False
+475;2003;M;Samochodów i Maszyn Roboczych;Inżynieria mechaniczna;Warszawa;polski;None;Bratniak;None;Kampus Południowy;6;2;normal;None;True;False
+696;1998;F;Transportu;Transport;Warszawa;polski;649;Tulipan;None;Kampus Centralny;5;None;renovated;null;True;True
+667;1998;F;Elektroniki i Technik Informacyjnych;Telekomunikacja;Warszawa;polski;None;None;None;None;8;4;normal;null;False;False
+891;2004;M;Inżynierii Lądowej;Budownictwo;Warszawa;polski;281;Muszelka;None;Kampus Centralny;1;1;renovated;null;False;True
+850;2001;M;Chemiczny;Biotechnologia;Warszawa;polski;None;Akademik;None;Kampus Centralny;5;3;renovated;full;True;False
+105;1998;M;Budownictwa, Mechaniki i Petrochemii;Budownictwo;Płock;polski;388;Wcześniak;10C;Płock;8;2;renovated;null;False;False
+994;1997;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;None;None;None;None;6;1;None;null;True;False
+923;2003;M;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;None;None;None;4;4;normal;full;None;False
+470;1998;F;Chemiczny;Technologia chemiczna;Warszawa;polski;None;Akademik;191A;Mokotów;4;4;normal;shower;None;False
+307;2005;M;Elektryczny;Elektrotechnika;Warszawa;polski;None;Tatrzańska;94A;Wola;5;5;renovated;None;True;False
+816;2004;M;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;Ustronie;124A;Kampus Centralny;None;None;renovated;None;False;True
+129;2004;F;Transportu;Transport;Warszawa;polski;703;None;None;Mokotów;1;1;renovated;shower;False;False
+188;2005;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Ochrona środowiska;Warszawa;polski;185;None;None;None;1;1;normal;None;None;False
+561;2002;F;Chemiczny;Technologia chemiczna;Warszawa;polski;None;Tatrzańska;None;Wola;6;2;None;null;False;False
+435;2000;F;Geodezji i Kartografii;Geodezja i kartografia;Warszawa;polski;None;Żaczek;None;Kampus Centralny;8;2;normal;shower;None;True
+359;2000;F;Elektroniki i Technik Informacyjnych;Telekomunikacja;Warszawa;polski;713;None;None;Wola;1;1;None;full;False;False
+143;2005;F;Elektroniki i Technik Informacyjnych;Automatyka i robotyka;Warszawa;polski;None;Ustronie;None;Kampus Centralny;7;3;renovated;null;True;False
+655;2002;F;Samochodów i Maszyn Roboczych;Mechatronics of Vehicles and Construction Machinery;Warszawa;angielski;None;Bratniak;1A;Kampus Południowy;None;None;normal;shower;False;False
+685;2003;M;Samochodów i Maszyn Roboczych;Inżynieria pojazdów elektrycznych i hybrydowych;Warszawa;polski;None;None;None;Kampus Południowy;6;3;renovated;shower;False;False
+418;2001;F;Elektryczny;Automatyka i robotyka stosowana;Warszawa;polski;994;Bratniak;None;Kampus Centralny;5;2;normal;shower;True;True
+702;2002;M;Mechatroniki;Mechatronics;Warszawa;angielski;832;None;None;Kampus Południowy;5;None;renovated;shower;False;False
+607;1999;M;Elektroniki i Technik Informacyjnych;Telecommunications;Warszawa;angielski;None;Muszelka;29A;None;6;None;renovated;full;True;False
+331;1997;F;Mechatroniki;Mechatronics;Warszawa;angielski;None;None;None;Kampus Południowy;5;None;renovated;full;True;False
+158;1998;F;Samochodów i Maszyn Roboczych;Mechatronika pojazdów i maszyn roboczych;Warszawa;polski;None;Tulipan;None;Kampus Południowy;5;2;normal;shower;False;False
+792;1999;F;Geodezji i Kartografii;Gospodarka przestrzenna;Warszawa;polski;None;Tatrzańska;None;Wola;2;None;normal;null;True;False
+282;1999;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;None;None;None;Mokotów;8;3;None;None;False;False
+968;2001;M;Mechaniczny Technologiczny;Papiernictwo i poligrafia;Warszawa;polski;None;Tatrzańska;None;Kampus Południowy;1;1;None;full;True;False
+266;2003;M;Matematyki i Nauk Informacyjnych;Inżynieria i analiza danych;Warszawa;polski;None;None;None;Kampus Centralny;8;1;renovated;full;True;False
+303;1997;M;Architektury;Architecture;Warszawa;angielski;188;Muszelka;27A;Ochota;1;1;renovated;full;False;False
+405;2003;M;Mechaniczny Energetyki i Lotnictwa;Mechanika i projektowanie maszyn;Warszawa;polski;None;Tulipan;None;Ochota;5;3;normal;shower;False;False
+857;2000;M;Mechaniczny Technologiczny;Papiernictwo i poligrafia;Warszawa;polski;115;Tulipan;None;Kampus Południowy;2;2;normal;null;False;False
+443;2003;F;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;None;None;Wola;None;None;renovated;shower;True;False
+404;2003;M;Geodezji i Kartografii;Geoinformatyka;Warszawa;polski;None;None;None;Wola;None;None;renovated;null;False;False
+376;1999;F;Mechatroniki;Mechatronika;Warszawa;polski;None;Akademik;None;Kampus Południowy;8;1;normal;null;True;False
+383;2001;M;Chemiczny;Technologia chemiczna;Warszawa;polski;None;Mikrus;244A;None;None;None;normal;full;True;False
+320;2003;M;Elektroniki i Technik Informacyjnych;Automatyka i robotyka;Warszawa;polski;None;None;None;Wola;7;2;renovated;None;False;False
+699;2004;F;Zarządzania;Zarządzanie;Warszawa;polski;726;Żaczek;136A;Kampus Południowy;2;1;normal;shower;True;False
+319;2005;M;Samochodów i Maszyn Roboczych;Mechatronics of Vehicles and Construction Machinery;Warszawa;angielski;None;None;None;Kampus Południowy;7;6;normal;shower;False;False
+191;1997;M;Chemiczny;Technologia chemiczna;Warszawa;polski;None;Tatrzańska;74A;Wola;4;None;renovated;full;False;False
+271;2001;F;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;None;None;Kampus Centralny;2;2;renovated;full;True;True
+484;2004;F;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;None;Mikrus;97A;Kampus Południowy;1;1;normal;full;True;False
+836;1998;M;Geodezji i Kartografii;Geodezja i kartografia;Warszawa;polski;None;None;None;Mokotów;2;1;renovated;shower;False;False
+925;1997;F;Mechaniczny Energetyki i Lotnictwa;Mechanika i projektowanie maszyn;Warszawa;polski;None;Riviera;45A;None;8;3;normal;full;True;False
+163;2001;M;Mechaniczny Technologiczny;Mechanika i budowa maszyn;Warszawa;polski;None;Mikrus;None;Kampus Południowy;6;4;renovated;full;True;False
+275;2001;M;Elektryczny;Elektrotechnika;Warszawa;polski;None;None;None;Ochota;None;None;renovated;null;True;False
+866;1998;M;Elektroniki i Technik Informacyjnych;Computer Science;Warszawa;angielski;None;Mikrus;None;None;8;3;normal;shower;False;False
+297;2001;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Environmental Engineering;Warszawa;angielski;487;Żaczek;166A;Wola;6;4;normal;full;False;False
+408;2005;M;Geodezji i Kartografii;Geodezja i kartografia;Warszawa;polski;None;None;None;Wola;5;2;renovated;full;False;False
+582;2000;F;Elektroniki i Technik Informacyjnych;Telecommunications;Warszawa;angielski;None;Mikrus;161A;Wola;None;None;normal;null;False;False
+147;2005;M;Budownictwa, Mechaniki i Petrochemii;Mechanika i budowa maszyn;Płock;polski;663;Wcześniak;None;Płock;2;2;normal;full;False;False
+419;2000;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;970;None;None;Ochota;6;4;normal;full;False;False
+289;2005;M;Mechatroniki;Automatyka, robotyka i informatyka  przemysłowa;Warszawa;polski;None;None;None;Kampus Południowy;4;4;renovated;full;True;False
+659;2001;F;Elektryczny;Informatyka stosowana;Warszawa;polski;None;Tulipan;13B;Ochota;1;1;normal;null;True;False
+483;2004;F;Zarządzania;Inżynieria zarządzania;Warszawa;polski;521;Babilon;None;Kampus Południowy;None;None;renovated;null;None;False
+576;2001;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Tatrzańska;48A;Kampus Centralny;2;1;renovated;full;True;True
+387;1999;M;Geodezji i Kartografii;Gospodarka przestrzenna;Warszawa;polski;None;Mikrus;57A;Kampus Centralny;2;2;renovated;None;None;True
+654;2002;M;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;None;None;Mokotów;None;None;None;full;None;False
+837;1998;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;None;Tulipan;None;Ochota;2;1;renovated;null;False;False
+485;1998;M;Elektryczny;Electrical Engineering;Warszawa;angielski;None;Żaczek;None;None;1;1;renovated;null;True;False
+206;2001;F;Geodezji i Kartografii;Geodezja i kartografia;Warszawa;polski;None;None;None;Ochota;7;None;normal;None;True;False
+197;1998;M;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;None;Muszelka;None;Kampus Centralny;None;None;renovated;None;True;False
+315;2005;F;Transportu;Transport;Warszawa;polski;None;None;None;Wola;6;1;normal;null;False;False
+982;2005;M;Zarządzania;Zarządzanie;Warszawa;polski;None;None;None;Kampus Południowy;6;5;renovated;full;None;False
+774;2002;F;Transportu;Transport;Warszawa;polski;None;Mikrus;244A;Ochota;8;6;normal;None;False;False
+939;1999;M;Geodezji i Kartografii;Geoinformatyka;Warszawa;polski;None;None;None;Mokotów;6;6;None;null;False;False
+710;2001;F;Zarządzania;Zarządzanie;Warszawa;polski;None;None;None;Kampus Południowy;None;None;None;full;False;False
+533;2002;F;Architektury;Architektura;Warszawa;polski;None;Ustronie;None;Kampus Centralny;5;None;renovated;shower;False;False
+493;2004;M;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;365;None;None;Kampus Południowy;None;None;renovated;null;True;False
+768;2003;F;Samochodów i Maszyn Roboczych;Electric and Hybrid Vehicles Engineering;Warszawa;angielski;None;None;None;Kampus Południowy;6;1;None;null;False;False
+283;1997;M;Mechaniczny Technologiczny;Automatyzacja i robotyzacja procesów produkcyjnych;Warszawa;polski;None;None;None;Kampus Południowy;None;None;renovated;None;True;False
+427;1998;F;Budownictwa, Mechaniki i Petrochemii;Budownictwo;Płock;polski;572;Wcześniak;78A;Płock;7;None;None;full;False;False
+547;2004;M;Matematyki i Nauk Informacyjnych;Informatyka i systemy informacyjne;Warszawa;polski;401;None;None;Mokotów;None;None;renovated;null;False;False
+643;2003;F;Mechatroniki;Mechatronika;Warszawa;polski;None;Żaczek;364B;Kampus Południowy;1;1;normal;null;True;False
+503;1998;M;Architektury;Architektura;Warszawa;polski;932;Mikrus;72A;Mokotów;3;1;None;full;False;False
+706;1997;M;Architektury;Architecture;Warszawa;angielski;250;Ustronie;None;Wola;7;1;renovated;None;True;False
+375;2003;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;None;None;Wola;7;4;normal;shower;False;False
+466;2005;F;Fizyki;Fizyka techniczna;Warszawa;polski;None;None;None;Mokotów;6;5;normal;null;True;False
+563;2004;M;Zarządzania;Inżynieria zarządzania;Warszawa;polski;None;Bratniak;4A;Kampus Południowy;None;None;normal;null;True;False
+180;2001;M;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;None;None;None;3;3;renovated;full;False;False
+932;2000;F;Elektroniki i Technik Informacyjnych;Telekomunikacja;Warszawa;polski;462;None;None;None;8;4;normal;shower;False;False
+277;2001;F;Matematyki i Nauk Informacyjnych;Inżynieria i analiza danych;Warszawa;polski;None;Mikrus;None;Kampus Centralny;1;1;renovated;full;None;False
+830;2001;M;Elektryczny;Electrical Engineering;Warszawa;angielski;612;Ustronie;145A;Ochota;4;2;normal;None;None;False
+428;2002;M;Mechaniczny Energetyki i Lotnictwa;Energetyka;Warszawa;polski;299;None;None;Kampus Centralny;7;4;renovated;None;False;False
+591;2001;F;Elektroniki i Technik Informacyjnych;Telekomunikacja;Warszawa;polski;None;Babilon;None;Wola;6;2;normal;null;True;False
+973;2001;M;Architektury;Architektura;Warszawa;polski;None;None;None;Mokotów;2;None;normal;full;False;False
+352;2000;F;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;None;Tulipan;26B;Kampus Południowy;2;1;None;null;True;False
+151;2000;M;Elektryczny;Elektromobilność;Warszawa;polski;933;Ustronie;226A;Ochota;4;4;None;shower;False;False
+491;1999;M;Elektryczny;Automatyka i robotyka stosowana;Warszawa;polski;None;None;None;Ochota;2;1;renovated;shower;True;False
+502;2003;F;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;None;Żaczek;22B;None;1;1;normal;full;False;False
+285;2000;M;Transportu;Transport;Warszawa;polski;583;None;None;Kampus Centralny;4;4;renovated;null;None;True
+990;2000;F;Mechaniczny Technologiczny;Papiernictwo i poligrafia;Warszawa;polski;None;Babilon;None;Kampus Południowy;7;6;renovated;None;True;False
+724;2000;M;Elektroniki i Technik Informacyjnych;Automatyka i robotyka;Warszawa;polski;None;Akademik;None;None;8;3;normal;shower;None;False
+969;2002;M;Elektroniki i Technik Informacyjnych;Inżynieria Internetu rzeczy;Warszawa;polski;226;Tatrzańska;None;Wola;6;2;renovated;shower;True;False
+942;2003;M;Budownictwa, Mechaniki i Petrochemii;Mechanika i budowa maszyn;Płock;polski;298;Wcześniak;None;Płock;7;2;normal;full;False;False
+657;2003;F;Mechatroniki;Automatyka, robotyka i informatyka  przemysłowa;Warszawa;polski;659;Tatrzańska;27A;Kampus Południowy;7;5;None;null;False;False
+843;2004;M;Inżynierii Chemicznej i Procesowej;Inżynieria chemiczna i procesowa;Warszawa;polski;None;None;None;None;1;1;renovated;full;False;False
+701;2000;F;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Ochrona środowiska;Warszawa;polski;None;None;None;Ochota;5;2;normal;shower;False;False
+749;1998;F;Elektryczny;Elektrotechnika;Warszawa;polski;None;None;None;None;7;4;normal;full;False;False
+684;2003;F;Matematyki i Nauk Informacyjnych;Matematyka;Warszawa;polski;None;Tatrzańska;80B;None;2;2;None;shower;True;False
+835;1997;M;Elektryczny;Informatyka stosowana;Warszawa;polski;None;Tatrzańska;25B;Kampus Centralny;1;1;renovated;shower;True;True
+478;2005;F;Mechatroniki;Mechatronics;Warszawa;angielski;None;Ustronie;206A;Kampus Południowy;3;2;None;null;True;False
+728;2001;F;Mechatroniki;Mechatronika;Warszawa;polski;None;Tatrzańska;None;Kampus Południowy;7;1;normal;full;False;False
+141;1999;M;Matematyki i Nauk Informacyjnych;Informatyka i systemy informacyjne;Warszawa;polski;None;Bratniak;9A;Kampus Centralny;3;3;None;shower;None;False
+362;1997;F;Elektryczny;Informatyka stosowana;Warszawa;polski;None;Akademik;None;None;5;1;renovated;null;None;False
+826;2003;M;Mechaniczny Technologiczny;Automatyzacja i robotyzacja procesów produkcyjnych;Warszawa;polski;None;Babilon;None;Kampus Południowy;6;None;renovated;shower;True;False
+301;2004;M;Mechaniczny Energetyki i Lotnictwa;Lotnictwo i kosmonautyka;Warszawa;polski;482;None;None;Wola;None;None;normal;null;True;False
+157;2002;M;Budownictwa, Mechaniki i Petrochemii;Mechanika i budowa maszyn;Płock;polski;None;Wcześniak;None;Płock;1;1;normal;full;None;False
+356;2000;M;Mechaniczny Technologiczny;Papiernictwo i poligrafia;Warszawa;polski;None;None;None;Kampus Południowy;None;None;None;null;True;False
+804;2002;M;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;None;Żaczek;None;Mokotów;3;3;None;null;False;False
+526;2002;F;Elektryczny;Electrical Engineering;Warszawa;angielski;None;Bratniak;21A;Wola;1;1;None;None;True;False
+601;2000;F;Elektryczny;Informatyka stosowana;Warszawa;polski;185;None;None;Mokotów;8;3;None;None;True;False
+708;2005;M;Inżynierii Lądowej;Civil Engineering;Warszawa;angielski;None;None;None;None;2;None;normal;null;True;False
+273;1999;M;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Tatrzańska;None;Wola;6;1;normal;full;False;False
+558;2002;F;Elektryczny;Elektrotechnika;Warszawa;polski;None;None;None;Kampus Centralny;5;1;None;null;True;True
+126;1999;F;Inżynierii Materiałowej;Inżynieria materiałowa;Warszawa;polski;None;None;None;Kampus Południowy;1;1;renovated;shower;False;False
+945;2005;M;Mechaniczny Energetyki i Lotnictwa;Lotnictwo i kosmonautyka;Warszawa;polski;None;Ustronie;None;Kampus Centralny;5;5;renovated;full;True;False
+707;2004;F;Elektroniki i Technik Informacyjnych;Telekomunikacja;Warszawa;polski;463;Tatrzańska;None;None;5;3;normal;null;False;False
+859;2003;M;Zarządzania;Zarządzanie;Warszawa;polski;None;None;None;Kampus Południowy;3;None;None;None;True;False
+894;2005;M;Budownictwa, Mechaniki i Petrochemii;Technologia chemiczna;Płock;polski;None;Wcześniak;68A;Płock;8;6;None;full;False;False
+675;2001;M;Mechaniczny Technologiczny;Mechanika i budowa maszyn;Warszawa;polski;None;Riviera;201A;Kampus Południowy;None;None;normal;null;None;False
+822;1997;F;Inżynierii Materiałowej;Inżynieria materiałowa;Warszawa;polski;None;None;None;Kampus Południowy;None;None;renovated;null;True;False
+639;2001;M;Budownictwa, Mechaniki i Petrochemii;Przemysłowe zastosowania informatyki;Płock;polski;None;Wcześniak;None;Płock;5;2;normal;full;True;False
+434;2001;F;Mechatroniki;Mechatronika;Warszawa;polski;None;Mikrus;162A;Kampus Południowy;4;4;None;full;True;False
+528;2004;M;Chemiczny;Biotechnologia;Warszawa;polski;743;None;None;None;5;4;renovated;null;True;False
+806;2005;M;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;None;None;None;Kampus Południowy;3;1;renovated;full;True;False
+257;1997;M;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;None;Akademik;None;Kampus Południowy;1;1;None;null;None;False
+959;1997;F;Mechaniczny Technologiczny;Papiernictwo i poligrafia;Warszawa;polski;614;Tatrzańska;38B;Kampus Południowy;7;2;normal;null;True;False
+779;1997;M;Mechaniczny Technologiczny;Papiernictwo i poligrafia;Warszawa;polski;None;None;None;Kampus Południowy;6;3;renovated;null;True;False
+218;1997;F;Mechaniczny Energetyki i Lotnictwa;Robotyka i automatyka;Warszawa;polski;None;Mikrus;None;Mokotów;6;5;normal;shower;True;False
+802;2003;M;Transportu;Transport;Warszawa;polski;None;None;None;Mokotów;2;1;None;shower;False;False
+153;1998;F;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;Babilon;None;Wola;4;1;normal;null;False;False
+762;1999;F;Kolegium Nauk Ekonomicznych i Społecznych;Ekonomia;Płock;polski;901;Wcześniak;57B;Płock;5;5;renovated;shower;False;False
+119;2001;M;Architektury;Architektura;Warszawa;polski;None;Babilon;None;None;None;None;None;None;True;False
+909;2000;M;Inżynierii Materiałowej;Inżynieria materiałowa;Warszawa;polski;147;Mikrus;None;Kampus Południowy;3;3;normal;null;False;False
+284;2000;F;Inżynierii Chemicznej i Procesowej;Inżynieria chemiczna i procesowa;Warszawa;polski;None;None;None;Ochota;8;4;normal;None;False;False
+361;1999;F;Zarządzania;Inżynieria zarządzania;Warszawa;polski;734;Akademik;31A;Kampus Południowy;2;None;renovated;None;False;False
+496;1999;M;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;946;Mikrus;32A;Kampus Centralny;5;3;None;null;True;False
+849;1997;F;Budownictwa, Mechaniki i Petrochemii;Technologia chemiczna;Płock;polski;None;Wcześniak;None;Płock;7;1;None;None;True;False
+437;2000;M;Samochodów i Maszyn Roboczych;Mechatronika pojazdów i maszyn roboczych;Warszawa;polski;808;Ustronie;323A;Kampus Południowy;2;1;normal;None;True;False
+438;1998;M;Kolegium Nauk Ekonomicznych i Społecznych;Ekonomia;Płock;polski;None;Wcześniak;47A;Płock;1;None;renovated;full;True;False
+267;2002;M;Mechaniczny Energetyki i Lotnictwa;Lotnictwo i kosmonautyka;Warszawa;polski;None;Tulipan;None;None;3;2;normal;null;False;False
+270;1997;M;Budownictwa, Mechaniki i Petrochemii;Inżynieria środowiska;Płock;polski;None;Wcześniak;None;Płock;1;None;renovated;None;False;False
+220;2002;M;Mechaniczny Technologiczny;Automatyzacja i robotyzacja procesów produkcyjnych;Warszawa;polski;None;Tulipan;12B;Kampus Południowy;6;5;normal;None;None;False
+943;2005;M;Inżynierii Lądowej;Civil Engineering;Warszawa;angielski;276;None;None;Wola;7;3;renovated;null;False;False
+777;1999;M;Fizyki;Fizyka techniczna;Warszawa;polski;None;Ustronie;None;None;2;2;renovated;shower;False;False
+549;2005;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Babilon;51A;None;8;6;normal;None;False;False
+467;1999;F;Matematyki i Nauk Informacyjnych;Matematyka;Warszawa;polski;None;Muszelka;69B;Ochota;None;None;renovated;null;True;False
+202;1998;M;Matematyki i Nauk Informacyjnych;Inżynieria i analiza danych;Warszawa;polski;None;Mikrus;225A;None;3;None;normal;null;True;False
+632;2003;M;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;Tatrzańska;None;Kampus Centralny;6;1;None;full;False;False
+865;2003;F;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;None;None;None;3;1;normal;shower;True;False
+430;1997;F;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;None;Ustronie;None;Mokotów;2;1;renovated;None;True;False
+727;2000;F;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;None;None;None;Kampus Południowy;6;None;renovated;shower;True;False
+104;2001;M;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;Babilon;None;Wola;5;5;normal;full;True;False
+279;1998;M;Elektryczny;Electrical Engineering;Warszawa;angielski;729;Tatrzańska;None;None;5;2;normal;null;None;False
+367;2001;F;Geodezji i Kartografii;Geodezja i kartografia;Warszawa;polski;None;Riviera;85B;Wola;5;3;normal;full;True;False
+506;2001;M;Elektryczny;Elektrotechnika;Warszawa;polski;None;Riviera;54A;Mokotów;4;2;renovated;null;True;False
+308;1997;F;Elektryczny;Elektrotechnika;Warszawa;polski;None;None;None;Mokotów;6;6;None;full;False;False
+416;1998;F;Fizyki;Fotonika;Warszawa;polski;None;Tatrzańska;91A;None;7;4;renovated;full;False;False
+379;2005;M;Mechatroniki;Mechatronika;Warszawa;polski;None;None;None;Kampus Południowy;7;5;renovated;full;False;False
+888;1997;M;Transportu;Transport;Warszawa;polski;952;Akademik;None;Ochota;7;2;normal;full;None;False
+705;2001;M;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;169;Akademik;388A;Kampus Południowy;5;2;renovated;null;None;False
+884;2005;F;Mechatroniki;Mechatronika;Warszawa;polski;None;Babilon;None;Kampus Południowy;6;5;normal;null;True;False
+471;2001;M;Matematyki i Nauk Informacyjnych;Informatyka i systemy informacyjne;Warszawa;polski;None;Tulipan;4A;Ochota;3;2;renovated;shower;False;False
+442;2004;F;Mechatroniki;Mechatronics;Warszawa;angielski;None;Mikrus;18A;Kampus Południowy;4;None;renovated;null;True;False

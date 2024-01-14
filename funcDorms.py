@@ -34,6 +34,8 @@ def available_configurations(dorms):
     result = []
     for dorm in dorms:
         all_configs += dorm.segment_types(True)
+    # TODO
+    # zliczanie wolnych miejsc w przypadku w części zajętego pokoju bardziej nie działa niż działa
     for dorm in dorms:
         for config in dorm.segment_types():
             result.append({"configuration": config, "beds": all_configs.count(config) * config.tenants_num_segment, "students": []})
