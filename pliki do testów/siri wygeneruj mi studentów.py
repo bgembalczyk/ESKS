@@ -26,7 +26,7 @@ def random_segment(dorm):
             max_room, max_seg = 385, 2
         case _:
             return None
-    return f"{random.randint(1, max_room)}{chr(ord('A') + random.randint(1, max_seg))}"
+    return f"{random.randint(1, max_room)}{chr(ord('A') + random.randint(0, max_seg - 1))}"
 
 def find_major(majors, n):
     for major in majors:
