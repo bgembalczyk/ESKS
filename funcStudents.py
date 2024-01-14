@@ -43,6 +43,7 @@ def students_exact_segment_type(students, dorms):
     return result
 
 def students_better_segment_type(students, dorms):
+    # to chyba nie działa tak jak chciałem -> sprawdź screeny
     result = []
     segment_configs_counts = available_configurations(dorms)
     segment_configs = [segment_configuration["configuration"] for segment_configuration in segment_configs_counts]

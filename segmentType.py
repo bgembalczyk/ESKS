@@ -47,6 +47,7 @@ class SegmentType:
         return True
 
     def __lt__(self, other):
+        # to chyba nie działa tak jak chciałem -> sprawdź screeny
         if self.tenants_num_segment is not None and other.tenants_num_segment is not None:
             if self.tenants_num_segment < other.tenants_num_segment:
                 return False
