@@ -25,4 +25,3 @@ if __name__ == '__main__':
     #         if item["configuration"].tenants_num_segment > 1:
     #             roommates_groups = divide_into_segments(item["students"], item["configuration"].tenants_num_segment)
 
- ]
