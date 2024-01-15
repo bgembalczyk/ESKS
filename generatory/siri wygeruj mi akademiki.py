@@ -60,10 +60,10 @@ dorms_data = [
                ({"segments": [2], "renovated": True}, 115),
                ({"segments": [2], "bathroom": True}, 115)]
      },
-    {"name": "Wcześniak", "location": "Płock",
-     "rooms": [({"segments": [1, 1, 2, 2], "bathroom": True}, 40),
-               ({"segments": [2, 2, 2, 2], "bathroom": True}, 45)]
-     },
+    # {"name": "Wcześniak", "location": "Płock",
+    #  "rooms": [({"segments": [1, 1, 2, 2], "bathroom": True}, 40),
+    #            ({"segments": [2, 2, 2, 2], "bathroom": True}, 45)]
+    #  },
     {"name": "Żaczek", "location": "Kampus Południowy",
      "rooms": [({"segments": [1], "bathroom": True, "kitchen": True}, 210),
                ({"segments": [2], "bathroom": True, "kitchen": True}, 105),

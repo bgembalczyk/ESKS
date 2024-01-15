@@ -34,7 +34,7 @@ def find_major(majors, n):
             return major[1], major[0], major[3], major[4]
 
 
-N = 500
+N = 5000
 max_stud = 5660
 dorm_Wwa = ["Akademik", "Babilon", "Bratniak", "Mikrus", "Muszelka", "Riviera", "Tatrzańska", "Tulipan", "Ustronie",
              "Żaczek"]
@@ -89,12 +89,12 @@ majors = [
     ["Transport", "Transportu", "280", "Warszawa", "polski", "4582"],
     ["Zarządzanie", "Zarządzania", "120", "Warszawa", "polski", "4702"],
     ["Zarządzanie i inżynieria produkcji", "Mechaniczny Technologiczny", "120", "Warszawa", "polski", "4822"],
-    ["Budownictwo", "Budownictwa, Mechaniki i Petrochemii", "80", "Płock", "polski", "4902"],
-    ["Ekonomia", "Kolegium Nauk Ekonomicznych i Społecznych", "90", "Płock", "polski", "4992"],
-    ["Inżynieria środowiska", "Budownictwa, Mechaniki i Petrochemii", "50", "Płock", "polski", "5042"],
-    ["Mechanika i budowa maszyn", "Budownictwa, Mechaniki i Petrochemii", "70", "Płock", "polski", "5112"],
-    ["Przemysłowe zastosowania informatyki", "Budownictwa, Mechaniki i Petrochemii", "40", "Płock", "polski", "5152"],
-    ["Technologia chemiczna", "Budownictwa, Mechaniki i Petrochemii", "80", "Płock", "polski", "5232"],
+    # ["Budownictwo", "Budownictwa, Mechaniki i Petrochemii", "80", "Płock", "polski", "4902"],
+    # ["Ekonomia", "Kolegium Nauk Ekonomicznych i Społecznych", "90", "Płock", "polski", "4992"],
+    # ["Inżynieria środowiska", "Budownictwa, Mechaniki i Petrochemii", "50", "Płock", "polski", "5042"],
+    # ["Mechanika i budowa maszyn", "Budownictwa, Mechaniki i Petrochemii", "70", "Płock", "polski", "5112"],
+    # ["Przemysłowe zastosowania informatyki", "Budownictwa, Mechaniki i Petrochemii", "40", "Płock", "polski", "5152"],
+    # ["Technologia chemiczna", "Budownictwa, Mechaniki i Petrochemii", "80", "Płock", "polski", "5232"],
     ["Aerospace Engineering", "Mechaniczny Energetyki i Lotnictwa", "25", "Warszawa", "angielski", "5257"],
     ["Architecture", "Architektury", "50", "Warszawa", "angielski", "5307"],
     ["Civil Engineering", "Inżynierii Lądowej", "60", "Warszawa", "angielski", "5367"],
@@ -112,7 +112,7 @@ majors = [
     ["Power Engineering", "Mechaniczny Energetyki i Lotnictwa", "20", "Warszawa", "angielski", "5630"],
     ["Telecommunications", "Elektroniki i Technik Informacyjnych", "30", "Warszawa", "angielski", "5660"]
 ]
-students_id_pool = list(range(100, 1000))
+students_id_pool = list(range(1000, 10000))
 
 
 with open("students.txt", "w") as file:
@@ -166,7 +166,7 @@ with open("students.txt", "w") as file:
         else:
             preference_ad = False
         if random.random() < 1 / 4:
-            preference_tenant = random.randint(100, 1000)
+            preference_tenant = random.randint(1000, 10000)
         else:
             preference_tenant = None
         line = f"{stud_id};{random.randint(1997, 2005)};{sex * 'F' + (1 - sex) * 'M'};" \

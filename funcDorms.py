@@ -51,7 +51,8 @@ def combined_segment_types(roommates):
     new_kitchen = None
     new_ad = None
 
-    for roommate in roommates:
+    for student in roommates:
+        roommate = student.preference
         if roommate.dorm is not None and roommate.dorm not in new_dorm:
             new_dorm.append(roommate.dorm)
         if roommate.location is not None and roommate.location not in new_location:

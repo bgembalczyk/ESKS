@@ -144,7 +144,7 @@ def divide_into_segment_configurations(students, dorms):
                         min_segs = conf_div["beds"]
                         min_conf = seg_conf
         for conf_div in available_configs:
-            if min_conf == seg_conf:
+            if conf_div["configuration"] == min_conf:
                 referral[1] = conf_div["configuration"]
                 students.append(referral[0])
                 break
@@ -158,20 +158,20 @@ def compare_students(potential_roommates):
     for student_i in potential_roommates:
         for student_j in potential_roommates:
             if student_i != student_j:
-                # if student_i.pref_segment[1] is not None and student_j.pref_segment[1] is not None:
-                #     if not (student_i.pref_segment[0] == student_j.pref_segment[0] and student_i.pref_segment[1] == student_j.pref_segment[1]):
-                #         result += 100
+                if student_i.pref_segment[1] is not None and student_j.pref_segment[1] is not None:
+                    if student_i.pref_segment[0] == student_j.pref_segment[0] and student_i.pref_segment[1] != student_j.pref_segment[1]:
+                        result += 500
                 if student_i.sex != student_j.sex:
-                    result += 1000
+                    return 1000
                 if student_i.city != student_j.city:
                     result += 100
                 if student_i.lang != student_j.lang:
                     result += 100
                 result += abs(student_i.year - student_j.year)
                 if student_i.faculty != student_j.faculty:
-                    result += 2
+                    result += 25
                 if student_i.major == student_j.major:
-                    result += 4
+                    result += 10
     return result
 
 def find_best_roommates(potential_roommates, potential_combs):
@@ -189,8 +189,95 @@ def find_best_roommates(potential_roommates, potential_combs):
 
 def divide_into_segments(potential_roommates, tenant_num_segment):
     result = []
-    while len(potential_roommates) > tenant_num_segment:
-        potential_combs = list(combinations(potential_roommates, tenant_num_segment))
-        result.append(find_best_roommates(potential_roommates, potential_combs))
-    result.append(potential_roommates)
+    students_to_match = []
+    for student in potential_roommates:
+        if student.pref_segment[1] is not None:
+            result.append([student])
+        else:
+            students_to_match.append(student)
+    while len(students_to_match) > 0:
+        min_fit = 1000
+        min_seg = None
+        for roommates in result:
+            for student in students_to_match:
+                if len(roommates) < tenant_num_segment:
+                    tmp_fit = compare_students([student] + roommates)
+                    if tmp_fit < min_fit:
+                        min_fit = tmp_fit
+                        min_seg = roommates
+        if min_fit == 1000:
+            result.append([students_to_match[0]])
+            students_to_match.pop(0)
+        else:
+            for roommates in result:
+                for student in students_to_match:
+                    tmp_fit = compare_students([student] + roommates)
+                    if tmp_fit == min_fit and min_seg == roommates:
+                        roommates.append(student)
+                        students_to_match.remove(student)
+                        break
+    return result
+
+def students_live_together_into_segments(students, dorms):
+    segment_configurations_tmp = available_configurations(dorms)
+    segment_configurations = [seg_conf["configuration"] for seg_conf in segment_configurations_tmp]
+    result = []
+    roommates_groups = students_live_together(students)
+    for roommates in roommates_groups:
+        best_segment_type = []
+
+        for student in roommates:
+            if student.pref_segment[1] is not None:
+                chosen_segment = get_specific_segment(dorms, student.pref_segment)
+                if chosen_segment is not None:
+                    if chosen_segment.habitable and chosen_segment.beds >= chosen_segment.tenants_num() + len(roommates):
+                        best_segment_type.append(chosen_segment.type())
+
+        combined_segment_type = combined_segment_types(roommates)
+        correct_combined = []
+        for seg_conf in combined_segment_type:
+            if not is_correct_location(seg_conf.dorm, seg_conf.location):
+                correct_combined += seg_conf.correct_location()
+            else:
+                correct_combined.append(seg_conf)
+        if len(best_segment_type) == 0:
+            for seg_conf_i in correct_combined:
+                for seg_conf_j in segment_configurations:
+                    if seg_conf_i == seg_conf_j:
+                        if seg_conf_j not in best_segment_type:
+                            best_segment_type.append(seg_conf_j)
+
+        if len(best_segment_type) == 0:
+            for seg_conf_i in correct_combined:
+                for seg_conf_j in segment_configurations:
+                    if seg_conf_i < seg_conf_j:
+                        if seg_conf_j not in best_segment_type:
+                            best_segment_type.append(seg_conf_j)
+
+        if len(best_segment_type) == 0:
+            for seg_conf_i in correct_combined:
+                min_seg_conf = 1000000000
+                for seg_conf_j in segment_configurations:
+                    tmp = seg_conf_i - seg_conf_j
+                    if seg_conf_j.tenants_num_segment >= len(roommates) and tmp < min_seg_conf:
+                        min_seg_conf = tmp
+            for seg_conf_i in correct_combined:
+                for seg_conf_j in segment_configurations:
+                    tmp = seg_conf_i - seg_conf_j
+                    if seg_conf_j.tenants_num_segment >= len(roommates) and tmp == min_seg_conf:
+                        if seg_conf_j not in best_segment_type:
+                            best_segment_type.append(seg_conf_j)
+
+        min_seg = 1000
+        for best_seg_conf in best_segment_type:
+            for seg_conf in segment_configurations_tmp:
+                if best_seg_conf == seg_conf["configuration"] and seg_conf["beds"] < min_seg:
+                    min_seg = seg_conf["beds"]
+        for best_seg_conf in best_segment_type:
+            for seg_conf in segment_configurations_tmp:
+                if best_seg_conf == seg_conf["configuration"] and seg_conf["beds"] == min_seg:
+                    result.append([roommates, best_seg_conf])
+                    break
+        for student in roommates:
+            students.remove(student)
     return result

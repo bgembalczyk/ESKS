@@ -25,8 +25,8 @@
 #                          f"Naciśnij 4, żeby złożyć wniosek o miejsce w akademiku\n"
 #                          f"Naciśnij 5, żeby przeprowadzić akcje kwaterunkową\n")
 #         if inputTmp == "0":
-#             studentsToAccommodate = inputStudents("pliki do testów/students.txt")
-#             dorms = inputDorms("pliki do testów/dorms.txt")
+#             studentsToAccommodate = inputStudents("generatory/students.txt")
+#             dorms = inputDorms("generatory/dorms.txt")
 #             studentsToAccommodate.sort()
 #         elif inputTmp == "1":
 #             displayDorm(dorms)
