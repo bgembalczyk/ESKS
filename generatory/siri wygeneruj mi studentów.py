@@ -34,7 +34,7 @@ def find_major(majors, n):
             return major[1], major[0], major[3], major[4]
 
 
-N = 5000
+N = 500
 max_stud = 5660
 dorm_Wwa = ["Akademik", "Babilon", "Bratniak", "Mikrus", "Muszelka", "Riviera", "Tatrzańska", "Tulipan", "Ustronie",
              "Żaczek"]
@@ -112,7 +112,7 @@ majors = [
     ["Power Engineering", "Mechaniczny Energetyki i Lotnictwa", "20", "Warszawa", "angielski", "5630"],
     ["Telecommunications", "Elektroniki i Technik Informacyjnych", "30", "Warszawa", "angielski", "5660"]
 ]
-students_id_pool = list(range(1000, 10000))
+students_id_pool = list(range(100, 1000))
 
 
 with open("students.txt", "w") as file:
@@ -166,7 +166,7 @@ with open("students.txt", "w") as file:
         else:
             preference_ad = False
         if random.random() < 1 / 4:
-            preference_tenant = random.randint(1000, 10000)
+            preference_tenant = random.randint(100, 1000)
         else:
             preference_tenant = None
         line = f"{stud_id};{random.randint(1997, 2005)};{sex * 'F' + (1 - sex) * 'M'};" \

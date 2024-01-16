@@ -69,6 +69,10 @@ class Student:
         return self.id == other.id
 
     def accommodate(self, segment_var: Segment):
+        if self.segment is not None:
+            self.segment.tenants.remove(self)
+            self.segment = None
         segment_var.tenants.append(self)
         self.segment = segment_var
+        print(self.id, self.segment.room.dorm.name, self.segment.room.number, self.segment.symbol)
         return

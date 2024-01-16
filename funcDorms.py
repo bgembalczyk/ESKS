@@ -116,3 +116,10 @@ def is_correct_location(dorm_name, dorm_location):
         return False
     return True
 
+def find_segment_type(dorms, segment_type):
+    for dorm in dorms:
+        for room in dorm.rooms:
+            for segment in room.segments:
+                if segment.type() == segment_type and segment.habitable and segment.tenants_num() < segment.beds:
+                    return segment
+    return None
