@@ -1,0 +1,2 @@
+class SegmentTypesIncomparable(Exception):
+    pass

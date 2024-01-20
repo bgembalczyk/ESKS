@@ -1,15 +1,81 @@
 from dataclasses import dataclass
+from exceptions import *
 
-@dataclass(eq=False)
 class SegmentType:
-    dorm: str | None
-    location: str | None
-    tenants_num_room: int | None
-    tenants_num_segment: int | None
-    condition: str | None   # "normal", "renovated", "old"
-    bathroom: str | None    # "full", "shower", "null"
-    kitchen: bool | None
-    ad: bool | None
+    def __init__(self, dorm, location, tenants_num_room, tenants_num_segment, condition, bathroom, kitchen, ad):
+        dorms = [None, "Akademik", "Babilon", "Bratniak", "Mikrus", "Muszelka", "Riviera", "Tatrzańska", "Tulipan",
+                 "Ustronie", "Żaczek"]
+        locations = [None, "Ochota", "Kampus Centralny", "Mokotów", "Wola", "Kampus Południowy"]
+        conditions = [None, "normal", "renovated", "old"]
+        bathrooms = [None, "full", "shower", "null"]
+        if dorm not in dorms:
+            raise ValueError("SegmentType: dorm must be one of %r." % dorms)
+        if location not in locations:
+            raise ValueError("SegmentType: location must be one of %r." % locations)
+        if tenants_num_room is not None:
+            if type(tenants_num_room) is not int:
+                raise TypeError
+            else:
+                if tenants_num_room < 1:
+                    raise ValueError("SegmentType: tenants_num_room must be greater than 0")
+        if tenants_num_segment is not None:
+            if type(tenants_num_segment) is not int:
+                raise TypeError
+            else:
+                if tenants_num_segment < 1:
+                    raise ValueError("SegmentType: tenants_num_segment must be greater than 0")
+        if tenants_num_room is not None and tenants_num_segment is not None:
+            if tenants_num_segment > tenants_num_room:
+                raise ValueError("SegmentType: tenants_num_segment must be lower than or equal to tenants_num_room")
+        if condition not in conditions:
+            raise ValueError("SegmentType: condition must be one of %r." % conditions)
+        if bathroom not in bathrooms:
+            raise ValueError("SegmentType: bathroom must be one of %r." % bathrooms)
+        if type(kitchen) is not bool and kitchen is not None:
+            raise TypeError
+        if type(ad) is not bool and ad is not None:
+            raise TypeError
+
+        self._dorm = dorm
+        self._location = location
+        self._tenants_num_room = tenants_num_room
+        self._tenants_num_segment = tenants_num_segment
+        self._condition = condition
+        self._bathroom = bathroom
+        self._kitchen = kitchen
+        self._ad = ad
+
+    @property
+    def dorm(self):
+        return self._dorm
+
+    @property
+    def location(self):
+        return self._location
+
+    @property
+    def tenants_num_room(self):
+        return self._tenants_num_room
+
+    @property
+    def tenants_num_segment(self):
+        return self._tenants_num_segment
+
+    @property
+    def condition(self):
+        return self._condition
+
+    @property
+    def bathroom(self):
+        return self._bathroom
+
+    @property
+    def kitchen(self):
+        return self._kitchen
+
+    @property
+    def ad(self):
+        return self._ad
 
     def __eq__(self, other):
         if self.dorm is not None and other.dorm is not None:
@@ -47,7 +113,8 @@ class SegmentType:
         return True
 
     def __lt__(self, other):
-        # to chyba nie działa tak jak chciałem -> sprawdź screeny
+        if not (self.dorm == other.dorm or self.dorm is None or self.location == other.location or self.location is None):
+            raise SegmentTypesIncomparable
         if self.tenants_num_segment is not None and other.tenants_num_segment is not None:
             if self.tenants_num_segment < other.tenants_num_segment:
                 return False
@@ -89,93 +156,6 @@ class SegmentType:
         if self.ad != other.ad:
             return True
         return False
-
-    # def __mul__(self, other):
-    #     if None in [self.dorm, other.dorm]:
-    #         tmp_dorm = [x for x in [self.dorm, other.dorm] if x is not None]
-    #         if len(tmp_dorm) == 1:
-    #             new_dorm = tmp_dorm[0]
-    #         else:
-    #             new_dorm = None
-    #     else:
-    #         if self.dorm == other.dorm:
-    #             new_dorm = self.dorm
-    #         elif other.dorm in self.dorm:
-    #             new_dorm = self.dorm
-    #         else:
-    #             new_dorm = []
-    #             for item in [self.dorm, other.dorm]:
-    #                 if type(item) is list:
-    #                     new_dorm += item
-    #                 else:
-    #                     new_dorm.append(item)
-    #
-    #     if None in [self.location, other.location]:
-    #         tmp_location = [x for x in [self.location, other.location] if x is not None]
-    #         if len(tmp_location) == 1:
-    #             new_location = tmp_location[0]
-    #         else:
-    #             new_location = None
-    #     else:
-    #         if self.location == other.location:
-    #             new_location = self.location
-    #         elif other.location in self.location:
-    #             new_location = self.location
-    #         else:
-    #             new_location = []
-    #             for item in [self.location, other.location]:
-    #                 if type(item) is list:
-    #                     new_location += item
-    #                 else:
-    #                     new_location.append(item)
-    #
-    #     if None in [self.tenants_num_room, other.tenants_num_room]:
-    #         tmp_tenants_num_room = [x for x in [self.tenants_num_room, other.tenants_num_room] if x is not None]
-    #         if len(tmp_tenants_num_room) == 0:
-    #             new_tenants_num_room = None
-    #         else:
-    #             new_tenants_num_room = tmp_tenants_num_room[0]
-    #     else:
-    #         new_tenants_num_room = min([self.tenants_num_room, other.tenants_num_room])
-    #
-    #     if None in [self.tenants_num_segment, other.tenants_num_segment]:
-    #         tmp_tenants_num_segment = [x for x in [self.tenants_num_segment, other.tenants_num_segment] if x is not None]
-    #         if len(tmp_tenants_num_segment) == 0:
-    #             new_tenants_num_segment = None
-    #         else:
-    #             new_tenants_num_segment = tmp_tenants_num_segment[0]
-    #     else:
-    #         new_tenants_num_segment = min([self.tenants_num_segment, other.tenants_num_segment])
-    #
-    #     if "renovated" in [self.condition, other.condition]:
-    #         new_condition = "renovated"
-    #     elif "normal" in [self.condition, other.condition]:
-    #         new_condition = "normal"
-    #     elif "old" in [self.condition, other.condition]:
-    #         new_condition = "old"
-    #     else:
-    #         new_condition = None
-    #
-    #     if "full" in [self.bathroom, other.bathroom]:
-    #         new_bathroom = "full"
-    #     elif "shower" in [self.bathroom, other.bathroom]:
-    #         new_bathroom = "shower"
-    #     elif "null" in [self.bathroom, other.bathroom]:
-    #         new_bathroom = "null"
-    #     else:
-    #         new_bathroom = None
-    #
-    #     if self.kitchen is not None or other.kitchen is not None:
-    #         new_kitchen = True in [self.kitchen, other.kitchen]
-    #     else:
-    #         new_kitchen = None
-    #
-    #     if self.ad is not None or other.ad is not None:
-    #         new_ad = not (False in [self.ad, other.ad])
-    #     else:
-    #         new_ad = None
-    #
-    #     return SegmentType(new_dorm, new_location, new_tenants_num_room, new_tenants_num_segment, new_condition, new_bathroom, new_kitchen, new_ad)
 
     def __sub__(self, other):
         # dorm >> num_segment >> num_room >> condition >> bathroom >> kitchen >> ad
@@ -228,7 +208,7 @@ class SegmentType:
             if self.kitchen and not other.kitchen:
                 result += 10
         if self.ad is not None:
-            if not self.kitchen and other.ad:
+            if not self.ad and other.ad:
                 result += 1
         return result
 
@@ -236,8 +216,6 @@ class SegmentType:
         return SegmentType(self.dorm, self.location, self.tenants_num_room, self.tenants_num_segment, self.condition, self.bathroom, self.kitchen, self.ad)
 
     def correct_location(self):
-        tmp1 = self.copy()
-        tmp2 = self.copy()
-        tmp1.dorm = None
-        tmp2.location = None
+        tmp1 = SegmentType(None, self.location, self.tenants_num_room, self.tenants_num_segment, self.condition, self.bathroom, self.kitchen, self.ad)
+        tmp2 = SegmentType(self.dorm, None, self.tenants_num_room, self.tenants_num_segment, self.condition, self.bathroom, self.kitchen, self.ad)
         return tmp1, tmp2
