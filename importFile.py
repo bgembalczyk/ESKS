@@ -63,4 +63,3 @@ def input_students(path: str) -> list:
             new_stud = Student(int(stud_id), int(stud_year), stud_sex, stud_faculty, stud_major, stud_city, stud_lang, pref_roommate, (pref_dorm, pref_segment), stud_pref)
             students.append(new_stud)
         return students
-
