@@ -1,5 +1,5 @@
 from segmentType import SegmentType
-from exceptions import *
+from exceptions.segmentType import *
 import pytest
 
 def test_segment_type():
@@ -19,7 +19,7 @@ def test_segment_type_dorm():
     assert segment_type.dorm == "Akademik"
 
 def test_segment_type_dorm_wrong():
-    with pytest.raises(SegmentTypeWrongDorm):
+    with pytest.raises(WrongDorm):
         SegmentType("Sezam", "Ochota", 1, 1, "renovated", "full", True, False)
 
 def test_segment_type_location():
@@ -27,7 +27,7 @@ def test_segment_type_location():
     assert segment_type.location == "Ochota"
 
 def test_segment_type_location_wrong():
-    with pytest.raises(SegmentTypeWrongLocation):
+    with pytest.raises(WrongLocation):
         SegmentType("Akademik", "Ursynów", 1, 1, "renovated", "full", True, False)
 
 def test_segment_type_tenants_num_room():
@@ -35,11 +35,11 @@ def test_segment_type_tenants_num_room():
     assert segment_type.tenants_num_room == 1
 
 def test_segment_type_tenants_num_room_wrong_type():
-    with pytest.raises(SegmentTypeTenantsNumNotInt):
+    with pytest.raises(TenantsNumNotInt):
         SegmentType("Akademik", "Ochota", False, 1, "renovated", "full", True, False)
 
 def test_segment_type_tenants_num_room_wrong_int():
-    with pytest.raises(SegmentTypeWrongTenantsNumRoom):
+    with pytest.raises(WrongTenantsNumRoom):
         SegmentType("Akademik", "Ochota", -1, -11, "renovated", "full", True, False)
 
 def test_segment_type_tenants_num_segment():
@@ -47,15 +47,15 @@ def test_segment_type_tenants_num_segment():
     assert segment_type.tenants_num_segment == 1
 
 def test_segment_type_tenants_num_segment_wrong_type():
-    with pytest.raises(SegmentTypeTenantsNumNotInt):
+    with pytest.raises(TenantsNumNotInt):
         SegmentType("Akademik", "Ochota", 1, False, "renovated", "full", True, False)
 
 def test_segment_type_tenants_num_segment_wrong_int():
-    with pytest.raises(SegmentTypeWrongTenantsNumSegment):
+    with pytest.raises(WrongTenantsNumSegment):
         SegmentType("Akademik", "Ochota", 1, -1, "renovated", "full", True, False)
 
 def test_segment_type_tenants_num_wrong_int():
-    with pytest.raises(SegmentTypeWrongTenantsNumSegment):
+    with pytest.raises(WrongTenantsNumSegment):
         SegmentType("Akademik", "Ochota", 1, 2, "renovated", "full", True, False)
 
 def test_segment_type_condition():
@@ -63,7 +63,7 @@ def test_segment_type_condition():
     assert segment_type.condition == "renovated"
 
 def test_segment_type_wrong_condition():
-    with pytest.raises(SegmentTypeWrongCondition):
+    with pytest.raises(WrongCondition):
         SegmentType("Akademik", "Ochota", 1, 1, "new", "full", True, False)
 
 def test_segment_type_bathroom():
@@ -71,7 +71,7 @@ def test_segment_type_bathroom():
     assert segment_type.bathroom == "full"
 
 def test_segment_type_wrong_bathroom():
-    with pytest.raises(SegmentTypeWrongBathroom):
+    with pytest.raises(WrongBathroom):
         SegmentType("Akademik", "Ochota", 1, 1, "renovated", "renovated", True, False)
 
 def test_segment_type_kitchen():
@@ -79,7 +79,7 @@ def test_segment_type_kitchen():
     assert segment_type.kitchen
 
 def test_segment_type_wrong_kitchen():
-    with pytest.raises(SegmentTypeWrongKitchen):
+    with pytest.raises(WrongKitchen):
         SegmentType("Akademik", "Ochota", 1, 1, "renovated", "full", "true", False)
 
 def test_segment_type_ad():
@@ -87,7 +87,7 @@ def test_segment_type_ad():
     assert not segment_type.ad
 
 def test_segment_type_wrong_ad():
-    with pytest.raises(SegmentTypeWrongAd):
+    with pytest.raises(WrongAd):
         SegmentType("Akademik", "Ochota", 1, 1, "renovated", "full", True, "false")
 
 def test_segment_type__eq__():
@@ -123,7 +123,7 @@ def test_segment_type__lt__fail():
 def test_segment_type__lt__incomparable():
     segment_type1 = SegmentType("Akademik", "Ochota", 4, 2, "normal", "null", False, True)
     segment_type2 = SegmentType("Tatrzańska", "Mokotów", 1, 1, "renovated", "full", True, False)
-    with pytest.raises(SegmentTypesIncomparable):
+    with pytest.raises(Incomparable):
         segment_type1 < segment_type2
 
 def test_segment_type__sub__():

@@ -1,5 +1,4 @@
-from dataclasses import dataclass
-from exceptions import *
+from exceptions.segmentType import *
 
 class SegmentType:
     def __init__(self, dorm, location, tenants_num_room, tenants_num_segment, condition, bathroom, kitchen, ad):
@@ -9,32 +8,32 @@ class SegmentType:
         conditions = [None, "normal", "renovated", "old"]
         bathrooms = [None, "full", "shower", "null"]
         if dorm not in dorms:
-            raise SegmentTypeWrongDorm
+            raise WrongDorm
         if location not in locations:
-            raise SegmentTypeWrongLocation
+            raise WrongLocation
         if tenants_num_room is not None:
             if type(tenants_num_room) is not int:
-                raise SegmentTypeTenantsNumNotInt
+                raise TenantsNumNotInt
             else:
                 if tenants_num_room < 1:
-                    raise SegmentTypeWrongTenantsNumRoom
+                    raise WrongTenantsNumRoom
         if tenants_num_segment is not None:
             if type(tenants_num_segment) is not int:
-                raise SegmentTypeTenantsNumNotInt
+                raise TenantsNumNotInt
             else:
                 if tenants_num_segment < 1:
-                    raise SegmentTypeWrongTenantsNumSegment("SegmentType: tenants_num_segment must be greater than 0")
+                    raise WrongTenantsNumSegment("SegmentType: tenants_num_segment must be greater than 0")
         if tenants_num_room is not None and tenants_num_segment is not None:
             if tenants_num_segment > tenants_num_room:
-                raise SegmentTypeWrongTenantsNumSegment("SegmentType: tenants_num_segment must be lower than or equal to tenants_num_room")
+                raise WrongTenantsNumSegment("SegmentType: tenants_num_segment must be lower than or equal to tenants_num_room")
         if condition not in conditions:
-            raise SegmentTypeWrongCondition
+            raise WrongCondition
         if bathroom not in bathrooms:
-            raise SegmentTypeWrongBathroom
+            raise WrongBathroom
         if type(kitchen) is not bool and kitchen is not None:
-            raise SegmentTypeWrongKitchen
+            raise WrongKitchen
         if type(ad) is not bool and ad is not None:
-            raise SegmentTypeWrongAd
+            raise WrongAd
 
         self._dorm = dorm
         self._location = location
@@ -114,7 +113,7 @@ class SegmentType:
 
     def __lt__(self, other):
         if not (self.dorm == other.dorm or self.dorm is None or self.location == other.location or self.location is None):
-            raise SegmentTypesIncomparable
+            raise Incomparable
         if self.tenants_num_segment is not None and other.tenants_num_segment is not None:
             if self.tenants_num_segment < other.tenants_num_segment:
                 return False
