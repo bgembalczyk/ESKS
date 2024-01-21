@@ -1,24 +1,26 @@
-class StudentError(Exception):
+class IdNotInt(TypeError):
     pass
 
-class StudentIdNotInt(StudentError, TypeError):
+class WrongId(ValueError):
+    def __init__(self):
+        message = "Student: USOSid must greater than 0"
+        super().__init__(message)
+
+class YearNotInt(TypeError):
     pass
 
-class StudentYearNotInt(StudentError, TypeError):
-    pass
-
-class StudentWrongYear(StudentError, ValueError):
+class WrongYear(ValueError):
     def __init__(self):
         message = "Student: year must between 1900 and 2010"
         super().__init__(message)
 
-class StudentWrongSex(StudentError, ValueError):
+class WrongSex(ValueError):
     def __init__(self):
         sex = ["M", "F", "O"]
         message = "Student: sex must be one of %r." % sex
         super().__init__(message)
 
-class StudentWrongFaculty(StudentError, ValueError):
+class WrongFaculty(ValueError):
     def __init__(self):
         faculties = ["Administracji i Nauk Społecznych", "Architektury", "Budownictwa, Mechaniki i Petrochemii",
                      "Chemiczny", "Elektroniki i Technik Informacyjnych", "Elektryczny", "Fizyki",
@@ -30,7 +32,7 @@ class StudentWrongFaculty(StudentError, ValueError):
         message = "Student: faculty must be one of %r." % faculties
         super().__init__(message)
 
-class StudentWrongMajor(StudentError, ValueError):
+class WrongMajor(ValueError):
     def __init__(self):
         majors = ["Administracja", "Aerospace Engineering", "Architecture", "Architektura", "Automatyka i robotyka",
                   "Automatyka i robotyka stosowana", "Automatyka, robotyka i informatyka  przemysłowa",
@@ -53,14 +55,34 @@ class StudentWrongMajor(StudentError, ValueError):
         message = "Student: major must be one of %r." % majors
         super().__init__(message)
 
-class StudentWrongCity(StudentError, ValueError):
+class WrongCity(ValueError):
     def __init__(self):
         cites = ["Warszawa", "Płock"]
         message = "Student: city must be one of %r." % cites
         super().__init__(message)
 
-class StudentWrongLang(StudentError, ValueError):
+class WrongLang(ValueError):
     def __init__(self):
         langs = ["polski", "angielski"]
         message = "Student: lang must be one of %r." % langs
+        super().__init__(message)
+
+class WrongPreference(Exception):
+    def __init__(self):
+        message = "Student: Preferred segment must be tuple with (dorm, segment sign)"
+        super().__init__(message)
+
+class WrongPrefDorm(ValueError):
+    def __init__(self):
+        dorms = [None, "Akademik", "Babilon", "Bratniak", "Mikrus", "Muszelka", "Riviera", "Tatrzańska", "Tulipan",
+                 "Ustronie", "Żaczek"]
+        message = "Student: Preferred dorm must be one of %r." % dorms
+        super().__init__(message)
+
+class PrefDormMissing(Exception):
+    pass
+
+class WrongPrefSegment(ValueError):
+    def __init__(self):
+        message = "Student: Preferred segment's sign must be [int][char.upper]"
         super().__init__(message)
