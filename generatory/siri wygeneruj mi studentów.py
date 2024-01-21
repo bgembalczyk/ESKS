@@ -37,7 +37,7 @@ def find_major(majors, n):
 N = 500
 max_stud = 5660
 dorm_Wwa = ["Akademik", "Babilon", "Bratniak", "Mikrus", "Muszelka", "Riviera", "Tatrzańska", "Tulipan", "Ustronie",
-             "Żaczek"]
+            "Żaczek"]
 majors = [
     ["Administracja", "Administracji i Nauk Społecznych", "200", "Warszawa", "polski", "200"],
     ["Architektura", "Architektury", "100", "Warszawa", "polski", "300"],
