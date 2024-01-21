@@ -86,3 +86,15 @@ class WrongPrefSegment(ValueError):
     def __init__(self):
         message = "Student: Preferred segment's sign must be [int][char.upper]"
         super().__init__(message)
+
+class CannotAccommodate(Exception):
+    pass
+
+class AlreadyAccommodated(CannotAccommodate):
+    pass
+
+class NonHabitable(CannotAccommodate):
+    pass
+
+class TooManyTenants(CannotAccommodate):
+    pass

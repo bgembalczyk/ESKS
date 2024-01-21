@@ -2,6 +2,9 @@ import pytest
 
 from student import Student
 from segmentType import SegmentType
+from segment import Segment
+from room import Room
+from dormitory import Dormitory
 from exceptions.student import *
 
 def test_student():
@@ -144,7 +147,78 @@ def test_student__lt__fail():
     student2 = Student(297777, 1999, "F", "Chemiczny", "Biotechnologia", "Płock", "angielski", 319000, ("Babilon", "2137Z"), SegmentType("Babilon", "Ochota", 2, 2, "normal", "full", True, False))
     assert not student1 < student2
 
-# TODO
-# def test_accommodate():
-#     student = Student(id, year, sex, faculty, major, city, lang, pref_roommate, pref_segment, preference)
-#     assert False
+def test_accommodate():
+    dormitory = Dormitory("Sezam", True, "Powiśle")
+    room = Room(dormitory, 1, True, "renovated", "full", True, False)
+    segment = Segment(room, "A", True, 1)
+    dormitory.rooms.append(room)
+    room.segments.append(segment)
+    student = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
+    student.accommodate(segment)
+    assert student.segment is segment
+
+def test_accommodate2():
+    dormitory = Dormitory("Sezam", True, "Powiśle")
+    room = Room(dormitory, 1, True, "renovated", "full", True, False)
+    segment = Segment(room, "A", True, 1)
+    dormitory.rooms.append(room)
+    room.segments.append(segment)
+    student = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
+    student.accommodate(segment)
+    assert segment.tenants[0] is student
+
+def test_accommodate_already_accommodated():
+    dormitory = Dormitory("Sezam", True, "Powiśle")
+    room = Room(dormitory, 1, True, "renovated", "full", True, False)
+    segment1 = Segment(room, "A", True, 1)
+    segment2 = Segment(room, "B", True, 1)
+    dormitory.rooms.append(room)
+    room.segments.append(segment1)
+    room.segments.append(segment2)
+    student = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
+    student.accommodate(segment1)
+    with pytest.raises(AlreadyAccommodated):
+        student.accommodate(segment2)
+
+def test_accommodate_non_habitable_segment():
+    dormitory = Dormitory("Sezam", True, "Powiśle")
+    room = Room(dormitory, 1, True, "renovated", "full", True, False)
+    segment = Segment(room, "A", False, 1)
+    dormitory.rooms.append(room)
+    room.segments.append(segment)
+    student = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
+    with pytest.raises(NonHabitable):
+        student.accommodate(segment)
+
+def test_accommodate_non_habitable_room():
+    dormitory = Dormitory("Sezam", True, "Powiśle")
+    room = Room(dormitory, 1, False, "renovated", "full", True, False)
+    segment = Segment(room, "A", True, 1)
+    dormitory.rooms.append(room)
+    room.segments.append(segment)
+    student = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
+    with pytest.raises(NonHabitable):
+        student.accommodate(segment)
+
+def test_accommodate_non_habitable_dorm():
+    dormitory = Dormitory("Sezam", False, "Powiśle")
+    room = Room(dormitory, 1, True, "renovated", "full", True, False)
+    segment = Segment(room, "A", True, 1)
+    dormitory.rooms.append(room)
+    room.segments.append(segment)
+    student = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
+    with pytest.raises(NonHabitable):
+        student.accommodate(segment)
+
+def test_accommodate_too_many_tenants():
+    dormitory = Dormitory("Sezam", True, "Powiśle")
+    room = Room(dormitory, 1, True, "renovated", "full", True, False)
+    segment = Segment(room, "A", True, 1)
+    dormitory.rooms.append(room)
+    room.segments.append(segment)
+    student1 = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
+    student2 = Student(297777, 1999, "F", "Chemiczny", "Biotechnologia", "Płock", "angielski", 319000, ("Babilon", "2137Z"), SegmentType("Babilon", "Ochota", 2, 2, "normal", "full", True, False))
+    student1.accommodate(segment)
+    with pytest.raises(TooManyTenants):
+        student2.accommodate(segment)
+

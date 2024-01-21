@@ -145,8 +145,11 @@ class Student:
 
     def accommodate(self, segment_var: Segment):
         if self.segment is not None:
-            self.segment.tenants.remove(self)
-            self.segment = None
+            raise AlreadyAccommodated
+        if not segment_var.habitable or not segment_var.room.habitable or not segment_var.room.dorm.habitable:
+            raise NonHabitable
+        if segment_var.tenants_num() >= segment_var.beds:
+            raise TooManyTenants
         segment_var.tenants.append(self)
         self.segment = segment_var
         print(self.id, self.segment.room.dorm.name, self.segment.room.number, self.segment.symbol)
