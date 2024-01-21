@@ -2,7 +2,9 @@ class WrongRoom(TypeError):
     pass
 
 class SymbolNotStr(ValueError):
-    pass
+    def __init__(self):
+        message = "Segment: symbol must be single uppercase letter"
+        super().__init__(message)
 
 class WrongSymbol(TypeError):
     pass
@@ -10,8 +12,10 @@ class WrongSymbol(TypeError):
 class WrongHabitable(TypeError):
     pass
 
-class BedsNotInt(ValueError):
+class BedsNotInt(TypeError):
     pass
 
-class WrongBeds(TypeError):
-    pass
+class WrongBeds(ValueError):
+    def __init__(self):
+        message = "Segment: Number of beds must be positive int"
+        super().__init__(message)
