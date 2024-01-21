@@ -7,6 +7,7 @@ class SegmentType:
         locations = [None, "Ochota", "Kampus Centralny", "Mokotów", "Wola", "Kampus Południowy"]
         conditions = [None, "normal", "renovated", "old"]
         bathrooms = [None, "full", "shower", "null"]
+
         if dorm not in dorms:
             raise WrongDorm
         if location not in locations:
