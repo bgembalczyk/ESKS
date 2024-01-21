@@ -4,6 +4,8 @@ from exceptions.room import *
 from segment import Segment
 from room import Room
 from dormitory import Dormitory
+from student import Student
+from segmentType import SegmentType
 
 def test_room():
     dormitory = Dormitory("Akademik", True, "Ochota")
@@ -88,10 +90,45 @@ def test_room_wrong_ad():
     with pytest.raises(Exception):
         Room(dormitory, 1, True, "renovated", "full", True, 1)
 
+def test_room_beds():
+    dormitory = Dormitory("Akademik", True, "Ochota")
+    room2 = Room(dormitory, 2, True, "renovated", "full", True, False)
+    segment2A = Segment(room2, "A", True, 2)
+    segment2B = Segment(room2, "B", True, 3)
+    room2.segments.append(segment2A)
+    room2.segments.append(segment2B)
+    dormitory.rooms.append(room2)
+    assert room2.beds() == 5
+
+def test_room_tenants_num():
+    dormitory = Dormitory("Akademik", True, "Ochota")
+    room2 = Room(dormitory, 2, True, "renovated", "full", True, False)
+    segment2A = Segment(room2, "A", True, 2)
+    segment2B = Segment(room2, "B", True, 3)
+    room2.segments.append(segment2A)
+    room2.segments.append(segment2B)
+    dormitory.rooms.append(room2)
+    student1 = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
+    student2 = Student(320684, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
+    student3 = Student(320685, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
+    student4 = Student(320686, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
+    student5 = Student(320687, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
+    student1.accommodate(segment2A)
+    student2.accommodate(segment2A)
+    student3.accommodate(segment2B)
+    student4.accommodate(segment2B)
+    student5.accommodate(segment2B)
+    assert room2.tenants_num() == 5
+
 def test_room__str__():
     dormitory = Dormitory("Akademik", True, "Ochota")
-    room = Room(dormitory, 1, True, "renovated", "full", True, False)
-    string = f"\tNumer pokoju: 1\n\tLiczba łóżek: 0\n\tLiczba mieszkańców: 0\n\tLiczba segmentów: 0\n"
+    room = Room(dormitory, 2, True, "renovated", "full", True, False)
+    segmentA = Segment(room, "A", True, 2)
+    segmentB = Segment(room, "B", True, 3)
+    room.segments.append(segmentA)
+    room.segments.append(segmentB)
+    dormitory.rooms.append(room)
+    string = f"\tNumer pokoju: 2\n\tLiczba łóżek: 5\n\tLiczba mieszkańców: 0\n\tLiczba segmentów: 2\n"
     assert str(room) == string
 
 def test_room__lt__():
