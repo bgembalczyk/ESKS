@@ -9,32 +9,32 @@ class SegmentType:
         conditions = [None, "normal", "renovated", "old"]
         bathrooms = [None, "full", "shower", "null"]
         if dorm not in dorms:
-            raise ValueError("SegmentType: dorm must be one of %r." % dorms)
+            raise SegmentTypeWrongDorm
         if location not in locations:
-            raise ValueError("SegmentType: location must be one of %r." % locations)
+            raise SegmentTypeWrongLocation
         if tenants_num_room is not None:
             if type(tenants_num_room) is not int:
-                raise TypeError
+                raise SegmentTypeTenantsNumNotInt
             else:
                 if tenants_num_room < 1:
-                    raise ValueError("SegmentType: tenants_num_room must be greater than 0")
+                    raise SegmentTypeWrongTenantsNumRoom
         if tenants_num_segment is not None:
             if type(tenants_num_segment) is not int:
-                raise TypeError
+                raise SegmentTypeTenantsNumNotInt
             else:
                 if tenants_num_segment < 1:
-                    raise ValueError("SegmentType: tenants_num_segment must be greater than 0")
+                    raise SegmentTypeWrongTenantsNumSegment("SegmentType: tenants_num_segment must be greater than 0")
         if tenants_num_room is not None and tenants_num_segment is not None:
             if tenants_num_segment > tenants_num_room:
-                raise ValueError("SegmentType: tenants_num_segment must be lower than or equal to tenants_num_room")
+                raise SegmentTypeWrongTenantsNumSegment("SegmentType: tenants_num_segment must be lower than or equal to tenants_num_room")
         if condition not in conditions:
-            raise ValueError("SegmentType: condition must be one of %r." % conditions)
+            raise SegmentTypeWrongCondition
         if bathroom not in bathrooms:
-            raise ValueError("SegmentType: bathroom must be one of %r." % bathrooms)
+            raise SegmentTypeWrongBathroom
         if type(kitchen) is not bool and kitchen is not None:
-            raise TypeError
+            raise SegmentTypeWrongKitchen
         if type(ad) is not bool and ad is not None:
-            raise TypeError
+            raise SegmentTypeWrongAd
 
         self._dorm = dorm
         self._location = location

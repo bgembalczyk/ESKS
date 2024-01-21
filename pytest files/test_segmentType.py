@@ -19,7 +19,7 @@ def test_segment_type_dorm():
     assert segment_type.dorm == "Akademik"
 
 def test_segment_type_dorm_wrong():
-    with pytest.raises(ValueError):
+    with pytest.raises(SegmentTypeWrongDorm):
         SegmentType("Sezam", "Ochota", 1, 1, "renovated", "full", True, False)
 
 def test_segment_type_location():
@@ -27,7 +27,7 @@ def test_segment_type_location():
     assert segment_type.location == "Ochota"
 
 def test_segment_type_location_wrong():
-    with pytest.raises(ValueError):
+    with pytest.raises(SegmentTypeWrongLocation):
         SegmentType("Akademik", "Ursynów", 1, 1, "renovated", "full", True, False)
 
 def test_segment_type_tenants_num_room():
@@ -35,11 +35,11 @@ def test_segment_type_tenants_num_room():
     assert segment_type.tenants_num_room == 1
 
 def test_segment_type_tenants_num_room_wrong_type():
-    with pytest.raises(TypeError):
+    with pytest.raises(SegmentTypeTenantsNumNotInt):
         SegmentType("Akademik", "Ochota", False, 1, "renovated", "full", True, False)
 
 def test_segment_type_tenants_num_room_wrong_int():
-    with pytest.raises(ValueError):
+    with pytest.raises(SegmentTypeWrongTenantsNumRoom):
         SegmentType("Akademik", "Ochota", -1, -11, "renovated", "full", True, False)
 
 def test_segment_type_tenants_num_segment():
@@ -47,15 +47,15 @@ def test_segment_type_tenants_num_segment():
     assert segment_type.tenants_num_segment == 1
 
 def test_segment_type_tenants_num_segment_wrong_type():
-    with pytest.raises(TypeError):
+    with pytest.raises(SegmentTypeTenantsNumNotInt):
         SegmentType("Akademik", "Ochota", 1, False, "renovated", "full", True, False)
 
 def test_segment_type_tenants_num_segment_wrong_int():
-    with pytest.raises(ValueError):
+    with pytest.raises(SegmentTypeWrongTenantsNumSegment):
         SegmentType("Akademik", "Ochota", 1, -1, "renovated", "full", True, False)
 
 def test_segment_type_tenants_num_wrong_int():
-    with pytest.raises(ValueError):
+    with pytest.raises(SegmentTypeWrongTenantsNumSegment):
         SegmentType("Akademik", "Ochota", 1, 2, "renovated", "full", True, False)
 
 def test_segment_type_condition():
@@ -63,7 +63,7 @@ def test_segment_type_condition():
     assert segment_type.condition == "renovated"
 
 def test_segment_type_wrong_condition():
-    with pytest.raises(ValueError):
+    with pytest.raises(SegmentTypeWrongCondition):
         SegmentType("Akademik", "Ochota", 1, 1, "new", "full", True, False)
 
 def test_segment_type_bathroom():
@@ -71,7 +71,7 @@ def test_segment_type_bathroom():
     assert segment_type.bathroom == "full"
 
 def test_segment_type_wrong_bathroom():
-    with pytest.raises(ValueError):
+    with pytest.raises(SegmentTypeWrongBathroom):
         SegmentType("Akademik", "Ochota", 1, 1, "renovated", "renovated", True, False)
 
 def test_segment_type_kitchen():
@@ -79,7 +79,7 @@ def test_segment_type_kitchen():
     assert segment_type.kitchen
 
 def test_segment_type_wrong_kitchen():
-    with pytest.raises(TypeError):
+    with pytest.raises(SegmentTypeWrongKitchen):
         SegmentType("Akademik", "Ochota", 1, 1, "renovated", "full", "true", False)
 
 def test_segment_type_ad():
@@ -87,7 +87,7 @@ def test_segment_type_ad():
     assert not segment_type.ad
 
 def test_segment_type_wrong_ad():
-    with pytest.raises(TypeError):
+    with pytest.raises(SegmentTypeWrongAd):
         SegmentType("Akademik", "Ochota", 1, 1, "renovated", "full", True, "false")
 
 def test_segment_type__eq__():
@@ -143,6 +143,4 @@ def test_segment_type_copy():
 
 def test_segment_type_correct_location():
     segment_type1 = SegmentType("Akademik", "Mokotów", 4, 2, "normal", "null", False, True)
-    # segment_type2 = SegmentType(None, "Mokotów", 4, 2, "normal", "null", False, True)
-    # segment_type3 = SegmentType("Akademik", None, 4, 2, "normal", "null", False, True)
     assert segment_type1.correct_location() == (SegmentType(None, "Mokotów", 4, 2, "normal", "null", False, True), SegmentType("Akademik", None, 4, 2, "normal", "null", False, True))
