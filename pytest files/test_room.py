@@ -143,13 +143,22 @@ def test_room__lt__fail():
     room2 = Room(dormitory, 2, True, "renovated", "full", True, False)
     assert not room2 < room1
 
-def test_room_get_segments():
+def test_room_get_segment():
     dormitory = Dormitory("Akademik", True, "Ochota")
     room = Room(dormitory, 1, True, "renovated", "full", True, False)
     segment = Segment(room, "A", True, 1)
     dormitory.rooms.append(room)
     room.segments.append(segment)
     assert room.get_segment("A") is segment
+
+def test_room_get_segment_none():
+    dormitory = Dormitory("Akademik", True, "Ochota")
+    room = Room(dormitory, 1, True, "renovated", "full", True, False)
+    segment = Segment(room, "A", True, 1)
+    dormitory.rooms.append(room)
+    room.segments.append(segment)
+    with pytest.raises(SegmentNotFound):
+        room.get_segment("B")
 
 def test_room_get_segments_symbol_not_str():
     dormitory = Dormitory("Akademik", True, "Ochota")

@@ -29,3 +29,6 @@ class WrongKitchen(TypeError):
 
 class WrongAd(TypeError):
     pass
+
+class SegmentNotFound(Exception):
+    pass
