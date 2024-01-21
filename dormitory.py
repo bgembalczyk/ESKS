@@ -1,10 +1,20 @@
+import exceptions.room
 from room import Room
-from segment import Segment
-from student import Student
-
+from exceptions.dormitory import *
 
 class Dormitory:
-    def __init__(self, name: str, habitable: bool, location: str):
+    def __init__(self, name, habitable, location):
+        dorms = ["Akademik", "Babilon", "Bratniak", "Mikrus", "Muszelka", "Riviera", "Tatrzańska", "Tulipan",
+                 "Ustronie", "Żaczek"]
+        locations = ["Ochota", "Kampus Centralny", "Mokotów", "Wola", "Kampus Południowy"]
+
+        if name not in dorms:
+            raise WrongName
+        if location not in locations:
+            raise WrongLocation
+        if type(habitable) is not bool:
+            raise WrongHabitable
+
         self._name = name
         self._location = location
         self.habitable = habitable
@@ -37,11 +47,16 @@ class Dormitory:
             res += room.tenants_num()
         return res
 
-    def get_room(self, roomNum: int) -> Room | None:
+    def get_room(self, roomNum) -> Room:
+        if type(roomNum) is not int:
+            raise exceptions.room.NumberNotInt
+        if roomNum <= 0:
+            raise exceptions.room.WrongNumber
+
         for room_iter in self.rooms:
             if room_iter.number == roomNum:
                 return room_iter
-        return None
+        raise RoomNotFound
 
     def input_rooms(self, tab: list) -> None:
         for room in tab:
@@ -62,17 +77,3 @@ class Dormitory:
                         if (seg_type not in result) or repeating:
                             result.append(seg_type)
         return result
-
-    # TODO
-    # nie ma już Student.prefTenantsNum
-    # def find_place(self, student: Student) -> Segment | None:
-    #     pref_mates_num = student.prefTenantsNum
-    #     for room in self.rooms:
-    #         for segment in room.segments:
-    #             if segment.beds == pref_mates_num and len(segment.tenants) < segment.beds:
-    #                 return segment
-    #     for room in self.rooms:
-    #         for segment in room.segments:
-    #             if len(segment.tenants) < segment.beds:
-    #                 return segment
-    #     return None
