@@ -221,4 +221,3 @@ def test_accommodate_too_many_tenants():
     student1.accommodate(segment)
     with pytest.raises(TooManyTenants):
         student2.accommodate(segment)
-
