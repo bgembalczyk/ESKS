@@ -18,7 +18,7 @@ if __name__ == '__main__':
     # TODO
     # została obsługa z cmd i testy
     #    seks.seks()
-    dorms = input_dorms("generatory/dorms.json")
-    path = "generatory/students.txt"
+    dorms = input_dorms("dorms.json")
+    path = "students.txt"
 
     accommodation_action(path, dorms)

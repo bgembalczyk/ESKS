@@ -60,10 +60,6 @@ dorms_data = [
                ({"segments": [2], "renovated": True}, 115),
                ({"segments": [2], "bathroom": True}, 115)]
      },
-    # {"name": "Wcześniak", "location": "Płock",
-    #  "rooms": [({"segments": [1, 1, 2, 2], "bathroom": True}, 40),
-    #            ({"segments": [2, 2, 2, 2], "bathroom": True}, 45)]
-    #  },
     {"name": "Żaczek", "location": "Kampus Południowy",
      "rooms": [({"segments": [1], "bathroom": True, "kitchen": True}, 210),
                ({"segments": [2], "bathroom": True, "kitchen": True}, 105),
@@ -109,5 +105,5 @@ for dorm in dorms_data:
             room_number += 1
     dorms["dorms"].append(tmp_dorm)
 
-with open("dorms.json", "w", encoding='utf-8') as file:
+with open("../dorms.json", "w", encoding='utf-8') as file:
     json.dump(dorms, file, ensure_ascii=False, indent=4)
