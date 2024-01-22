@@ -30,7 +30,7 @@ class Student:
                   "Power Engineering", "Przemysłowe zastosowania informatyki", "Robotyka i automatyka",
                   "Technologia chemiczna", "Telecommunications", "Telekomunikacja", "Transport", "Zarządzanie",
                   "Zarządzanie i inżynieria produkcji"]
-        cites = ["Warszawa", "Płock"]
+        cites = ["Warszawa"]
         langs = ["polski", "angielski"]
         dorms = [None, "Akademik", "Babilon", "Bratniak", "Mikrus", "Muszelka", "Riviera", "Tatrzańska", "Tulipan",
                  "Ustronie", "Żaczek"]

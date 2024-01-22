@@ -57,7 +57,7 @@ class WrongMajor(ValueError):
 
 class WrongCity(ValueError):
     def __init__(self):
-        cites = ["Warszawa", "Płock"]
+        cites = ["Warszawa"]
         message = "Student: city must be one of %r." % cites
         super().__init__(message)
 

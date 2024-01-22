@@ -112,8 +112,6 @@ def is_correct_location(dorm_name, dorm_location):
         return False
     if dorm_location == "Kampus Południowy" and dorm_name != "Żaczek":
         return False
-    if dorm_location == "Płock" and dorm_name != "Wcześniak":
-        return False
     return True
 
 def find_segment_type(dorms, segment_type):

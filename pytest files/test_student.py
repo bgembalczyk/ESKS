@@ -129,7 +129,7 @@ def test_student__str__():
 
 def test_student__eq__():
     student1 = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
-    student2 = Student(320683, 1999, "F", "Chemiczny", "Biotechnologia", "Płock", "angielski", 319000, ("Babilon", "2137Z"), SegmentType("Babilon", "Ochota", 2, 2, "normal", "full", True, False))
+    student2 = Student(320683, 1999, "F", "Chemiczny", "Biotechnologia", "Warszawa", "angielski", 319000, ("Babilon", "2137Z"), SegmentType("Babilon", "Ochota", 2, 2, "normal", "full", True, False))
     assert student1 == student2
 
 def test_student__eq__fail():
@@ -139,12 +139,12 @@ def test_student__eq__fail():
 
 def test_student__lt__():
     student1 = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
-    student2 = Student(297777, 1999, "F", "Chemiczny", "Biotechnologia", "Płock", "angielski", 319000, ("Babilon", "2137Z"), SegmentType("Babilon", "Ochota", 2, 2, "normal", "full", True, False))
+    student2 = Student(297777, 1999, "F", "Chemiczny", "Biotechnologia", "Warszawa", "angielski", 319000, ("Babilon", "2137Z"), SegmentType("Babilon", "Ochota", 2, 2, "normal", "full", True, False))
     assert student2 < student1
 
 def test_student__lt__fail():
     student1 = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
-    student2 = Student(297777, 1999, "F", "Chemiczny", "Biotechnologia", "Płock", "angielski", 319000, ("Babilon", "2137Z"), SegmentType("Babilon", "Ochota", 2, 2, "normal", "full", True, False))
+    student2 = Student(297777, 1999, "F", "Chemiczny", "Biotechnologia", "Warszawa", "angielski", 319000, ("Babilon", "2137Z"), SegmentType("Babilon", "Ochota", 2, 2, "normal", "full", True, False))
     assert not student1 < student2
 
 def test_accommodate():
@@ -217,7 +217,7 @@ def test_accommodate_too_many_tenants():
     dormitory.rooms.append(room)
     room.segments.append(segment)
     student1 = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", 297777, ("Akademik", "307A"), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
-    student2 = Student(297777, 1999, "F", "Chemiczny", "Biotechnologia", "Płock", "angielski", 319000, ("Babilon", "2137Z"), SegmentType("Babilon", "Ochota", 2, 2, "normal", "full", True, False))
+    student2 = Student(297777, 1999, "F", "Chemiczny", "Biotechnologia", "Warszawa", "angielski", 319000, ("Babilon", "2137Z"), SegmentType("Babilon", "Ochota", 2, 2, "normal", "full", True, False))
     student1.accommodate(segment)
     with pytest.raises(TooManyTenants):
         student2.accommodate(segment)
