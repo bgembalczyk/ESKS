@@ -1,41 +1,38 @@
 from segmentType import SegmentType
-
-# def accommodationAction(studentsToAccommodate: list, dorms: dict) -> None:
-#     while studentsToAccommodate:
-#         tmpStudent = studentsToAccommodate[0]
-#         tmpSegment = dorms[tmpStudent.prefDorm].find_place(tmpStudent)
-#         if not tmpSegment:
-#             for dorm_name in dorms:
-#                 tmpSegment = dorms[dorm_name].find_place(tmpStudent)
-#                 if tmpSegment:
-#                     break
-#         if not tmpSegment:
-#             print("There's not enough places in dorms!!!")
-#             print(len(studentsToAccommodate))
-#             print(studentsToAccommodate)
-#             break
-#         tmpStudent.accommodate(tmpSegment)
-#         studentsToAccommodate.pop(0)
+from exceptions.rest import *
+import exceptions.dormitory
+import exceptions.room
 
 def get_specific_segment(dorms, pref_seg_num):
-    pref_dorm = pref_seg_num[0]
-    pref_room = int(pref_seg_num[1][:-1])
-    pref_segment = pref_seg_num[1][-1]
+    try:
+        pref_dorm = pref_seg_num[0]
+    except (TypeError, ValueError):
+        raise WrongSegmentReference
+    try:
+        pref_room = int(pref_seg_num[1][:-1])
+    except (TypeError, ValueError):
+        raise WrongSegmentReference
+    try:
+        pref_segment = pref_seg_num[1][-1]
+    except (TypeError, ValueError):
+        raise WrongSegmentReference
     for dorm in dorms:
         if dorm.name == pref_dorm:
-            room = dorm.get_room(pref_room)
-            if room is not None:
-                segment = room.get_segment(pref_segment)
-                return segment
-    return None
+            try:
+                room = dorm.get_room(pref_room)
+                try:
+                    segment = room.get_segment(pref_segment)
+                    return segment
+                except exceptions.room.SegmentNotFound:
+                    raise NotFound
+            except exceptions.dormitory.RoomNotFound:
+                raise NotFound
 
 def available_configurations(dorms):
     all_configs = []
     result = []
     for dorm in dorms:
         all_configs += dorm.segment_types(True)
-    # TODO
-    # zliczanie wolnych miejsc w przypadku w części zajętego pokoju bardziej nie działa niż działa
     for dorm in dorms:
         for config in dorm.segment_types():
             result.append({"configuration": config, "beds": all_configs.count(config) * config.tenants_num_segment, "students": []})
@@ -52,35 +49,35 @@ def combined_segment_types(roommates):
     new_ad = None
 
     for student in roommates:
-        roommate = student.preference
-        if roommate.dorm is not None and roommate.dorm not in new_dorm:
-            new_dorm.append(roommate.dorm)
-        if roommate.location is not None and roommate.location not in new_location:
-            new_location.append(roommate.location)
-        if roommate.tenants_num_room is not None:
-            new_tenants_num_room.append(roommate.tenants_num_room)
-        if roommate.tenants_num_segment is not None:
-            new_tenants_num_segment.append(roommate.tenants_num_segment)
+        roommate_pref = student.preference
+        if roommate_pref.dorm is not None and roommate_pref.dorm not in new_dorm:
+            new_dorm.append(roommate_pref.dorm)
+        if roommate_pref.location is not None and roommate_pref.location not in new_location:
+            new_location.append(roommate_pref.location)
+        if roommate_pref.tenants_num_room is not None:
+            new_tenants_num_room.append(roommate_pref.tenants_num_room)
+        if roommate_pref.tenants_num_segment is not None:
+            new_tenants_num_segment.append(roommate_pref.tenants_num_segment)
         if new_condition != "renovated":
-            if roommate.condition == "renovated":
+            if roommate_pref.condition == "renovated":
                 new_condition = "renovated"
-            elif roommate.condition == "normal" and new_condition != "normal":
+            elif roommate_pref.condition == "normal" and new_condition != "normal":
                 new_condition = "normal"
-            elif roommate.condition == "old" and new_condition is None:
+            elif roommate_pref.condition == "old" and new_condition is None:
                 new_condition = "old"
         if new_bathroom != "full":
-            if roommate.bathroom == "full":
+            if roommate_pref.bathroom == "full":
                 new_bathroom = "full"
-            elif roommate.bathroom == "shower" and new_bathroom != "shower":
+            elif roommate_pref.bathroom == "shower" and new_bathroom != "shower":
                 new_bathroom = "shower"
-            elif roommate.bathroom == "null" and new_bathroom is None:
+            elif roommate_pref.bathroom == "null" and new_bathroom is None:
                 new_bathroom = "null"
         if new_kitchen is not True:
-            if roommate.kitchen is not None:
-                new_kitchen = roommate.kitchen
+            if roommate_pref.kitchen is not None:
+                new_kitchen = roommate_pref.kitchen
         if new_ad is not False:
-            if roommate.ad is not None:
-                new_ad = roommate.ad
+            if roommate_pref.ad is not None:
+                new_ad = roommate_pref.ad
 
     if len(new_dorm) == 0:
         new_dorm = [None]
@@ -120,4 +117,4 @@ def find_segment_type(dorms, segment_type):
             for segment in room.segments:
                 if segment.type() == segment_type and segment.habitable and segment.tenants_num() < segment.beds:
                     return segment
-    return None
+    raise NotFound
