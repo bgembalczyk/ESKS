@@ -1,5 +1,6 @@
 from graphs import *
 from funcDorms import *
+from exceptions.rest import *
 from segmentType import SegmentType
 from itertools import combinations
 
@@ -7,7 +8,7 @@ def get_student(USOSid, students):
     for student in students:
         if student.id == USOSid:
             return student
-    return None
+    raise NotFound
 
 def students_roommates_pairs(students):
     result = []
@@ -16,6 +17,7 @@ def students_roommates_pairs(students):
             student_pair = [get_student(student.id, students), get_student(student.pref_roommate, students)]
             if student_pair[1] is not None:
                 if student_pair[0].city == student_pair[1].city:
+                    student_pair.sort()
                     result.append(student_pair)
     return result
 
@@ -24,10 +26,10 @@ def students_live_together(students):
     edges = students_roommates_pairs(students)
     nodes = all_nodes(edges)
     for node in nodes:
-        tmp = find_connected_subgraph(node, edges)
-        tmp.sort()
-        if tmp not in result:
-            result.append(tmp)
+        subgraph = find_connected_subgraph(node, edges)
+        subgraph.sort()
+        if subgraph not in result:
+            result.append(subgraph)
     return result
 
 def students_exact_segment(students, dorms):
