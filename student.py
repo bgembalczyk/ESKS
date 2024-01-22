@@ -70,12 +70,15 @@ class Student:
             raise PrefDormMissing
         if pref_segment[0] not in dorms:
             raise WrongPrefDorm
-        if pref_segment[1][-1] not in "QWERTYUIOPASDFGHJKLZXCVBNM":
-            raise WrongPrefSegment
+        if pref_segment[1] is not None:
+            if pref_segment[1][-1] not in "QWERTYUIOPASDFGHJKLZXCVBNM":
+                raise WrongPrefSegment
         try:
             int(pref_segment[1][:-1])
         except ValueError:
             raise WrongPrefSegment
+        except TypeError:
+            pass
 
         self._id = USOSid
         self._year = year

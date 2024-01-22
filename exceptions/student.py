@@ -69,7 +69,7 @@ class WrongLang(ValueError):
 
 class WrongPreference(Exception):
     def __init__(self):
-        message = "Student: Preferred segment must be tuple with (dorm, segment sign)"
+        message = "Student: Preferred segment must be tuple with (str, [int][char.upper])"
         super().__init__(message)
 
 class WrongPrefDorm(ValueError):

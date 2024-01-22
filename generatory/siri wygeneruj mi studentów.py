@@ -162,8 +162,8 @@ def generator_studenciakow(path, N, idMin, idMax):
             line = f"{stud_id};{random.randint(1997, 2005)};{sex * 'F' + (1 - sex) * 'M'};" \
                    f"{stud_faculty};{stud_major};{stud_city};{stud_lang};{preference_tenant};{preference_dorm};" \
                    f"{preference_segment};{preference_location};{preference_tenants_num_room};" \
-                   f"{preference_tenants_num_segment};{preference_condition};{preference_bathroom};{preference_kitchen};" \
-                   f"{preference_ad}\n"
+                   f"{preference_tenants_num_segment};{preference_condition};{preference_bathroom};" \
+                   f"{preference_kitchen};{preference_ad}\n"
             file.write(line)
 
 
