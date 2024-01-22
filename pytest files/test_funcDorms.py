@@ -86,8 +86,8 @@ def test_available_configurations():
 
 def test_combined_segment_types():
     student1 = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", None, ("Akademik", None), SegmentType("Akademik", "Ochota", 1, 1, "renovated", "null", False, False))
-    student2 = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", None, ("Akademik", None), SegmentType("Akademik", "Ochota", 1, 1, None, "shower", True, False))
-    student3 = Student(320683, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", None, ("Akademik", None), SegmentType("Akademik", "Ochota", 1, 1, "normal", "full", False, True))
+    student2 = Student(320684, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", None, ("Akademik", None), SegmentType("Akademik", "Ochota", 1, 1, None, "shower", True, False))
+    student3 = Student(320685, 2002, "M", "Elektroniki i Technik Informacyjnych", "Informatyka", "Warszawa", "polski", None, ("Akademik", None), SegmentType("Akademik", "Ochota", 1, 1, "normal", "full", False, True))
     roommates = [student1, student2, student3]
     res_segment = combined_segment_types(roommates)
     assert res_segment[0] == SegmentType("Akademik", "Ochota", 3, 3, "renovated", "full", True, False)
