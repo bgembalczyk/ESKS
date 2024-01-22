@@ -1,0 +1,116 @@
+100;2002;M;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+101;2002;M;Architektury;Architektura;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+102;2002;M;Elektroniki i Technik Informacyjnych;Automatyka i robotyka;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+103;2002;M;Elektryczny;Automatyka i robotyka stosowana;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+104;2002;M;Mechaniczny Technologiczny;Automatyzacja i robotyzacja procesów produkcyjnych;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+105;2002;M;Mechatroniki;Automatyka, robotyka i informatyka  przemysłowa;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+106;2002;M;Chemiczny;Biotechnologia;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+107;2002;M;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+108;2002;M;Elektroniki i Technik Informacyjnych;Cyberbezpieczeństwo;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+109;2002;M;Elektryczny;Elektromobilność;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+110;2002;M;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+111;2002;M;Elektryczny;Elektrotechnika;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+112;2002;M;Mechaniczny Energetyki i Lotnictwa;Energetyka;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+113;2002;M;Fizyki;Fizyka techniczna;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+114;2002;M;Fizyki;Fotonika;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+115;2002;M;Geodezji i Kartografii;Geodezja i kartografia;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+116;2002;M;Geodezji i Kartografii;Geoinformatyka;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+117;2002;M;Geodezji i Kartografii;Gospodarka przestrzenna;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+118;2002;M;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+119;2002;M;Matematyki i Nauk Informacyjnych;Informatyka i systemy informacyjne;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+120;2002;M;Elektryczny;Informatyka stosowana;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+121;2002;M;Elektroniki i Technik Informacyjnych;Inżynieria biomedyczna;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+122;2002;M;Mechatroniki;Inżynieria biomedyczna;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+123;2002;M;Inżynierii Chemicznej i Procesowej;Inżynieria chemiczna i procesowa;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+124;2002;M;Matematyki i Nauk Informacyjnych;Inżynieria i analiza danych;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+125;2002;M;Elektroniki i Technik Informacyjnych;Inżynieria Internetu rzeczy;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+126;2002;M;Inżynierii Materiałowej;Inżynieria materiałowa;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+127;2002;M;Samochodów i Maszyn Roboczych;Inżynieria mechaniczna;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+128;2002;M;Samochodów i Maszyn Roboczych;Inżynieria pojazdów elektrycznych i hybrydowych;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+129;2002;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+130;2002;M;Zarządzania;Inżynieria zarządzania;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+131;2002;M;Mechaniczny Energetyki i Lotnictwa;Lotnictwo i kosmonautyka;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+132;2002;M;Matematyki i Nauk Informacyjnych;Matematyka;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+133;2002;M;Matematyki i Nauk Informacyjnych;Matematyka i analiza danych;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+134;2002;M;Mechaniczny Technologiczny;Mechanika i budowa maszyn;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+135;2002;M;Mechaniczny Energetyki i Lotnictwa;Mechanika i projektowanie maszyn;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+136;2002;M;Mechatroniki;Mechatronika;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+137;2002;M;Samochodów i Maszyn Roboczych;Mechatronika pojazdów i maszyn roboczych;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+138;2002;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Ochrona środowiska;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+139;2002;M;Mechaniczny Technologiczny;Papiernictwo i poligrafia;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+140;2002;M;Mechaniczny Energetyki i Lotnictwa;Robotyka i automatyka;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+141;2002;M;Chemiczny;Technologia chemiczna;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+142;2002;M;Elektroniki i Technik Informacyjnych;Telekomunikacja;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+143;2002;M;Transportu;Transport;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+144;2002;M;Zarządzania;Zarządzanie;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+145;2002;M;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+146;2002;M;Mechaniczny Energetyki i Lotnictwa;Aerospace Engineering;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+147;2002;M;Architektury;Architecture;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+148;2002;M;Inżynierii Lądowej;Civil Engineering;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+149;2002;M;Elektroniki i Technik Informacyjnych;Computer Science;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+150;2002;M;Matematyki i Nauk Informacyjnych;Computer Science and Information Systems;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+151;2002;M;Samochodów i Maszyn Roboczych;Electric and Hybrid Vehicles Engineering;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+152;2002;M;Elektryczny;Electrical Engineering;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+153;2002;M;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Environmental Engineering;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+154;2002;M;Mechatroniki;Mechatronics;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+155;2002;M;Samochodów i Maszyn Roboczych;Mechatronics of Vehicles and Construction Machinery;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+156;2002;M;Mechaniczny Energetyki i Lotnictwa;Power Engineering;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+157;2002;M;Elektroniki i Technik Informacyjnych;Telecommunications;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+158;2002;F;Administracji i Nauk Społecznych;Administracja;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+159;2002;F;Architektury;Architektura;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+160;2002;F;Elektroniki i Technik Informacyjnych;Automatyka i robotyka;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+161;2002;F;Elektryczny;Automatyka i robotyka stosowana;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+162;2002;F;Mechaniczny Technologiczny;Automatyzacja i robotyzacja procesów produkcyjnych;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+163;2002;F;Mechatroniki;Automatyka, robotyka i informatyka  przemysłowa;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+164;2002;F;Chemiczny;Biotechnologia;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+165;2002;F;Inżynierii Lądowej;Budownictwo;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+166;2002;F;Elektroniki i Technik Informacyjnych;Cyberbezpieczeństwo;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+167;2002;F;Elektryczny;Elektromobilność;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+168;2002;F;Elektroniki i Technik Informacyjnych;Elektronika;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+169;2002;F;Elektryczny;Elektrotechnika;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+170;2002;F;Mechaniczny Energetyki i Lotnictwa;Energetyka;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+171;2002;F;Fizyki;Fizyka techniczna;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+172;2002;F;Fizyki;Fotonika;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+173;2002;F;Geodezji i Kartografii;Geodezja i kartografia;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+174;2002;F;Geodezji i Kartografii;Geoinformatyka;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+175;2002;F;Geodezji i Kartografii;Gospodarka przestrzenna;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+176;2002;F;Elektroniki i Technik Informacyjnych;Informatyka;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+177;2002;F;Matematyki i Nauk Informacyjnych;Informatyka i systemy informacyjne;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+178;2002;F;Elektryczny;Informatyka stosowana;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+179;2002;F;Elektroniki i Technik Informacyjnych;Inżynieria biomedyczna;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+180;2002;F;Mechatroniki;Inżynieria biomedyczna;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+181;2002;F;Inżynierii Chemicznej i Procesowej;Inżynieria chemiczna i procesowa;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+182;2002;F;Matematyki i Nauk Informacyjnych;Inżynieria i analiza danych;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+183;2002;F;Elektroniki i Technik Informacyjnych;Inżynieria Internetu rzeczy;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+184;2002;F;Inżynierii Materiałowej;Inżynieria materiałowa;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+185;2002;F;Samochodów i Maszyn Roboczych;Inżynieria mechaniczna;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+186;2002;F;Samochodów i Maszyn Roboczych;Inżynieria pojazdów elektrycznych i hybrydowych;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+187;2002;F;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Inżynieria środowiska;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+188;2002;F;Zarządzania;Inżynieria zarządzania;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+189;2002;F;Mechaniczny Energetyki i Lotnictwa;Lotnictwo i kosmonautyka;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+190;2002;F;Matematyki i Nauk Informacyjnych;Matematyka;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+191;2002;F;Matematyki i Nauk Informacyjnych;Matematyka i analiza danych;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+192;2002;F;Mechaniczny Technologiczny;Mechanika i budowa maszyn;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+193;2002;F;Mechaniczny Energetyki i Lotnictwa;Mechanika i projektowanie maszyn;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+194;2002;F;Mechatroniki;Mechatronika;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+195;2002;F;Samochodów i Maszyn Roboczych;Mechatronika pojazdów i maszyn roboczych;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+196;2002;F;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Ochrona środowiska;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+197;2002;F;Mechaniczny Technologiczny;Papiernictwo i poligrafia;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+198;2002;F;Mechaniczny Energetyki i Lotnictwa;Robotyka i automatyka;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+199;2002;F;Chemiczny;Technologia chemiczna;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+200;2002;F;Elektroniki i Technik Informacyjnych;Telekomunikacja;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+201;2002;F;Transportu;Transport;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+202;2002;F;Zarządzania;Zarządzanie;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+203;2002;F;Mechaniczny Technologiczny;Zarządzanie i inżynieria produkcji;Warszawa;polski;None;None;None;None;None;None;None;None;None;None
+204;2002;F;Mechaniczny Energetyki i Lotnictwa;Aerospace Engineering;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+205;2002;F;Architektury;Architecture;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+206;2002;F;Inżynierii Lądowej;Civil Engineering;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+207;2002;F;Elektroniki i Technik Informacyjnych;Computer Science;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+208;2002;F;Matematyki i Nauk Informacyjnych;Computer Science and Information Systems;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+209;2002;F;Samochodów i Maszyn Roboczych;Electric and Hybrid Vehicles Engineering;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+210;2002;F;Elektryczny;Electrical Engineering;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+211;2002;F;Instalacji Budowlanych, Hydrotechniki i Inżynierii Środowiska;Environmental Engineering;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+212;2002;F;Mechatroniki;Mechatronics;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+213;2002;F;Samochodów i Maszyn Roboczych;Mechatronics of Vehicles and Construction Machinery;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+214;2002;F;Mechaniczny Energetyki i Lotnictwa;Power Engineering;Warszawa;angielski;None;None;None;None;None;None;None;None;None;None
+215;2002;F;Elektroniki i Technik Informacyjnych;Telecommunications;Warszawa;angielski;None;None;None;None;None;None;None;None;None;
