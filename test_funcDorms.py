@@ -3,9 +3,9 @@ from dormitory import Dormitory
 from room import Room
 from segment import Segment
 from student import Student
-from segmentType import SegmentType
 from funcDorms import *
 from exceptions.rest import *
+from segmentType import SegmentType
 
 def test_get_specific_segment():
     dorms = []
