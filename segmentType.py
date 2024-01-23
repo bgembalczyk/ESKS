@@ -1,41 +1,45 @@
-from exceptions.segmentType import *
+import exceptions.segmentType as Error
 
 class SegmentType:
     def __init__(self, dorm, location, tenants_num_room, tenants_num_segment, condition, bathroom, kitchen, ad):
+        # Initialize valid options for dorms, locations, conditions, and bathrooms
         dorms = [None, "Akademik", "Babilon", "Bratniak", "Mikrus", "Muszelka", "Riviera", "Tatrzańska", "Tulipan",
                  "Ustronie", "Żaczek"]
         locations = [None, "Ochota", "Kampus Centralny", "Mokotów", "Wola", "Kampus Południowy"]
         conditions = [None, "normal", "renovated", "old"]
         bathrooms = [None, "full", "shower", "null"]
 
+        # Validate input parameters
         if dorm not in dorms:
-            raise WrongDorm
+            raise Error.WrongDorm
         if location not in locations:
-            raise WrongLocation
+            raise Error.WrongLocation
         if tenants_num_room is not None:
             if type(tenants_num_room) is not int:
-                raise TenantsNumNotInt
+                raise Error.TenantsNumNotInt
             else:
                 if tenants_num_room < 1:
-                    raise WrongTenantsNumRoom
+                    raise Error.WrongTenantsNumRoom
         if tenants_num_segment is not None:
             if type(tenants_num_segment) is not int:
-                raise TenantsNumNotInt
+                raise Error.TenantsNumNotInt
             else:
                 if tenants_num_segment < 1:
-                    raise WrongTenantsNumSegment("SegmentType: tenants_num_segment must be greater than 0")
+                    raise Error.WrongTenantsNumSegment("SegmentType: tenants_num_segment must be greater than 0")
         if tenants_num_room is not None and tenants_num_segment is not None:
             if tenants_num_segment > tenants_num_room:
-                raise WrongTenantsNumSegment("SegmentType: tenants_num_segment must be lower than or equal to tenants_num_room")
+                message = "SegmentType: tenants_num_segment must be lower than or equal to tenants_num_room"
+                raise Error.WrongTenantsNumSegment(message)
         if condition not in conditions:
-            raise WrongCondition
+            raise Error.WrongCondition
         if bathroom not in bathrooms:
-            raise WrongBathroom
+            raise Error.WrongBathroom
         if type(kitchen) is not bool and kitchen is not None:
-            raise WrongKitchen
+            raise Error.WrongKitchen
         if type(ad) is not bool and ad is not None:
-            raise WrongAd
+            raise Error.WrongAd
 
+        # Assign values to instance variables
         self._dorm = dorm
         self._location = location
         self._tenants_num_room = tenants_num_room
@@ -78,6 +82,7 @@ class SegmentType:
         return self._ad
 
     def __eq__(self, other):
+        # Check equality of SegmentType objects
         if self.dorm is not None and other.dorm is not None:
             if self.dorm != other.dorm:
                 return False
@@ -113,8 +118,9 @@ class SegmentType:
         return True
 
     def __lt__(self, other):
+        # Compare SegmentType objects
         if not (self.dorm == other.dorm or self.dorm is None or self.location == other.location or self.location is None):
-            raise Incomparable
+            raise Error.Incomparable
         if self.tenants_num_segment is not None and other.tenants_num_segment is not None:
             if self.tenants_num_segment < other.tenants_num_segment:
                 return False
@@ -158,6 +164,7 @@ class SegmentType:
         return False
 
     def __sub__(self, other):
+        # Calculate a numerical difference between SegmentType objects
         # dorm >> num_segment >> num_room >> condition >> bathroom >> kitchen >> ad
         result = 1000000
         if self.dorm is not None and self.location is not None:
@@ -213,9 +220,27 @@ class SegmentType:
         return result
 
     def copy(self):
-        return SegmentType(self.dorm, self.location, self.tenants_num_room, self.tenants_num_segment, self.condition, self.bathroom, self.kitchen, self.ad)
+        # Create a copy of the SegmentType object
+        dorm = self.dorm
+        location = self.location
+        tenants_num_room = self.tenants_num_room
+        tenants_num_segment = self.tenants_num_segment
+        condition = self.condition
+        bathroom = self.bathroom
+        kitchen = self.kitchen
+        ad = self.ad
+        return SegmentType(dorm, location, tenants_num_room, tenants_num_segment, condition, bathroom, kitchen, ad)
 
     def correct_location(self):
-        tmp1 = SegmentType(None, self.location, self.tenants_num_room, self.tenants_num_segment, self.condition, self.bathroom, self.kitchen, self.ad)
-        tmp2 = SegmentType(self.dorm, None, self.tenants_num_room, self.tenants_num_segment, self.condition, self.bathroom, self.kitchen, self.ad)
+        # Create a copy of the SegmentType object
+        dorm = self.dorm
+        location = self.location
+        tenants_num_room = self.tenants_num_room
+        tenants_num_segment = self.tenants_num_segment
+        condition = self.condition
+        bathroom = self.bathroom
+        kitchen = self.kitchen
+        ad = self.ad
+        tmp1 = SegmentType(None, location, tenants_num_room, tenants_num_segment, condition, bathroom, kitchen, ad)
+        tmp2 = SegmentType(dorm, None, tenants_num_room, tenants_num_segment, condition, bathroom, kitchen, ad)
         return tmp1, tmp2
