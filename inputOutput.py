@@ -1,15 +1,13 @@
-from dormitory import Dormitory
-from room import Room
-from segment import Segment
 from student import Student
 from segmentType import SegmentType
 from funcDorms import get_dorm
-from exceptions.student import *
+from exceptions.student import WrongId, WrongSex, WrongLang, WrongMajor, WrongFaculty, WrongPrefDorm, YearNotInt
 import exceptions.dormitory
 import exceptions.room
 
 
 def display_dorm(dorms):
+    # Displays information about dormitories, rooms, and segments.
     dorm_names = []
     for dorm in dorms:
         dorm_names.append(dorm.name)
@@ -49,6 +47,7 @@ def display_dorm(dorms):
         print(tmp)
 
 def print_to_file(dorms):
+    # Prints information about students to a file named "raport.txt".
     students = []
     for dorm in dorms:
         for room in dorm.rooms:
@@ -61,6 +60,7 @@ def print_to_file(dorms):
             file.write(f"{student.id} -> {student.segment.room.dorm.name} {student.segment.room.number}{student.segment.symbol}")
 
 def display_stud(dorms):
+    # Displays information about students.
     students = []
     for dorm in dorms:
         for room in dorm.rooms:
@@ -72,6 +72,7 @@ def display_stud(dorms):
         print(f"{student.id} -> {student.segment.room.dorm.name} {student.segment.room.number}{student.segment.symbol}")
 
 def edit(dorms):
+    # Edits dormitory, room, and segment information based on user input.
     dorm_input = input("Podaj nazwę akademika, w którym chcesz wprowadzić zmiany: ")
     for dorm in dorms:
         if dorm.name == dorm_input:
@@ -116,6 +117,7 @@ def edit(dorms):
                           f"Pokoje w DS {dorm.name} mają numery od {dorm.rooms[0].number} do {dorm.rooms[-1].number}")
 
 def input_single_student():
+    # Collects information about a single student from user input.
     while True:
         USOSid = input("Podaj swój numer USOSid: ")
         year = input("Podaj swój rok urodzenia: ")
@@ -125,24 +127,28 @@ def input_single_student():
         lang = input("Podaj język, w którym studiujesz: [polski/angielski] ")
         pref_dorm = input("Podaj preferowany akademik: ")
         try:
-            student = Student(int(USOSid), int(year), sex, faculty, major, "Warszawa", lang, None, (pref_dorm, None), SegmentType(pref_dorm, None, None, None, None, None, None, None))
+            USOSid = int(USOSid)
+            year = int(year)
+            pref_seg = (pref_dorm, None)
+            preference = SegmentType(pref_dorm, None, None, None, None, None, None, None)
+            student = Student(USOSid, year, sex, faculty, major, "Warszawa", lang, None, pref_seg, preference)
             return [student]
         except WrongId:
-            print("Spróbuj jeszcze raz")
+            print("Spróbuj jeszcze raz, niepoprawny USOSid")
         except YearNotInt:
-            print("Spróbuj jeszcze raz")
+            print("Spróbuj jeszcze raz, niepoprawny rok")
         except WrongSex:
-            print("Spróbuj jeszcze raz")
+            print("Spróbuj jeszcze raz, niepoprawna płeć")
         except WrongFaculty:
-            print("Spróbuj jeszcze raz")
+            print("Spróbuj jeszcze raz, niepoprawny wydział")
         except WrongMajor:
-            print("Spróbuj jeszcze raz")
+            print("Spróbuj jeszcze raz, niepoprawny kierunek")
         except WrongLang:
-            print("Spróbuj jeszcze raz")
+            print("Spróbuj jeszcze raz, niepoprawny język")
         except WrongPrefDorm:
-            print("Spróbuj jeszcze raz")
+            print("Spróbuj jeszcze raz, niepoprawny akademik")
         except ValueError:
-            print("Spróbuj jeszcze raz")
+            print("Spróbuj jeszcze raz, prawdopodobnie to nie była liczba, gdy powinna")
         except TypeError:
-            print("Spróbuj jeszcze raz")
+            print("Spróbuj jeszcze raz, prawdopodobnie to nie była liczba, gdy powinna")
 

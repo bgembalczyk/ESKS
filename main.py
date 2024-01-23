@@ -1,10 +1,4 @@
 import esks
-from dormitory import Dormitory
-from importFile import *
-from funcStudents import *
-from funcDorms import *
-from segmentType import SegmentType
-from accommodationAction import *
 
 # 1. Studenci, którzy wskazali dorm i segment
 # 2. Studenci, dla których istnieje dokładny typ segmentu
