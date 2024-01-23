@@ -1,14 +1,16 @@
 from segmentType import SegmentType
-from exceptions.rest import *
+from exceptions.rest import WrongSegmentReference, NotFound
 import exceptions.dormitory
 import exceptions.room
 
 def get_dorm(dorms, dorm_name):
+    # Get a dormitory by name
     for dorm in dorms:
         if dorm.name == dorm_name:
             return dorm
 
 def get_specific_segment(dorms, pref_seg_num):
+    # Get a specific segment based on preferences
     try:
         pref_dorm = pref_seg_num[0]
     except (TypeError, ValueError):
@@ -34,16 +36,23 @@ def get_specific_segment(dorms, pref_seg_num):
                 raise NotFound
 
 def available_configurations(dorms):
+    # Find available configurations in dormitories
     all_configs = []
     result = []
     for dorm in dorms:
         all_configs += dorm.segment_types(True)
     for dorm in dorms:
         for config in dorm.segment_types():
-            result.append({"configuration": config, "beds": all_configs.count(config) * config.tenants_num_segment, "students": []})
+            new_config = {
+                "configuration": config,
+                "beds": all_configs.count(config) * config.tenants_num_segment,
+                "students": []
+            }
+            result.append(new_config)
     return result
 
 def combined_segment_types(roommates):
+    # Combine segment types based on roommate preferences
     new_dorm = []
     new_location = []
     new_tenants_num_room = []
@@ -98,10 +107,17 @@ def combined_segment_types(roommates):
     result = []
     for dorm in new_dorm:
         for location in new_location:
-            result.append(SegmentType(dorm, location, new_tenants_num_room, new_tenants_num_segment, new_condition, new_bathroom, new_kitchen, new_ad))
+            tenants_room = new_tenants_num_room
+            tenants_segment = new_tenants_num_segment
+            condition = new_condition
+            bathroom = new_bathroom
+            kitchen = new_kitchen
+            ad = new_ad
+            result.append(SegmentType(dorm, location, tenants_room, tenants_segment, condition, bathroom, kitchen, ad))
     return result
 
 def is_correct_location(dorm_name, dorm_location):
+    # Check if the dormitory location is correct based on dorm name
     if None in [dorm_name, dorm_location]:
         return True
     if dorm_location == "Ochota" and dorm_name not in ["Akademik", "Babilon", "Bratniak", "Muszelka", "Tulipan"]:
@@ -117,6 +133,7 @@ def is_correct_location(dorm_name, dorm_location):
     return True
 
 def find_segment_type(dorms, segment_type):
+    # Find a segment type based on a given configuration in dormitories
     for dorm in dorms:
         for room in dorm.rooms:
             for segment in room.segments:
