@@ -1,8 +1,10 @@
-from importFile import *
-from inputOutput import *
+# Importing functions and classes from other modules
+from importFile import input_dorms, input_students
+from inputOutput import edit, display_dorm, display_stud, input_single_student, print_to_file
 from accommodationAction import accommodation_action
 
 def check_places(dorms) -> int:
+    # Check the available places in dorms
     beds_available = 0
     tenants_num = 0
     for dorm in dorms:
@@ -10,6 +12,7 @@ def check_places(dorms) -> int:
         tenants_num += dorm.tenants_num()
     return beds_available - tenants_num
 
+# Main function for the Elektroniczny System Kwaterowania Studentów (ESKS)
 def esks() -> None:
     students_to_accommodate = []
 
@@ -37,7 +40,6 @@ def esks() -> None:
         elif inputTmp == "3":
             students_to_accommodate = input_single_student()
             accommodation_action(students_to_accommodate, dorms)
-            pass
         elif inputTmp == "4":
             path = input("Podaj ścieżkę do pliku ze studentami: ")
             students_to_accommodate = input_students(path)
