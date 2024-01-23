@@ -1,17 +1,17 @@
-from graphs import *
-from funcDorms import *
-from exceptions.rest import *
+from graphs import find_connected_subgraph, all_nodes
+from funcDorms import get_specific_segment, available_configurations, is_correct_location, combined_segment_types
+from exceptions.rest import NotFound
 from exceptions.segmentType import Incomparable
-from segmentType import SegmentType
-from itertools import combinations
 
 def get_student(USOSid, students):
+    # Get a student by USOS ID
     for student in students:
         if student.id == USOSid:
             return student
     raise NotFound
 
 def students_roommates_pairs(students):
+    # Find pairs of students who prefer to be roommates
     result = []
     for student in students:
         if student.pref_roommate is not None:
@@ -25,6 +25,7 @@ def students_roommates_pairs(students):
     return result
 
 def students_live_together(students):
+    # Find connected subgraphs of students living together
     result = []
     edges = students_roommates_pairs(students)
     nodes = all_nodes(edges)
@@ -36,6 +37,7 @@ def students_live_together(students):
     return result
 
 def students_exact_segment(students, dorms):
+    # Find students with exact segment preferences from available segments
     result = []
     for student in students:
         if None not in student.pref_segment:
@@ -49,6 +51,7 @@ def students_exact_segment(students, dorms):
     return result
 
 def students_exact_segment_type(students, dorms):
+    # Find students with exact segment type preferences from available configurations
     result = []
     segment_configs_counts = available_configurations(dorms)
     segment_configs = [segment_configuration["configuration"] for segment_configuration in segment_configs_counts]
@@ -62,6 +65,7 @@ def students_exact_segment_type(students, dorms):
     return result
 
 def students_better_segment_type(students, dorms):
+    # Find students with preferences lower than better segment type from available configurations
     result = []
     segment_configs_counts = available_configurations(dorms)
     segment_configs = [segment_configuration["configuration"] for segment_configuration in segment_configs_counts]
@@ -69,14 +73,16 @@ def students_better_segment_type(students, dorms):
         if student.preference not in segment_configs:
             better_segments = []
             for seg_conf in segment_configs:
-                if student.preference.dorm in [seg_conf.dorm, None] and student.preference.location in [seg_conf.location, None]:
-                    if student.preference < seg_conf:
-                        better_segments.append(seg_conf)
+                if student.preference.dorm in [seg_conf.dorm, None]:
+                    if student.preference.location in [seg_conf.location, None]:
+                        if student.preference < seg_conf:
+                            better_segments.append(seg_conf)
             if len(better_segments) > 0:
                 result.append([student, better_segments])
     return result
 
 def students_that_dont_know_where_dorms_are(students, dorms):
+    # Find students who don't know where dorms are and match them with available configurations
     result = []
     segment_configs_counts = available_configurations(dorms)
     segment_configs = [segment_configuration["configuration"] for segment_configuration in segment_configs_counts]
@@ -90,7 +96,11 @@ def students_that_dont_know_where_dorms_are(students, dorms):
                         matching_segment_types.append(seg_conf)
             if len(matching_segment_types) == 0:
                 for seg_conf in segment_configs:
-                    if student.preference.dorm == seg_conf.dorm or student.preference.location == seg_conf.location or student.preference.dorm is None or student.preference.location is None:
+                    condition1 = student.preference.dorm == seg_conf.dorm
+                    condition2 = student.preference.location == seg_conf.location
+                    condition3 = student.preference.dorm is None
+                    condition4 = student.preference.location is None
+                    if condition1 or condition2 or condition3 or condition4:
                         if student.preference < seg_conf:
                             matching_segment_types.append(seg_conf)
             if len(matching_segment_types) > 0:
@@ -98,6 +108,7 @@ def students_that_dont_know_where_dorms_are(students, dorms):
     return result
 
 def find_best_segment_type(students, dorms):
+    # Find the best segment type for each student based on preferences and available configurations
     result = []
     segment_configs_counts = available_configurations(dorms)
     segment_configs = [segment_configuration["configuration"] for segment_configuration in segment_configs_counts]
@@ -116,6 +127,7 @@ def find_best_segment_type(students, dorms):
     return result
 
 def add_to_seg_conf_from_cat(students, students_to_accommodate, available_configs, flexible_students):
+    # Add students to segment configurations based on certain criteria
     for referral in students_to_accommodate:
         if type(referral[1]) is list and len(referral[1]) == 1:
             referral[1] = referral[1][0]
@@ -129,27 +141,33 @@ def add_to_seg_conf_from_cat(students, students_to_accommodate, available_config
             students.remove(referral[0])
 
 def divide_into_segment_configurations(students, dorms):
+    # Divide students into segment configurations based on preferences and available configurations
     available_configs = available_configurations(dorms)
     flexible_students = []
 
-    add_to_seg_conf_from_cat(students, students_exact_segment(students, dorms), available_configs, flexible_students)
+    students_to_accommodate = students_exact_segment(students, dorms)
+    add_to_seg_conf_from_cat(students, students_to_accommodate, available_configs, flexible_students)
 
-    add_to_seg_conf_from_cat(students, students_exact_segment_type(students, dorms), available_configs, flexible_students)
+    students_to_accommodate = students_exact_segment_type(students, dorms)
+    add_to_seg_conf_from_cat(students, students_to_accommodate, available_configs, flexible_students)
 
-    add_to_seg_conf_from_cat(students, students_better_segment_type(students, dorms), available_configs, flexible_students)
+    students_to_accommodate = students_better_segment_type(students, dorms)
+    add_to_seg_conf_from_cat(students, students_to_accommodate, available_configs, flexible_students)
 
-    add_to_seg_conf_from_cat(students, students_that_dont_know_where_dorms_are(students, dorms), available_configs, flexible_students)
+    students_to_accommodate = students_that_dont_know_where_dorms_are(students, dorms)
+    add_to_seg_conf_from_cat(students, students_to_accommodate, available_configs, flexible_students)
 
-    add_to_seg_conf_from_cat(students, find_best_segment_type(students, dorms), available_configs, flexible_students)
+    students_to_accommodate = find_best_segment_type(students, dorms)
+    add_to_seg_conf_from_cat(students, students_to_accommodate, available_configs, flexible_students)
 
     for referral in flexible_students:
-        min_segs = 1000
+        min_segments = 1000
         min_conf = None
         for seg_conf in referral[1]:
             for conf_div in available_configs:
                 if seg_conf == conf_div["configuration"]:
-                    if min_segs > conf_div["beds"]:
-                        min_segs = conf_div["beds"]
+                    if min_segments > conf_div["beds"]:
+                        min_segments = conf_div["beds"]
                         min_conf = seg_conf
         for conf_div in available_configs:
             if conf_div["configuration"] == min_conf:
@@ -162,13 +180,15 @@ def divide_into_segment_configurations(students, dorms):
     return available_configs
 
 def compare_students(potential_roommates):
+    # Compare students based on various criteria
     result = 0
     for student_i in potential_roommates:
         for student_j in potential_roommates:
             if student_i != student_j:
                 if student_i.pref_segment[1] is not None and student_j.pref_segment[1] is not None:
-                    if student_i.pref_segment[0] == student_j.pref_segment[0] and student_i.pref_segment[1] != student_j.pref_segment[1]:
-                        result += 500
+                    if student_i.pref_segment[0] == student_j.pref_segment[0]:
+                        if student_i.pref_segment[1] != student_j.pref_segment[1]:
+                            result += 500
                 if student_i.sex != student_j.sex:
                     return 1000
                 if student_i.city != student_j.city:
@@ -183,6 +203,7 @@ def compare_students(potential_roommates):
     return result
 
 def find_best_roommates(potential_roommates, potential_combs):
+    # Find the best roommates from potential combinations based on comparison criteria
     min_fit = 10000
     for comb in potential_combs:
         if compare_students(comb) < min_fit:
@@ -196,6 +217,7 @@ def find_best_roommates(potential_roommates, potential_combs):
     return None
 
 def divide_into_segments(potential_roommates, tenant_num_segment):
+    # Divide potential roommates into segments based on certain criteria
     result = []
     students_to_match = []
     for student in potential_roommates:
@@ -227,6 +249,7 @@ def divide_into_segments(potential_roommates, tenant_num_segment):
     return result
 
 def students_live_together_into_segments(students, dorms):
+    # Find roommates living together in segments and assign the best segment types
     segment_configurations_tmp = available_configurations(dorms)
     segment_configurations = [seg_conf["configuration"] for seg_conf in segment_configurations_tmp]
     result = []
@@ -238,8 +261,9 @@ def students_live_together_into_segments(students, dorms):
             if student.pref_segment[1] is not None:
                 chosen_segment = get_specific_segment(dorms, student.pref_segment)
                 if chosen_segment is not None:
-                    if chosen_segment.habitable and chosen_segment.beds >= chosen_segment.tenants_num() + len(roommates):
-                        best_segment_type.append(chosen_segment.type())
+                    if chosen_segment.habitable:
+                        if chosen_segment.beds >= chosen_segment.tenants_num() + len(roommates):
+                            best_segment_type.append(chosen_segment.type())
 
         combined_segment_type = combined_segment_types(roommates)
         correct_combined = []
