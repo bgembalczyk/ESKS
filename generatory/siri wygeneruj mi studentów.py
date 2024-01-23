@@ -167,4 +167,4 @@ def generator_studenciakow(path, N, idMin, idMax):
             file.write(line)
 
 
-generator_studenciakow("../students.txt", 500, 100, 1000)
+generator_studenciakow("../students500.txt", 500, 100, 999)

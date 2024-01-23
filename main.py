@@ -1,4 +1,4 @@
-import seks
+import esks
 from dormitory import Dormitory
 from importFile import *
 from funcStudents import *
@@ -15,10 +15,4 @@ from accommodationAction import *
 #   dorm >> num_segment >> num_room >> condition >> bathroom >> kitchen >> ad
 
 if __name__ == '__main__':
-    # TODO
-    # została obsługa z cmd i testy
-    #    seks.seks()
-    dorms = input_dorms("dorms.json")
-    path = "students.txt"
-
-    accommodation_action(path, dorms)
+    esks.esks()

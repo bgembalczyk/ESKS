@@ -1,6 +1,7 @@
 from graphs import *
 from funcDorms import *
 from exceptions.rest import *
+from exceptions.segmentType import Incomparable
 from segmentType import SegmentType
 from itertools import combinations
 
@@ -14,11 +15,13 @@ def students_roommates_pairs(students):
     result = []
     for student in students:
         if student.pref_roommate is not None:
-            student_pair = [get_student(student.id, students), get_student(student.pref_roommate, students)]
-            if student_pair[1] is not None:
+            try:
+                student_pair = [get_student(student.id, students), get_student(student.pref_roommate, students)]
                 if student_pair[0].city == student_pair[1].city:
                     student_pair.sort()
                     result.append(student_pair)
+            except NotFound:
+                pass
     return result
 
 def students_live_together(students):
@@ -36,10 +39,13 @@ def students_exact_segment(students, dorms):
     result = []
     for student in students:
         if None not in student.pref_segment:
-            chosen_segment = get_specific_segment(dorms, student.pref_segment)
-            if chosen_segment is not None:
-                if chosen_segment.habitable and chosen_segment.beds > chosen_segment.tenants_num():
-                    result.append([student, chosen_segment.type()])
+            try:
+                chosen_segment = get_specific_segment(dorms, student.pref_segment)
+                if chosen_segment is not None:
+                    if chosen_segment.habitable and chosen_segment.beds > chosen_segment.tenants_num():
+                        result.append([student, chosen_segment.type()])
+            except NotFound:
+                pass
     return result
 
 def students_exact_segment_type(students, dorms):
@@ -252,9 +258,12 @@ def students_live_together_into_segments(students, dorms):
         if len(best_segment_type) == 0:
             for seg_conf_i in correct_combined:
                 for seg_conf_j in segment_configurations:
-                    if seg_conf_i < seg_conf_j:
-                        if seg_conf_j not in best_segment_type:
-                            best_segment_type.append(seg_conf_j)
+                    try:
+                        if seg_conf_i < seg_conf_j:
+                            if seg_conf_j not in best_segment_type:
+                                best_segment_type.append(seg_conf_j)
+                    except Incomparable:
+                        pass
 
         if len(best_segment_type) == 0:
             for seg_conf_i in correct_combined:

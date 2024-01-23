@@ -13,7 +13,7 @@ def input_dorms(path):
             dorms.append(new_dorm)
     return dorms
 
-def input_students(path: str) -> list:
+def input_students(path):
     with open(path, "r") as file:
         students = []
         for line in file:

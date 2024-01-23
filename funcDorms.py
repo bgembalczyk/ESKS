@@ -3,6 +3,11 @@ from exceptions.rest import *
 import exceptions.dormitory
 import exceptions.room
 
+def get_dorm(dorms, dorm_name):
+    for dorm in dorms:
+        if dorm.name == dorm_name:
+            return dorm
+
 def get_specific_segment(dorms, pref_seg_num):
     try:
         pref_dorm = pref_seg_num[0]

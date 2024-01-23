@@ -1,136 +1,148 @@
 from dormitory import Dormitory
 from room import Room
 from segment import Segment
+from student import Student
+from segmentType import SegmentType
+from funcDorms import get_dorm
+from exceptions.student import *
+import exceptions.dormitory
+import exceptions.room
 
 
-def display_dorm(dorms: dict) -> None:
+def display_dorm(dorms):
+    dorm_names = []
+    for dorm in dorms:
+        dorm_names.append(dorm.name)
     dorm_input = input("Podaj nazwę akademika: [/all] ")
-    if dorm_input in dorms:
-        print(dorms[dorm_input])
-        tmp_room_input = input("Czy chcesz wyświetlić informacje o pokoju? [t/n] ")
-        while tmp_room_input == "t":
-            if tmp_room_input == "t":
+    if dorm_input in dorm_names:
+        print(get_dorm(dorms, dorm_input))
+        tmp_room_input = input("Czy chcesz wyświetlić informacje o pokoju? [T/N] ").upper()
+        while tmp_room_input == "T":
+            if tmp_room_input == "T":
                 room_input = input("Podaj numer pokoju: ")
-            for room in dorms[dorm_input].rooms:
-                if tmp_room_input == "t":
+            for room in dorm.rooms:
+                if tmp_room_input == "T":
                     if room.number() == int(room_input):
                         print(room)
                         break
-            tmp_segment_input = input("Czy chcesz wyświetlić informacje o segmencie? [t/n]")
-            while tmp_segment_input == "t":
+            tmp_segment_input = input("Czy chcesz wyświetlić informacje o segmencie? [T/N] ").upper()
+            while tmp_segment_input == "T":
                 segment_input = input("Podaj symbol segmentu: ")
                 for segment in room.segments:
                     if segment.symbol() == segment_input:
                         print(segment)
                         break
     elif dorm_input == "all":
-        for dorm_name in dorms:
-            print(dorms[dorm_name])
-            for room in dorms[dorm_name].rooms:
+        for dorm in dorms:
+            print(dorm)
+            for room in dorm.rooms:
                 print(room)
                 for segment in room.segments:
                     print(segment)
     else:
         print("Nie ma takiego akademika, akademiki PW to: ")
         tmp = ""
-        for dorm_name in dorms:
-            tmp += f"{dorm_name}, "
+        for dorm in dorms:
+            tmp += f"{dorm.name}, "
         if len(dorms):
             tmp = tmp[:-2]
         print(tmp)
 
-def display_stud(students: list) -> None:
-    N = int(input("Podaj dla ilu studentów chcesz wypisać informacje: "))
-    for i in range(min(len(students), N)):
-        print(students[i])
+def print_to_file(dorms):
+    students = []
+    for dorm in dorms:
+        for room in dorm.rooms:
+            for segment in room.segments:
+                for tenant in segment.tenants:
+                    students.append(tenant)
+    students.sort()
+    with open("raport.txt", "w") as file:
+        for student in students:
+            file.write(f"{student.id} -> {student.segment.room.dorm.name} {student.segment.room.number}{student.segment.symbol}")
 
-def edit_dorms(dorms: dict):
-    tmp_input = input("Naciśnij 0, żeby wrócić\n"
-                     "Naciśnij 1, żeby dodać akademik\n"
-                     "Naciśnij 2, żeby edytować akademik\n"
-                     "Naciśnij 3, żeby usunąć akademik\n")
-    while tmp_input != "0":
-        dorm_input = input("Podaj nazwę akademika: ")
-        if dorm_input in dorms:
-            if tmp_input == "1":
-                print("Już jest akademik o takiej nazwie!")
-            elif tmp_input == "2":
-                edit_room(dorms[dorm_input])
-            elif tmp_input == "3":
-                dorms.pop(dorm_input)
-        else:
-            if tmp_input == "1":
-                dorms[dorm_input] = Dormitory(dorm_input)
-            else:
-                print("Nie ma takiego akademika, akademiki PW to: ")
-                tmp = ""
-                for dorm_name in dorms:
-                    tmp += f"{dorm_name}, "
-                if len(dorms):
-                    tmp = tmp[:-2]
-                print(tmp)
+def display_stud(dorms):
+    students = []
+    for dorm in dorms:
+        for room in dorm.rooms:
+            for segment in room.segments:
+                for tenant in segment.tenants:
+                    students.append(tenant)
+    students.sort()
+    for student in students:
+        print(f"{student.id} -> {student.segment.room.dorm.name} {student.segment.room.number}{student.segment.symbol}")
 
-        tmp_input = input("Naciśnij 0, żeby wrócić\n"
-                         "Naciśnij 1, żeby dodać akademik\n"
-                         "Naciśnij 2, żeby edytować akademik\n"
-                         "Naciśnij 3, żeby usunąć akademik\n")
+def edit(dorms):
+    dorm_input = input("Podaj nazwę akademika, w którym chcesz wprowadzić zmiany: ")
+    for dorm in dorms:
+        if dorm.name == dorm_input:
+            tmp_input = input(f"Czy chcesz włączyć lub wyłączyć z kwaterowania DS {dorm.name}? [T/N] ").upper()
+            if tmp_input == "T":
+                tmp_input = input(f"Ustaw aktualny status kwaterowania w DS {dorm.name}: [T/N] ").upper()
+                if tmp_input == "T":
+                    dorm.habitable = True
+                elif tmp_input == "N":
+                    dorm.habitable = False
+            while tmp_input:
+                tmp_input = input(f"Podaj numer pokoju w DS {dorm.name}, który chcesz włączyć lub wyłączyć z kwaterowania: ")
+                try:
+                    room = dorm.get_room(int(tmp_input))
+                    tmp_input = input(f"Czy chcesz włączyć lub wyłączyć z kwaterowania pokój {room.number}? [T/N] ").upper()
+                    if tmp_input == "T":
+                        tmp_input = input(f"Ustaw aktualny status kwaterowania w pokoju {room.number}: [T/N] ").upper()
+                        if tmp_input == "T":
+                            room.habitable = True
+                        elif tmp_input == "N":
+                            room.habitable = False
+                    while tmp_input:
+                        tmp_input = input(f"Podaj symbol segmentu w pokoju {room.number}, który chcesz włączyć lub wyłączyć z kwaterowania: ")
+                        try:
+                            segment = room.get_segment(tmp_input)
+                            tmp_input = input(f"Czy chcesz włączyć lub wyłączyć z kwaterowania segment {segment.symbol}? [T/N] ").upper()
+                            if tmp_input == "T":
+                                tmp_input = input(f"Ustaw aktualny status kwaterowania w segmencie {segment.symbol}: [T/N] ").upper()
+                                if tmp_input == "T":
+                                    segment.habitable = True
+                                elif tmp_input == "N":
+                                    segment.habitable = False
+                        except (TypeError, ValueError):
+                            print("Spróbuj jeszcze raz")
+                        except exceptions.room.SegmentNotFound:
+                            print(f"W pokoju {room.number} nie ma takiego segmentu\n"
+                                  f"Segmenty w pokoju {room.number} mają symbole od {room.segments[0].symbol} do {room.segments[-1].symbol}")
+                except (TypeError, ValueError):
+                    print("Spróbuj jeszcze raz")
+                except exceptions.dormitory.RoomNotFound:
+                    print(f"W DS {dorm.name} nie ma takiego pokoju\n"
+                          f"Pokoje w DS {dorm.name} mają numery od {dorm.rooms[0].number} do {dorm.rooms[-1].number}")
 
-def edit_room(dorm_name: Dormitory):
-    tmp_input = input("Naciśnij 0, żeby wrócić\n"
-                     "Naciśnij 1, żeby dodać pokój\n"
-                     "Naciśnij 2, żeby edytować pokój\n"
-                     "Naciśnij 3, żeby usunąć pokój\n")
-    while tmp_input != "0":
-        int_input = int(input("Podaj numer pokoju: "))
-        room_input = dorm_name.get_room(int_input)
-        if room_input:
-            if tmp_input == "1":
-                print("Już jest pokój o takim numerze!")
-            elif tmp_input == "2":
-                edit_segment(room_input)
-            elif tmp_input == "3":
-                dorm_name.rooms.remove(room_input)
-        else:
-            if tmp_input == "1":
-                dorm_name.rooms.append(Room(dorm_name, int_input))
-            else:
-                print(f"Nie ma takiego pokoju.\n"
-                      f"Pokoje w Domu Studenckim {dorm_name.name()} mają numery od {dorm_name.rooms[0].number()} do {dorm_name.rooms[-1].number()}")
-
-        tmp_input = input("Naciśnij 0, żeby wrócić\n"
-                         "Naciśnij 1, żeby dodać pokój\n"
-                         "Naciśnij 2, żeby edytować pokój\n"
-                         "Naciśnij 3, żeby usunąć pokój\n")
-
-def edit_segment(room: Room):
-    tmp_input = input("Naciśnij 0, żeby wrócić\n"
-                     "Naciśnij 1, żeby dodać segment\n"
-                     "Naciśnij 2, żeby edytować segment\n"
-                     "Naciśnij 3, żeby usunąć segment\n")
-    while tmp_input != "0":
-        chr_input = input("Podaj symbol segmentu: ")
-        segment_input = room.get_segment(chr_input)
-        if segment_input:
-            if tmp_input == "1":
-                print("Już jest segment o takim symbolu!")
-            elif tmp_input == "2":
-                if input("Czy chcesz zmienić liczbę łóżek? [t/n]") == "t":
-                    beds = int(input("Podaj nową liczbę łóżek w segmencie: "))
-                    while beds < len(segment_input.tenants):
-                        print("Liczba łóżek nie może być mniejsza od ilości mieszkańców!")
-                        beds = int(input("Podaj nową liczbę łóżek w segmencie: "))
-            elif tmp_input == "3":
-                room.segments.remove(segment_input)
-        else:
-            if tmp_input == "1":
-                beds = int(input("Ile łóżek w segmencie? "))
-                room.segments.append(Segment(room, chr(ord(room.segments[-1].symbol()) + 1), beds))
-            else:
-                print(f"Nie ma takiego segmentu.\n"
-                      f"Segmenty w pokoju {room.segments} mają symbole od {room.segments[0].symbol()} do {room.segments[-1].symbol()}")
-
-        tmp_input = input("Naciśnij 0, żeby wrócić\n"
-                         "Naciśnij 1, żeby dodać pokój\n"
-                         "Naciśnij 2, żeby edytować pokój\n"
-                         "Naciśnij 3, żeby usunąć pokój\n")
+def input_single_student():
+    while True:
+        USOSid = input("Podaj swój numer USOSid: ")
+        year = input("Podaj swój rok urodzenia: ")
+        sex = input("Podaj swoją płeć: [M/F/O] ")
+        faculty = input("Podaj wydział, na którym studiujesz: ")
+        major = input("Podaj swój kierunek studiów: ")
+        lang = input("Podaj język, w którym studiujesz: [polski/angielski] ")
+        pref_dorm = input("Podaj preferowany akademik: ")
+        try:
+            student = Student(int(USOSid), int(year), sex, faculty, major, "Warszawa", lang, None, (pref_dorm, None), SegmentType(pref_dorm, None, None, None, None, None, None, None))
+            return [student]
+        except WrongId:
+            print("Spróbuj jeszcze raz")
+        except YearNotInt:
+            print("Spróbuj jeszcze raz")
+        except WrongSex:
+            print("Spróbuj jeszcze raz")
+        except WrongFaculty:
+            print("Spróbuj jeszcze raz")
+        except WrongMajor:
+            print("Spróbuj jeszcze raz")
+        except WrongLang:
+            print("Spróbuj jeszcze raz")
+        except WrongPrefDorm:
+            print("Spróbuj jeszcze raz")
+        except ValueError:
+            print("Spróbuj jeszcze raz")
+        except TypeError:
+            print("Spróbuj jeszcze raz")
 

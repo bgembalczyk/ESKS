@@ -155,5 +155,4 @@ class Student:
             raise TooManyTenants
         segment_var.tenants.append(self)
         self.segment = segment_var
-        print(self.id, self.segment.room.dorm.name, self.segment.room.number, self.segment.symbol)
         return
