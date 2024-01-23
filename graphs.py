@@ -1,4 +1,5 @@
 def find_connected_subgraph(start_node, edges):
+    # Find a connected subgraph starting from a given node in a graph
     result = [start_node]
     for node in result:
         for edge in edges:
@@ -10,6 +11,7 @@ def find_connected_subgraph(start_node, edges):
     return result
 
 def all_nodes(edges):
+    # Retrieve all unique nodes from a list of edges in a graph
     result = []
     for edge in edges:
         if edge[0] not in result:
